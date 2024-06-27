@@ -1,0 +1,195 @@
+/********** Reset + Main settings **********/
+
+/***** Breadcrumb *****/
+
+.block-breadcrumb ul {
+    margin: 10px 0;
+}
+
+.block-breadcrumb + #status-messages-placeholder {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+
+    .block-breadcrumb ul {
+        display: flex;
+    }
+
+    .block-breadcrumb .breadcrumb li {
+        display: block;
+    }
+}
+
+/***** Page container *****/
+
+.section-simple-block-text .container { 
+    max-width: 1480px;
+    padding: 0;
+}
+
+/***** <h1></h1> *****/
+/* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+.section-simple-block-text .section-title {
+    margin: 0;
+}
+
+.font-open-sans .section h1.section-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+/***** Landing page main container *****/
+/* Utiliser la classe "lpMain" pour le container principal */
+
+.lpMain { 
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+}
+
+/***** Titles *****/
+
+/*** <h2></h2> ***/
+/* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+.block-wysiwyg h2.lpTitle__h2 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+/** h2 highlighted **/
+/* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+.lpTitle__h2span,
+.lpTitle__h2span {
+    display: block;
+    width: fit-content;
+    padding: 6px;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.lpTitle__h2span--black {
+    background-color: #000000;
+}
+
+.lpTitle__h2span--orange {
+    background-color: #E75012;
+}
+
+/*** <h3></h3> ***/
+/* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+.font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/***** Content *****/
+
+/*** <p></p> ***/
+/* Utiliser la classe "lpText" sur les balises <p> */
+.block-wysiwyg .lpMain p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0;
+}
+
+/***** Lists *****/
+
+/*** <ol></ol> / <ul></ul> ***/
+/* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+.block-wysiwyg .lpMain ol, 
+.block-wysiwyg .lpMain ul {
+    overflow: visible;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/*** <li></li> ***/
+/* Utiliser la classe "lpList__item" sur les balises <li> */
+.block-wysiwyg .lpMain ol li, 
+.block-wysiwyg .lpMain ul li {
+    padding: 0;
+}
+
+.block-wysiwyg .lpMain ul li:before,
+.block-wysiwyg .lpMain ol li:before {
+    display: none;
+}
+
+/*** Links ***/
+/* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+a.lpLink {
+    color: #E75012;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: underline;
+    transition: all .3s ease-out;
+}
+
+a.lpLink--uppercase {
+    text-transform: uppercase;
+}
+
+a.lpLink:hover {
+    opacity: .7;
+    text-decoration: underline;
+}
+
+/***** Images *****/
+
+.block-wysiwyg .lpMain img, 
+.block-wysiwyg .lpMain figure {
+    margin: 0;
+}
+
+/***** CTAS *****/
+
+/* Utiliser la classe "lpCTA"  */
+.block-wysiwyg a.lpCTA {
+    display: block;
+    width: fit-content;
+    padding: 16px 26px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    border-radius: 26px;
+    transition: all .3s ease-out;
+}
+
+.block-wysiwyg a.lpCTA--primary {
+    color: #FFFFFF;
+    background-color: #e74e12;
+}
+
+.block-wysiwyg a.lpCTA--primary:hover {
+    background-color: #EF855A;
+}
+
+.block-wysiwyg a.lpCTA--secondary {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.block-wysiwyg a.lpCTA--secondary:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-color: #000000;
+}
