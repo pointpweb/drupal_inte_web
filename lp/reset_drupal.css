@@ -29,6 +29,7 @@
 }
 
 /***** <h1></h1> *****/
+
 /* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
 
 .section-simple-block-text .section-title {
@@ -37,12 +38,14 @@
 
 .font-open-sans .section h1.section-title {
     font-family: "Open Sans", sans-serif;
+    font-size: 36px;
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase;
 }
 
 /***** Landing page main container *****/
+
 /* Utiliser la classe "lpMain" pour le container principal */
 
 .lpMain { 
@@ -58,6 +61,7 @@
 
 /*** <h2></h2> ***/
 /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
 .block-wysiwyg h2.lpTitle__h2 {
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -69,6 +73,7 @@
 
 /** h2 highlighted **/
 /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
 .lpTitle__h2span,
 .lpTitle__h2span {
     display: block;
@@ -89,6 +94,7 @@
 
 /*** <h3></h3> ***/
 /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
 .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -101,6 +107,7 @@
 
 /*** <p></p> ***/
 /* Utiliser la classe "lpText" sur les balises <p> */
+
 .block-wysiwyg .lpMain p {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -112,6 +119,7 @@
 
 /*** <ol></ol> / <ul></ul> ***/
 /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
 .block-wysiwyg .lpMain ol, 
 .block-wysiwyg .lpMain ul {
     overflow: visible;
@@ -123,6 +131,7 @@
 
 /*** <li></li> ***/
 /* Utiliser la classe "lpList__item" sur les balises <li> */
+
 .block-wysiwyg .lpMain ol li, 
 .block-wysiwyg .lpMain ul li {
     padding: 0;
@@ -133,7 +142,8 @@
     display: none;
 }
 
-/*** Links ***/
+/***** Links *****/
+
 /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
 
 a.lpLink {
@@ -161,7 +171,8 @@ a.lpLink:hover {
 
 /***** CTAS *****/
 
-/* Utiliser la classe "lpCTA"  */
+/* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
 .block-wysiwyg a.lpCTA {
     display: block;
     width: fit-content;
