@@ -1,0 +1,457 @@
+<!----- CSS ----->
+<style>
+
+    /********** Reset + Main settings **********/
+
+    /***** Breadcrumb *****/
+
+    .block-breadcrumb ul {
+        margin: 10px 0;
+    }
+
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+
+        .block-breadcrumb ul {
+            display: flex;
+        }
+
+        .block-breadcrumb .breadcrumb li {
+            display: block;
+        }
+    }
+
+    /***** Page container *****/
+
+    .section-simple-block-text .container { 
+        max-width: 1480px;
+        padding: 0;
+    }
+
+    /***** <h1></h1> *****/
+
+    /* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+    .section-simple-block-text .section-title {
+        margin: 0;
+    }
+
+    .font-open-sans .section h1.section-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.625rem;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+    }
+
+    /***** Landing page main container *****/
+
+    /* Utiliser la classe "lpMain" pour le container principal */
+
+    .lpMain { 
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 22px;
+        color: #333333;
+    }
+
+    /***** Titles *****/
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
+    .block-wysiwyg h2.lpTitle__h2 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
+    .lpTitle__h2span,
+    .lpTitle__h2span {
+        display: block;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
+    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    /***** Content *****/
+
+    /*** <p></p> ***/
+    /* Utiliser la classe "lpText" sur les balises <p> */
+
+    .block-wysiwyg .lpMain p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 0;
+    }
+
+    /***** Lists *****/
+
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
+    .block-wysiwyg .lpMain ol, 
+    .block-wysiwyg .lpMain ul {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+
+    .block-wysiwyg .lpMain ol li, 
+    .block-wysiwyg .lpMain ul li {
+        padding: 0;
+    }
+
+    .block-wysiwyg .lpMain ul li:before,
+    .block-wysiwyg .lpMain ol li:before {
+        display: none;
+    }
+
+    /***** Links *****/
+
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+    a.lpLink {
+        width: fit-content;
+        color: #E75012;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: underline;
+        transition: all .3s ease-out;
+    }
+
+    a.lpLink--uppercase {
+        text-transform: uppercase;
+    }
+
+    a.lpLink:hover {
+        opacity: .7;
+        text-decoration: underline;
+    }
+
+    /***** Images *****/
+
+    .block-wysiwyg .lpMain img, 
+    .block-wysiwyg .lpMain figure,
+    .block-wysiwyg img.lpImage  {
+        margin: 0;
+    }
+
+    /***** CTAS *****/
+
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
+    .block-wysiwyg a.lpCTA {
+        display: block;
+        width: fit-content;
+        padding: 16px 26px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 14px;
+        border-radius: 26px;
+        transition: all .3s ease-out;
+    }
+
+    .block-wysiwyg a.lpCTA--primary {
+        color: #FFFFFF;
+        background-color: #E75012;
+    }
+
+    .block-wysiwyg a.lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+
+    .block-wysiwyg a.lpCTA--secondary {
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .block-wysiwyg a.lpCTA--secondary:hover {
+        color: #FFFFFF;
+        background-color: #000000;
+        border-color: #000000;
+    }
+
+    /********** NEW STYLE **********/
+
+    .font-open-sans .section h1.section-title {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .lpMain { 
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    @media (max-width: 640px) {
+        .lpMain { 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+        }
+    }
+
+    .lpArticle--desc_and_visual {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    @media (max-width: 640px) {
+        .lpArticle--desc_and_visual {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .lpArticle--devis {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .lpArticle--desc_and_visual .lpSection {
+        width: calc(50% - 20px);
+    }
+
+    @media (max-width: 640px) {
+        .lpArticle--desc_and_visual .lpSection {
+            width: 100%;
+        }
+    }
+
+    .lpArticle--desc_and_visual .lpSection--desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    @media (max-width: 640px) {
+        .lpArticle--desc_and_visual .lpLink {
+            margin: 0 auto;
+        }
+    }
+
+    .lpList {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute;
+        left: 20px;
+        top: 6px;
+    }
+
+    .lpArticle.lpArticle--desc_and_cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    @media (max-width: 640px) {
+        .lpArticle--desc_and_cta .lpSection--desc {
+            padding: 0 26px;
+            text-align: center;
+        }
+    }
+
+    .lpArticle--desc_and_cta .lpSection--cta {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    @media (max-width: 640px) {
+        .lpArticle--desc_and_cta .lpSection--cta {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+        }
+    }
+
+    .lpSection.lpSection--help {
+        width: 1000px;
+        margin: 0 auto;
+        background-color: #F6F6F6;
+        padding: 40px;
+        border-radius: 0 40px 40px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    @media (max-width: 640px) {
+        .lpSection.lpSection--help {
+            max-width: 100%;
+            padding: 30px 50px 30px;
+            text-align: center;
+        }
+    }
+
+    .lpSection.lpSection--help .lpLink {
+        font-weight: 700;
+    }
+
+    .lpAside {
+        margin: 40px 0 80px;
+    }
+
+    @media (max-width: 640px) {
+        .lpAside {
+            margin: 20px 0 40px;
+        }
+    }
+
+    /***** MEDIA QUERIES *****/
+
+    /*** TABLET ***/
+    @media (max-width: 1024px) {
+
+    }
+
+    /*** MOBILE ***/
+    @media (max-width: 640px) {
+
+    }
+
+</style>
+
+<!----- HTML ----->
+<div class="lpMain">
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--intro">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">Gratuit et sécurisé,<br>votre espace personnel vous permet de :</h2>
+            <ul class="lpList">
+                <li class="lpList__item">Accéder à toutes vos documents (factures, commandes, avoirs,…) en ligne 24h/24, 7j/7.</li>
+                <li class="lpList__item">Retrouver et valider vos devis demandés en agence.</li>
+                <li class="lpList__item">Gérer et consulter vos listes de produits favoris.</li>
+            </ul>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+        </section>
+    </article>
+ 
+    <article class="lpArticle lpArticle--desc_and_cta">
+        <section class="lpSection lpSection--desc">
+            <p class="lpText">Avec votre espace personnel POINT.P, gardez vos documents organisés et consultez-les facilement à tout moment depuis votre ordinateur, smartphone ou tablette !</p>
+        </section>
+        <section class="lpSection lpSection--cta">
+            <a href="https://www.pointp.fr/connexion?destination=/" class="lpCTA lpCTA--primary">Connecter à votre compte</a>
+            <a href="https://www.pointp.fr/inscription/nouveau-client" class="lpCTA lpCTA--secondary">Créer votre compte</a>
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--factures">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">Factures</h2>
+            <p class="lpText">Retrouvez toutes vos factures des commandes passées en ligne ou en agence dans votre espace perso POINT.P.</p>
+            <p class="lpText">Si vous réglez vos commandes par encours, alors vous avez la possibilité de télécharger vos anciennes factures sans limite de durée.</p>
+            <p class="lpText">Si vous payez vos commandes comptants (par carte bancaire ou virement immédiat), vos anciennes factures sont disponibles jusqu’à 13 mois après leur émission.</p>
+            <a href="https://www.pointp.fr/mon-compte/mes-factures" class="lpLink">Consulter mes factures</a>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--devis">
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+        </section>
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">Devis</h2>
+            <p class="lpText">L’espace personnel POINT.P permet de retrouver les devis pour les chantiers de construction ou de rénovation que vous avez demandés dans votre agence.</p>
+            <p class="lpText">Vous pouvez consulter tous les devis en cours de validité et y ajouter les produits. Vous aurez la possibilité de transformer les devis en commandes directement. A noter qu’un devis validé en ligne a la même valeur juridique qu’un devis validé en agence.</p>
+            <a href="https://www.pointp.fr/mon-compte/mes-devis" class="lpLink">Consulter mes devis</a>
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--liste_favoris">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">Liste de favoris</h2>
+            <p class="lpText">En enregistrant vos produits préférés dans la liste des favoris, vous pouvez les retrouver rapidement lors de vos prochaines visites.</p>
+            <p class="lpText">Organisez vos favoris en catégories (par projet, type de matériau, etc.) pour une meilleure gestion. Vous pouvez ajouter ou supprimer des articles à tout moment.</p>
+            <p class="lpText">Vous pourrez également retrouver la liste des produits que vous avez le plus commandé en agence ou sur le site web et application mobile POINT.P.</p>
+            <a href="https://www.pointp.fr/mon-compte/mes-listes" class="lpLink">Consulter mes listes</a>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+        </section>
+    </article>
+
+    <section class="lpSection lpSection--help">
+        <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
+        <p class="lpText">N'hésitez pas à nous contacter via notre <a href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
+    </section>
+
+</div>
+<aside class="lpAside">
+    <a href="https://www.pointp.fr/decouvrez-notre-application-mobile">
+        <img src="/s/imgs/pages/landing-avantages-espace-perso/wrapper_app_mobile.jpg" alt="Exemple d'une image" class="lpImage ">
+    </a>
+</aside>

@@ -38,7 +38,7 @@
 
 .font-open-sans .section h1.section-title {
     font-family: "Open Sans", sans-serif;
-    font-size: 36px;
+    font-size: 1.625rem;
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase;
@@ -147,6 +147,7 @@
 /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
 
 a.lpLink {
+    width: fit-content;
     color: #E75012;
     font-family: "Open Sans", sans-serif;
     text-decoration: underline;
