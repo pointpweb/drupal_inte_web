@@ -304,6 +304,10 @@
         top: 6px;
     }
 
+    .lpVideo--dashboard {
+        border: 1px solid #E75012;
+    }
+
     .lpArticle.lpArticle--desc_and_cta {
         display: flex;
         flex-direction: column;
@@ -392,7 +396,9 @@
             </ul>
         </section>
         <section class="lpSection lpSection--visual">
-            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+            <video id="lpVideoDashboard" class="lpVideo lpVideo--dashboard" alt="Le nouveau tableau de bord de mon compte en ligne POINT.P" width="680" height="282" autoplay loop controls>
+                <source src="/s/imgs/pages/landing-avantages-espace-perso/avantages_video.mp4" type="video/mp4">
+            </video>
         </section>
     </article>
  
@@ -401,8 +407,8 @@
             <p class="lpText">Avec votre espace personnel POINT.P, gardez vos documents organisés et consultez-les facilement à tout moment depuis votre ordinateur, smartphone ou tablette !</p>
         </section>
         <section class="lpSection lpSection--cta">
-            <a href="https://www.pointp.fr/connexion?destination=/" class="lpCTA lpCTA--primary">Connecter à votre compte</a>
-            <a href="https://www.pointp.fr/inscription/nouveau-client" class="lpCTA lpCTA--secondary">Créer votre compte</a>
+            <a aria-label="Me connecter à mon compte en ligne POINT.P" href="https://www.pointp.fr/connexion?destination=/" class="lpCTA lpCTA--primary">Se connecter</a>
+            <a aria-label="Me créer un compte en ligne POINT.P" href="https://www.pointp.fr/inscription/nouveau-client" class="lpCTA lpCTA--secondary">Créer mon compte</a>
         </section>
     </article>
 
@@ -412,22 +418,22 @@
             <p class="lpText">Retrouvez toutes vos factures des commandes passées en ligne ou en agence dans votre espace perso POINT.P.</p>
             <p class="lpText">Si vous réglez vos commandes par encours, alors vous avez la possibilité de télécharger vos anciennes factures sans limite de durée.</p>
             <p class="lpText">Si vous payez vos commandes comptants (par carte bancaire ou virement immédiat), vos anciennes factures sont disponibles jusqu’à 13 mois après leur émission.</p>
-            <a href="https://www.pointp.fr/mon-compte/mes-factures" class="lpLink">Consulter mes factures</a>
+            <a aria-label="Consulter mes factures sur mon compte en ligne POINT.P" href="https://www.pointp.fr/mon-compte/mes-factures" class="lpLink">Consulter mes factures</a>
         </section>
         <section class="lpSection lpSection--visual">
-            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/avantages_factures.jpg" alt="Consulter mes factures sur mon compte en ligne POINT.P" class="lpImage">
         </section>
     </article>
 
     <article class="lpArticle lpArticle--desc_and_visual lpArticle--devis">
         <section class="lpSection lpSection--visual">
-            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/avantages_devis.jpg" alt="Consulter mes devis sur mon compte en ligne POINT.P" class="lpImage">
         </section>
         <section class="lpSection lpSection--desc">
             <h2 class="lpTitle__h2">Devis</h2>
             <p class="lpText">L’espace personnel POINT.P permet de retrouver les devis pour les chantiers de construction ou de rénovation que vous avez demandés dans votre agence.</p>
             <p class="lpText">Vous pouvez consulter tous les devis en cours de validité et y ajouter les produits. Vous aurez la possibilité de transformer les devis en commandes directement. A noter qu’un devis validé en ligne a la même valeur juridique qu’un devis validé en agence.</p>
-            <a href="https://www.pointp.fr/mon-compte/mes-devis" class="lpLink">Consulter mes devis</a>
+            <a aria-label="Consulter mes devis sur mon compte en ligne POINT.P" href="https://www.pointp.fr/mon-compte/mes-devis" class="lpLink">Consulter mes devis</a>
         </section>
     </article>
 
@@ -437,21 +443,21 @@
             <p class="lpText">En enregistrant vos produits préférés dans la liste des favoris, vous pouvez les retrouver rapidement lors de vos prochaines visites.</p>
             <p class="lpText">Organisez vos favoris en catégories (par projet, type de matériau, etc.) pour une meilleure gestion. Vous pouvez ajouter ou supprimer des articles à tout moment.</p>
             <p class="lpText">Vous pourrez également retrouver la liste des produits que vous avez le plus commandé en agence ou sur le site web et application mobile POINT.P.</p>
-            <a href="https://www.pointp.fr/mon-compte/mes-listes" class="lpLink">Consulter mes listes</a>
+            <a aria-label="Consulter mes listes de produits préférés sur mon compte en ligne POINT.P" href="https://www.pointp.fr/mon-compte/mes-listes" class="lpLink">Consulter mes listes</a>
         </section>
         <section class="lpSection lpSection--visual">
-            <img src="/s/imgs/pages/landing-avantages-espace-perso/img_horizontal.jpg" alt="Exemple d'une image" class="lpImage">
+            <img src="/s/imgs/pages/landing-avantages-espace-perso/avantages_favoris.jpg" alt="Consulter mes listes de produits préférés sur mon compte en ligne POINT.P" class="lpImage">
         </section>
     </article>
 
     <section class="lpSection lpSection--help">
         <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
-        <p class="lpText">N'hésitez pas à nous contacter via notre <a href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
+        <p class="lpText">N'hésitez pas à nous contacter via notre <a aria-label="Contacter l'assistance client digitale de POINT.P" href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
     </section>
 
 </div>
 <aside class="lpAside">
-    <a href="https://www.pointp.fr/decouvrez-notre-application-mobile">
-        <img src="/s/imgs/pages/landing-avantages-espace-perso/wrapper_app_mobile.jpg" alt="Exemple d'une image" class="lpImage ">
+    <a aria-label="S'informer sur l'application mobile POINT.P" href="https://www.pointp.fr/decouvrez-notre-application-mobile">
+        <img src="/s/imgs/pages/landing-avantages-espace-perso/app_mobile.jpg" alt="S'informer sur l'application mobile POINT.P" class="lpImage ">
     </a>
 </aside>
