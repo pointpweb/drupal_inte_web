@@ -1,0 +1,448 @@
+<!-- RESET CSS -->
+<style>
+
+    /***** Back to top button *****/
+
+    /* To keep everywhere ? */
+    /* .block--backtotop {
+        display: none;
+    } */
+
+    /***** Breadcrumb *****/
+
+    /* Only for Page édito ? */
+    /* .block-breadcrumb {
+        width: 100%;
+        background-color: #fafafa;
+    } */
+
+    .block-breadcrumb ul {
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .block-breadcrumb .breadcrumb li {
+        display: block;
+    }
+
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+
+    /***** Page container *****/
+
+    .section-simple-block-text .container { 
+        max-width: 1480px;
+        padding: 0;
+    }
+
+    /***** <h1></h1> *****/
+
+    /* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+    .page-template-builder .builder-header {
+        margin-top: 24px;
+    }
+
+    .page-template-builder .section-template-header,
+    .section-simple-block-text .section-title {
+        margin: 0;
+    }
+
+    .page-template-builder .section-template-header .section-title {
+        position: unset;
+        left: unset;
+    }
+
+    .page-template-builder .section-template-header .container picture {
+        display: none;
+    }
+
+    .font-open-sans .section h1.section-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+
+        /* Background style */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media (min-width: 768px) {
+        .font-open-sans .section h1.section-title {
+            /* Little (ex: LP Infos) */
+            font-size: 1.625rem; 
+            /* Big (ex: Pages Réno) */
+            /* font-size: 2.25rem;  */
+        }
+    }
+
+    /***** Landing page main container *****/
+
+    /* Utiliser la classe "lpMain" pour le container principal */
+
+    .lpMain { 
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain {
+            font-size: 1rem;
+            padding: 40px;
+        }
+    }
+
+    /***** Titles *****/
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
+    .lpTitle__h2,
+    .block-wysiwyg h2.lpTitle__h2 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg h2.lpTitle__h2 {
+            font-size: 1.375rem;
+        }
+    }
+
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
+    .lpTitle__h2span {
+        display: block;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
+    .lpTitle__h3,
+    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .lpTitle__h3,
+        .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+            font-size: 1.25rem;
+        }
+    }
+
+    /***** Content *****/
+
+    /*** <p></p> ***/
+    /* Utiliser la classe "lpText" sur les balises <p> */
+
+    .lpMain p,
+    .block-wysiwyg .lpMain p {
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain p {
+            font-size: 1rem;
+        }
+    }
+
+    /***** Lists *****/
+
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
+    .lpMain ol,
+    .lpMain ul,
+    .block-wysiwyg .lpMain ol, 
+    .block-wysiwyg .lpMain ul {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain ol, 
+        .block-wysiwyg .lpMain ul {
+            font-size: 1rem;
+        }
+    }
+
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+
+    .lpMain ol li,
+    .lpMain ul li,
+    .block-wysiwyg .lpMain ol li, 
+    .block-wysiwyg .lpMain ul li {
+        padding: 0;
+    }
+
+    .lpMain ul li:before,
+    .lpMain ol li:before,
+    .block-wysiwyg .lpMain ul li:before,
+    .block-wysiwyg .lpMain ol li:before {
+        display: none;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item {
+        position: relative;
+        padding-left: 16px;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute;
+        left: 20px;
+        top: 8px;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain ul li.lpList__item::before {
+            left: 40px;
+        }
+    }
+
+    /***** Links *****/
+
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+    a.lpLink {
+        color: #E75012;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: underline;
+        transition: all .3s ease-out;
+    }
+
+    a.lpLink--uppercase {
+        text-transform: uppercase;
+    }
+
+    a.lpLink:hover {
+        opacity: .7;
+        text-decoration: underline;
+    }
+
+    /***** Images *****/
+
+    .lpMain img,
+    .lpMain figure,
+    .block-wysiwyg .lpMain img, 
+    .block-wysiwyg .lpMain figure {
+        margin: 0;
+    }
+
+    /***** CTAS *****/
+
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
+    .lpCTA,
+    .block-wysiwyg a.lpCTA {
+        display: block;
+        width: fit-content;
+        padding: 16px 26px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: .875rem;
+        border-radius: 26px;
+        transition: all .3s ease-out;
+    }
+
+    .lpCTA--primary,
+    .block-wysiwyg a.lpCTA--primary {
+        color: #FFFFFF;
+        background-color: #e74e12;
+    }
+
+    .lpCTA--primary:hover,
+    .block-wysiwyg a.lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+
+    .lpCTA--secondary,
+    .block-wysiwyg a.lpCTA--secondary {
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .lpCTA--secondary:hover,
+    .block-wysiwyg a.lpCTA--secondary:hover {
+        color: #FFFFFF;
+        background-color: #000000;
+        border-color: #000000;
+    }
+
+    /***** Section HELP *****/
+
+    .lpSection.lpSection--help {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        background-color: #F6F6F6;
+        border-radius: 0 20px 20px 20px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .lpSection.lpSection--help {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    /***** Splide JS *****/
+
+    .lpMain .splide__arrows.splide__arrows--ltr .splide__arrow {
+        border-radius: 50%;
+    }
+
+    .lpMain .splide__slide img {
+        height: unset;
+    }
+
+    @media (min-width: 768px) {
+
+        .lpMain .splide__arrows {
+            display: flex;
+        }
+
+        .splide.is-initialized:not(.is-active) .splide__list {
+            display: flex !important;
+            justify-content: center;
+        }
+    }
+</style>
+
+<!-- CSS -->
+<style>
+
+    .lpArticle {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .lpSection--grilles {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    } 
+
+    .lpFigcaption {
+        font-size: .75rem;
+        font-style: italic;
+    }
+</style>
+
+<!-- HTML -->
+<div class="lpMain">
+    <article class="lpArticle">
+        <h2 class="lpTitle__h2">Déchargement de la commande</h2>
+        <p class="lpText">Le chauffeur se réserve le droit de ne pas décharger la commande, et ce afin de garantir la tenue des opérations dans les conditions de sécurité requise si les conditions suivantes ne sont pas remplies :</p>
+        <ul class="lpList">
+            <li class="lpList__item">Le forfait concerne une livraison par camion pour une charge comprise entre 1 kilo et 8 tonnes, et ce dans un périmètre maximum de 100km autour de l’agence de rattachement choisie.</li>
+            <li class="lpList__item">Ces frais de port incluent le transport et le déchargement au pied du camion, des services de mise à disposition plus complexes sont en sus (sauf si ces options ont été choisies ou que ces coûts ont été ajoutés par l’agence).</li>
+            <li class="lpList__item">La date et le créneau horaire de livraison sur le site pointp.fr est donné à titre indicatif.</li>
+            <li class="lpList__item">L'intégralité de la commande doit être payée avant la livraison (sauf pour les clients avec compte terme).</li>
+            <li class="lpList__item">Assurez-vous lors de la réception de votre commande, que la marchandise livrée soit conforme à votre commande (plus d’information à l’article 6.1.2 Modalités de transport – livraison des CGV e-commerce).</li>
+            <li class="lpList__item">Assurez-vous que la rue soit bien autorisée aux véhicules de + de 3.5T.</li>
+        </ul>
+    </article> 
+    <article class="lpArticle">
+        <h2 class="lpTitle__h2">Options de mise à disposition</h2>
+        <p class="lpText">Si un mode de mise à disposition a été sélectionné, des conditions supplémentaires doivent être respectées :</p>
+        <ul class="lpList">
+            <li class="lpList__item">Option déchargement sur la voie publique : assurez-vous de bien avoir les autorisations nécessaires auprès de la commune concernée.</li>
+            <li class="lpList__item">Option zone extérieure privée avec accès poids lourd : assurez-vous que la largeur de voie (5 à 7 mètres) et l'entrée du chantier (3 mètres minimum) soient suffisamment larges. Si ce n’est pas le cas, prenez l’option accès limité.</li>
+            <li class="lpList__item">Option zone extérieure privée avec accès grue : assurez-vous qu’aucun obstacle majeur ne soit susceptible de gêner l'utilisation de la grue (murs ou clôture de plus de 2m de haut, câbles télécom ou EDF, arbres, véhicule, etc.).</li>
+            <li class="lpList__item">Option mise à l’étage (ATTENTION RESERVEE AUX PROFESSIONNELS) : les deux conditions développées ci-dessus doivent notamment être respectées (option zone extérieure privée avec accès poids lourd + option zone extérieure privée avec accès grue).</li>
+        </ul>
+    </article> 
+    <article class="lpArticle lpArticle--petites_commandes">
+        <h2 class="lpTitle__h2">Petites commandes</h2>
+        <p class="lpText">Dans le cadre de petites commandes respectant les conditions ci-dessous, celles-ci bénéficient d’un forfait de livraison différent :</p>
+        <ul class="lpList">
+            <li class="lpList__item">L’ensemble de la commande fait moins de 500 kilogrammes.</li>
+            <li class="lpList__item">Le ou les articles de la commande ont un poids unitaire inférieur ou égal à 25kg.</li>
+            <li class="lpList__item">Le ou les articles de la commande mesurent moins de 4 mètres de longueur.</li>
+            <li class="lpList__item">L’adresse de livraison se situe à maximum 30km de l’adresse de l’agence de rattachement choisie.</li>
+            <li class="lpList__item">Les articles « Treillis soudés » ne sont pas éligibles à ce forfait livraison pour des raisons de sécurité.</li>
+            <li class="lpList__item">Le montant du forfait de livraison dépend du montant en euro de votre panier. </li>
+            <li class="lpList__item">Ces frais de livraison incluent le transport et le déchargement au pied du camion.</li>
+            <li class="lpList__item">La date et le créneau horaire de livraison sur le site pointp.fr est donné à titre indicatif.</li>
+            <li class="lpList__item">L'intégralité de la commande doit être payée avant la livraison (sauf pour les clients avec compte terme).</li>
+            <li class="lpList__item">Assurez-vous lors de la réception de votre commande, que la marchandise livrée soit conforme à votre demande <a aria-label="Modalités de transport – livraison des CGV e-commerce" href="https://www.pointp.fr/cgv-e-commerce" class="lpLink">(plus d'information à l'article 6.1.2 Modalités de transport – livraison des CGV e-commerce)</a></li>
+        </ul>
+        <section class="lpSection lpSection--grilles">
+            <h3 class="lpTitle__h3">Les grilles tarifaires</h3>
+            <div class="lpBlockImg">
+                <img src="/s/imgs/pages/landing-conditions-de-livraison/grille_livraison_idf.jpg" alt="Grille de livraison en Ile de France POINT.P" class="lpImage">
+                <figcaption class="lpFigcaption">La grille du forfait de livraison en région Île de France</figcaption>
+            </div>
+            <div class="lpBlockImg">
+                <img src="/s/imgs/pages/landing-conditions-de-livraison/grille_livraison_hors_idf.jpg" alt="Grille de livraison hors Ile de France POINT.P" class="lpImage">
+                <figcaption class="lpFigcaption">La grille du forfait de livraison hors région Île de France</figcaption>
+            </div>
+        </section>
+    </article> 
+    <section class="lpSection lpSection--help">
+        <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
+        <p class="lpText">N'hésitez pas à nous contacter via notre <a aria-label="Contacter l'assistance client digitale de POINT.P" href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
+    </section>
+</div>
