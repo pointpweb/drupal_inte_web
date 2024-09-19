@@ -249,12 +249,6 @@
         top: 8px;
     }
 
-    @media (min-width: 768px) {
-        .block-wysiwyg .lpMain ul li.lpList__item::before {
-            left: 40px;
-        }
-    }
-
     /***** Links *****/
 
     /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
@@ -340,6 +334,7 @@
 
     @media (min-width: 768px) {
         .lpSection.lpSection--help {
+            width: 100%;
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -370,7 +365,6 @@
 
 <!-- CSS -->
 <style>
-
     .lpArticle {
         display: flex;
         flex-direction: column;
@@ -382,7 +376,19 @@
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
     } 
+
+    .lpSection--grilles .lpTitle__h3 {
+        width: 100%;
+    }
+
+    .lpSection--grilles .lpBlockImg {
+        max-width: 350px;
+    }
 
     .lpFigcaption {
         font-size: .75rem;
@@ -400,7 +406,7 @@
             <li class="lpList__item">Ces frais de port incluent le transport et le déchargement au pied du camion, des services de mise à disposition plus complexes sont en sus (sauf si ces options ont été choisies ou que ces coûts ont été ajoutés par l’agence).</li>
             <li class="lpList__item">La date et le créneau horaire de livraison sur le site pointp.fr est donné à titre indicatif.</li>
             <li class="lpList__item">L'intégralité de la commande doit être payée avant la livraison (sauf pour les clients avec compte terme).</li>
-            <li class="lpList__item">Assurez-vous lors de la réception de votre commande, que la marchandise livrée soit conforme à votre commande (plus d’information à l’article 6.1.2 Modalités de transport – livraison des CGV e-commerce).</li>
+            <li class="lpList__item">Assurez-vous lors de la réception de votre commande, que la marchandise livrée soit conforme à votre commande <a aria-label="Modalités de transport – livraison des CGV e-commerce" href="https://www.pointp.fr/cgv-e-commerce" class="lpLink">(plus d'information à l'article 6.1.2 Modalités de transport – livraison des CGV e-commerce)</a></li>
             <li class="lpList__item">Assurez-vous que la rue soit bien autorisée aux véhicules de + de 3.5T.</li>
         </ul>
     </article> 

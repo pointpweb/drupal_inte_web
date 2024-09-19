@@ -1,0 +1,360 @@
+/***** Back to top button *****/
+
+/* To keep everywhere ? */
+/* .block--backtotop {
+    display: none;
+} */
+
+/***** Breadcrumb *****/
+
+/* Only for Page édito ? */
+/* .block-breadcrumb {
+    width: 100%;
+    background-color: #fafafa;
+} */
+
+.block-breadcrumb ul {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: normal;
+}
+
+.block-breadcrumb .breadcrumb li {
+    display: block;
+}
+
+.block-breadcrumb + #status-messages-placeholder {
+    margin: 0;
+}
+
+/***** Page container *****/
+
+.section-simple-block-text .container { 
+    max-width: 1480px;
+    padding: 0;
+}
+
+/***** <h1></h1> *****/
+
+/* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+.page-template-builder .builder-header {
+    margin-top: 24px;
+}
+
+.page-template-builder .section-template-header,
+.section-simple-block-text .section-title {
+    margin: 0;
+}
+
+.page-template-builder .section-template-header .section-title {
+    position: unset;
+    left: unset;
+}
+
+.page-template-builder .section-template-header .container picture {
+    display: none;
+}
+
+.font-open-sans .section h1.section-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+
+    /* Background style */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .font-open-sans .section h1.section-title {
+        /* Little (ex: LP Infos) */
+        font-size: 1.625rem; 
+        /* Big (ex: Pages Réno) */
+        /* font-size: 2.25rem;  */
+    }
+}
+
+/***** Landing page main container *****/
+
+/* Utiliser la classe "lpMain" pour le container principal */
+
+.lpMain { 
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: .875rem;
+    line-height: 1.375rem;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .lpMain {
+        font-size: 1rem;
+        padding: 40px;
+    }
+}
+
+/***** Titles *****/
+
+/*** <h2></h2> ***/
+/* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
+.lpTitle__h2,
+.block-wysiwyg h2.lpTitle__h2 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .block-wysiwyg h2.lpTitle__h2 {
+        font-size: 1.375rem;
+    }
+}
+
+/** h2 highlighted **/
+/* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
+.lpTitle__h2span {
+    display: block;
+    width: fit-content;
+    padding: 6px;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.lpTitle__h2span--black {
+    background-color: #000000;
+}
+
+.lpTitle__h2span--orange {
+    background-color: #E75012;
+}
+
+/*** <h3></h3> ***/
+/* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
+.lpTitle__h3,
+.font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+    .lpTitle__h3,
+    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/***** Content *****/
+
+/*** <p></p> ***/
+/* Utiliser la classe "lpText" sur les balises <p> */
+
+.lpMain p,
+.block-wysiwyg .lpMain p {
+    font-family: "Open Sans", sans-serif;
+    font-size: .875rem;
+    line-height: 1.375rem;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .block-wysiwyg .lpMain p {
+        font-size: 1rem;
+    }
+}
+
+/***** Lists *****/
+
+/*** <ol></ol> / <ul></ul> ***/
+/* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
+.lpMain ol,
+.lpMain ul,
+.block-wysiwyg .lpMain ol, 
+.block-wysiwyg .lpMain ul {
+    overflow: visible;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: .875rem;
+    line-height: 1.375rem;
+}
+
+@media (min-width: 768px) {
+    .block-wysiwyg .lpMain ol, 
+    .block-wysiwyg .lpMain ul {
+        font-size: 1rem;
+    }
+}
+
+/*** <li></li> ***/
+/* Utiliser la classe "lpList__item" sur les balises <li> */
+
+.lpMain ol li,
+.lpMain ul li,
+.block-wysiwyg .lpMain ol li, 
+.block-wysiwyg .lpMain ul li {
+    padding: 0;
+}
+
+.lpMain ul li:before,
+.lpMain ol li:before,
+.block-wysiwyg .lpMain ul li:before,
+.block-wysiwyg .lpMain ol li:before {
+    display: none;
+}
+
+.block-wysiwyg .lpMain ul li.lpList__item {
+    position: relative;
+    padding-left: 16px;
+}
+
+.block-wysiwyg .lpMain ul li.lpList__item::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E75012;
+    position: absolute;
+    left: 20px;
+    top: 8px;
+}
+
+/***** Links *****/
+
+/* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+a.lpLink {
+    color: #E75012;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: underline;
+    transition: all .3s ease-out;
+}
+
+a.lpLink--uppercase {
+    text-transform: uppercase;
+}
+
+a.lpLink:hover {
+    opacity: .7;
+    text-decoration: underline;
+}
+
+/***** Images *****/
+
+.lpMain img,
+.lpMain figure,
+.block-wysiwyg .lpMain img, 
+.block-wysiwyg .lpMain figure {
+    margin: 0;
+}
+
+/***** CTAS *****/
+
+/* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
+.lpCTA,
+.block-wysiwyg a.lpCTA {
+    display: block;
+    width: fit-content;
+    padding: 16px 26px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: .875rem;
+    border-radius: 26px;
+    transition: all .3s ease-out;
+}
+
+.lpCTA--primary,
+.block-wysiwyg a.lpCTA--primary {
+    color: #FFFFFF;
+    background-color: #e74e12;
+}
+
+.lpCTA--primary:hover,
+.block-wysiwyg a.lpCTA--primary:hover {
+    background-color: #EF855A;
+}
+
+.lpCTA--secondary,
+.block-wysiwyg a.lpCTA--secondary {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.lpCTA--secondary:hover,
+.block-wysiwyg a.lpCTA--secondary:hover {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+/***** Section HELP *****/
+
+.lpSection.lpSection--help {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    background-color: #F6F6F6;
+    border-radius: 0 20px 20px 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .lpSection.lpSection--help {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+/***** Splide JS *****/
+
+.lpMain .splide__arrows.splide__arrows--ltr .splide__arrow {
+    border-radius: 50%;
+}
+
+.lpMain .splide__slide img {
+    height: unset;
+}
+
+@media (min-width: 768px) {
+
+    .lpMain .splide__arrows {
+        display: flex;
+    }
+
+    .splide.is-initialized:not(.is-active) .splide__list {
+        display: flex !important;
+        justify-content: center;
+    }
+}
