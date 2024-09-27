@@ -1,0 +1,590 @@
+<!-- RESET CSS -->
+<style>
+    /***** Back to top button *****/
+
+    /* To keep everywhere ? */
+    /* .block--backtotop {
+        display: none;
+    } */
+
+    /***** Breadcrumb *****/
+
+    /* Only for Page édito ? */
+    /* .block-breadcrumb {
+        width: 100%;
+        background-color: #fafafa;
+    } */
+
+    .block-breadcrumb ul {
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .block-breadcrumb .breadcrumb li {
+        display: block;
+    }
+
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+
+    /***** Page container *****/
+
+    .section-simple-block-text .container { 
+        max-width: 1480px;
+        padding: 0;
+    }
+
+    /***** <h1></h1> *****/
+
+    /* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+    .page-template-builder .builder-header {
+        margin-top: 24px;
+    }
+
+    .page-template-builder .section-template-header,
+    .section-simple-block-text .section-title {
+        margin: 0;
+    }
+
+    .page-template-builder .section-template-header .section-title {
+        position: unset;
+        left: unset;
+    }
+
+    .page-template-builder .section-template-header .container picture {
+        display: none;
+    }
+
+    .font-open-sans .section h1.section-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+
+        /* Background style */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media (min-width: 768px) {
+        .font-open-sans .section h1.section-title {
+            /* Little (ex: LP Infos) */
+            /* font-size: 1.625rem;  */
+            /* Big (ex: Pages Réno) */
+            font-size: 2.25rem; 
+        }
+    }
+
+    /***** Landing page main container *****/
+
+    /* Utiliser la classe "lpMain" pour le container principal */
+
+    .lpMain { 
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain {
+            font-size: 1rem;
+            padding: 40px;
+        }
+    }
+
+    /***** Titles *****/
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
+    .lpTitle__h2,
+    .block-wysiwyg h2.lpTitle__h2 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg h2.lpTitle__h2 {
+            font-size: 1.375rem;
+        }
+    }
+
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
+    .lpTitle__h2span {
+        display: block;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
+    .lpTitle__h3,
+    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .lpTitle__h3,
+        .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+            font-size: 1.25rem;
+        }
+    }
+
+    /***** Content *****/
+
+    /*** <p></p> ***/
+    /* Utiliser la classe "lpText" sur les balises <p> */
+
+    .lpMain p,
+    .block-wysiwyg .lpMain p {
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        padding: 0;
+    }
+
+    .lpMain p.lpText--small,
+    .block-wysiwyg .lpMain p.lpText--small {
+        font-size: .75rem;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain p {
+            font-size: 1rem;
+        }
+    }
+
+    /***** Lists *****/
+
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
+    .lpMain ol,
+    .lpMain ul,
+    .block-wysiwyg .lpMain ol, 
+    .block-wysiwyg .lpMain ul {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain ol, 
+        .block-wysiwyg .lpMain ul {
+            font-size: 1rem;
+        }
+    }
+
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+
+    .lpMain ol li,
+    .lpMain ul li,
+    .block-wysiwyg .lpMain ol li, 
+    .block-wysiwyg .lpMain ul li {
+        padding: 0;
+    }
+
+    .lpMain ul li:before,
+    .lpMain ol li:before,
+    .block-wysiwyg .lpMain ul li:before,
+    .block-wysiwyg .lpMain ol li:before {
+        display: none;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item {
+        position: relative;
+        padding-left: 16px;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute;
+        left: 20px;
+        top: 8px;
+    }
+
+    /***** Links *****/
+
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+    a.lpLink {
+        color: #E75012;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: underline;
+        transition: all .3s ease-out;
+    }
+
+    a.lpLink--uppercase {
+        text-transform: uppercase;
+    }
+
+    a.lpLink:hover {
+        opacity: .7;
+        text-decoration: underline;
+    }
+
+    /***** Images *****/
+
+    .lpMain img,
+    .lpMain figure,
+    .block-wysiwyg .lpMain img, 
+    .block-wysiwyg .lpMain figure {
+        margin: 0;
+    }
+
+    /***** Videos/iframes *****/
+    .block-wysiwyg iframe {
+        margin: 0;
+    }
+
+    /***** CTAS *****/
+
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
+    .lpCTA,
+    .block-wysiwyg a.lpCTA {
+        display: block;
+        width: fit-content;
+        padding: 16px 26px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: .875rem;
+        border-radius: 26px;
+        transition: all .3s ease-out;
+    }
+
+    .lpCTA--primary,
+    .block-wysiwyg a.lpCTA--primary {
+        color: #FFFFFF;
+        background-color: #e74e12;
+    }
+
+    .lpCTA--primary:hover,
+    .block-wysiwyg a.lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+
+    .lpCTA--secondary,
+    .block-wysiwyg a.lpCTA--secondary {
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .lpCTA--secondary:hover,
+    .block-wysiwyg a.lpCTA--secondary:hover {
+        color: #FFFFFF;
+        background-color: #000000;
+        border-color: #000000;
+    }
+
+    /***** Section HELP *****/
+
+    .lpSection.lpSection--help {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        background-color: #F6F6F6;
+        border-radius: 0 20px 20px 20px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .lpSection.lpSection--help {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    /***** Splide JS *****/
+
+    .lpMain .splide__arrows.splide__arrows--ltr .splide__arrow {
+        border-radius: 50%;
+    }
+
+    .lpMain .splide__slide img {
+        height: unset;
+    }
+
+    @media (min-width: 768px) {
+
+        .lpMain .splide__arrows {
+            display: flex;
+        }
+
+        .splide.is-initialized:not(.is-active) .splide__list {
+            display: flex !important;
+            justify-content: center;
+        }
+    }
+</style>
+
+<!-- CSS -->
+<style>
+
+    .lpArticle:not(.lpArticle--promo) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .lpSection {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .lpSection--visual {
+        align-items: center;
+    }
+
+    .lpSection--promo .lpArticle {
+        border: 1px solid #FFCC00;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        padding: 20px;
+    }
+
+    .lpMain p.lpText--promo,
+    .block-wysiwyg .lpMain p.lpText--promo {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .lpText--promo span {
+        color: #e74e12;
+    }
+
+    .lpAside--promoConditions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .font-open-sans .block-wysiwyg .lpAside--promoConditions p.lpText {
+        font-style: italic;
+        width: calc(100% - 14px);
+    }
+
+    .lpAside--promoConditions .lpText span {
+        color: #e74e12;
+    }
+
+    .lpMain .lpAside--promoConditions ul.lpList,
+    .block-wysiwyg .lpMain .lpAside--promoConditions ul.lpList {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease-out;
+    }
+
+    .lpAside--promoConditions .lpList .open {
+        max-height: 500px;
+        overflow: visible;
+    }
+
+    .lpSection--promo .lpBlockImg--mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+
+    .lpSection--promo .lpBlockImg--mobile .lpImage {
+        max-width: 310px;
+    }
+
+    .lpSection--promo .lpBlockImg--desktop {
+        display: none;
+    }
+
+    .lpSection--visual .lpImage {
+        max-width: 200px;
+    }
+</style>
+
+<div class="lpMain lpMain--app_mobile">
+    <section class="lpSection lpSection--promo">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Exclu APP
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                Du 01 au 15 octobre 2024
+            </span>
+        </h2>
+        <article class="lpArticle lpArticle--promo">
+            <p class="lpText lpText--promo lpText--mobile">
+                Profitez de <span>-20€</span> (TTC)<br>tous les 200€ d’achat<br>avec le code <span>APP20</span>
+            </p>
+            <div class="lpBlockImg lpBlockImg--mobile">
+                <img src="/s/imgs/pages/landing_app_mobile/download_app_store_mobile.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
+                <img src="/s/imgs/pages/landing_app_mobile/download_google_play_mobile.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+            </div>
+            <div class="lpBlockImg lpBlockImg--desktop">
+                <img src="/s/imgs/pages/landing_app_mobile/download_app_store_desktop.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
+                <img src="/s/imgs/pages/landing_app_mobile/download_google_play_desktop.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+            </div>
+        </article>
+        <aside class="lpAside lpAside--promoConditions">
+            <p class="lpText lpText--small">Uniquement sur l’application mobile POINT.P, du 01 au 15 octobre 2024, <span>voir conditions</span></p>
+            <svg class="ctaMoreLess" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.5" cy="6.71338" r="6" stroke="#E75012"/>
+                <line x1="6.61108" y1="3.21338" x2="6.61108" y2="10.2134" stroke="#E75012"/>
+                <line x1="10" y1="6.82446" x2="3" y2="6.82446" stroke="#E75012"/>
+            </svg>
+            <ul class="lpList close">
+                <li class="lpList__item">Uniquement valable sur l’application mobile POINT.P.</li>
+                <li class="lpList__item">Valable une seule fois par client.</li>
+                <li class="lpList__item">Offre valable uniquement pendant la période de l'opération commerciale.</li>
+                <li class="lpList__item">Offre non cumulable avec d’autres promotions.</li>
+            </ul>
+        </aside>
+    </section>
+
+    <article class="lpArticle lpArticle--desc_and_visual">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Plus qu’une appli, un outil
+            </h2>
+            <p class="lpText">
+                L’application mobile POINT.P est un outil indispensable pour les professionnels du bâtiment, les artisans et les particuliers. Elle vous permet d’accéder facilement à une vaste gamme de matériaux de construction et de rénovation, directement depuis votre smartphone, où que vous soyez, 24h/24 et 7j/7.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <iframe width="680" height="314" src="https://www.youtube.com/embed/96P-aaze9cU?si=h9NTAhi-_GLLDIxG" title="YouTube video player" alt="Découvrez les nouveautés de l'application POINT.P lors de notre émission « Les Démos d’Estelle »" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--visual_vertical">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Tous vos services à portée de main
+            </h2>
+            <p class="lpText">
+                Grâce à un tableau de bord intuitif, profitez d’un accès en un clic à vos factures, devis, commandes et suivis d’encours. Vous retrouvez rapidement vos listes de produits favoris ainsi que les produits que vous avez le plus commandés en agence, sur le site web ou via l’application POINT.P.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_home.jpg" alt="Accueil de l'application mobile POINT.P" class="lpImage">
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--visual_vertical">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Recherche simple et rapide
+            </h2>
+            <p class="lpText">
+                Besoin de trouver rapidement un produit spécifique ? Avec notre fonction de recherche avancée, accédez à plus de 100 000 références de matériaux en scannant le code-barres ou en effectuant une recherche textuelle. Vous pouvez également localiser les agences POINT.P les plus proches et consulter leurs stocks, horaires d’ouverture, coordonnées et services.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_search.jpg" alt="Recherche de l'application mobile POINT.P" class="lpImage">
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--visual_vertical">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Disponibilité des matériaux en temps réel 
+            </h2>
+            <p class="lpText">
+                Grâce à l’application POINT.P, consultez en temps réel la disponibilité des stocks dans l’agence de votre choix et bénéficiez de vos prix personnalisés. Commandez vos matériaux en quelques clics, que ce soit pour un retrait à l’agence, un service DRIVE, ou une livraison sur chantier rapide et efficace.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_stock.jpg" alt="Stock de l'application mobile POINT.P" class="lpImage">
+        </section>
+    </article>
+
+    <article class="lpArticle lpArticle--desc_and_visual lpArticle--visual_vertical">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Commandez en toute simplicité
+            </h2>
+            <p class="lpText">
+                Avec POINT.P, la gestion de vos achats de matériaux de construction devient simple et rapide, que vous soyez artisan professionnel ou particulier. Commandez en ligne et récupérez vos produits en agence ou faites-vous livrer directement sur vos chantiers. Gagnez du temps tout en optimisant vos approvisionnements grâce à notre application mobile complète et intuitive.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_checkout.jpg" alt="Panier de l'application mobile POINT.P" class="lpImage">
+        </section>
+    </article>
+
+    <!-- <article class="lpArticle lpArticle--desc_and_visual">
+        <section class="lpSection lpSection--desc">
+            <h2 class="lpTitle__h2">
+                Tous vos services à portée de main
+            </h2>
+            <p class="lpText">
+                Grâce à un tableau de bord intuitif, profitez d’un accès en un clic à vos factures, devis, commandes et suivis d’encours. Vous retrouvez rapidement vos listes de produits favoris ainsi que les produits que vous avez le plus commandés en agence, sur le site web ou via l’application POINT.P.
+            </p>
+        </section>
+        <section class="lpSection lpSection--visual">
+            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_home.jpg" alt="Accueil de l'application mobile POINT.P" class="lpImage">
+        </section>
+    </article> -->
+
+    <section class="lpSection lpSection--help">
+        <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
+        <p class="lpText">N'hésitez pas à nous contacter via notre <a aria-label="Contacter l'assistance client digitale de POINT.P" href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
+    </section>
+</div>

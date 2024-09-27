@@ -1,0 +1,341 @@
+<style type="text/css">
+
+    /********** Page container **********/
+    .section-simple-block-text .container {
+      max-width: 100%;
+      padding: 0;
+    }
+    .section-simple-block-text .section-title {
+      margin: 0; 
+    }
+  
+    /***** h1 title *****/
+    .section .section-title {
+      letter-spacing: -.05em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 5.625rem; 
+      color: white;
+      font-family: OpenSans-regular; 
+      font-size: 2.625rem; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      background-image: url(https://www.pointp.fr/fstrz/r/s/www.pointp.fr/sites/default/files/2023-03/1480x90-Banni%C3%A8re-sans-texte.jpg?frz-v=4402);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    @media (max-width: 760px) {
+      .section .section-title {
+        font-size: 1.625rem;
+        text-align: center;
+      }
+  
+      .section .section-title span {
+        max-width: 270px;
+      }
+    }
+  
+    
+    /********** Main container **********/
+    .appMobileArticle {
+      width: 100%;
+      max-width: 1006px;
+      margin: 5rem auto 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileArticle {
+        margin: 2.5rem auto 0;
+        display: block;
+        padding: 0 1.25rem;
+      }
+    }
+  
+    @media (min-width: 761px) and (max-width: 1024px) {
+      .appMobileArticle {
+        padding: 0 2.5rem;
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .block-wysiwyg .appMobileArticle img:not([data-not-responsive="1"]) {
+        margin: 0 auto !important;
+      }
+    }
+  
+  .appMobileArticle__iframe {
+  justify-content: center; 
+  }
+  
+    /***** Main blocks *****/
+    .appMobileArticle__why .appMobileSection,
+    .appMobileArticle__how .appMobileSection {
+      width: 49%; 
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileArticle__why .appMobileSection,
+      .appMobileArticle__how .appMobileSection {
+        width: 100%; 
+      }
+    }
+  
+    /***** General settings h2 titles *****/
+  
+    .block-wysiwyg h2.appMobileArticle__title {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      margin: 0 0 2.5rem; 
+      line-height: 1.2;
+    }
+  
+    /***** General settings text *****/
+    .font-open-sans .block-wysiwyg .landingPage__appMobile p {
+      line-height: 2; 
+    }
+  
+    .font-open-sans .block-wysiwyg .appMobileArticle p.listItem__text,
+    .font-open-sans .block-wysiwyg .appMobileArticle p.sectionTitle {
+      color: #121926; 
+    }
+  
+    .landingPage__appMobile .boldItem {
+      font-weight: 600;
+    }
+    
+    .landingPage__appMobile .coloredItem {
+      color: #E75012;
+    }
+  
+    /***** General settings lists *****/
+  
+    .block-wysiwyg .appMobileArticle ul li.listItem {
+      position: relative;
+      padding: 0 0 0 2rem;
+    }
+  
+    .block-wysiwyg .appMobileArticle ul li:before {
+      top: 0.5rem;
+      content: "";
+      width: .625rem;
+      height: .625rem;
+      background-color: #E75012;
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      left: 1.5rem;
+    }
+  
+    .block-wysiwyg .appMobileArticle ul {
+      margin: 0;
+    }
+  
+    /********** WHY container **********/
+    .appMobileArticle .dashboardVisual {
+      width: 100%;
+      max-width: 475px;
+      display: block;
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileArticle .dashboardVisual {
+        padding: 0 0 2rem;
+      }
+    }
+  
+    .font-open-sans .block-wysiwyg .appMobileSection__arguments p {
+      padding: 0 0 3rem;
+    }
+  
+    @media (max-width: 760px) {
+      .font-open-sans .block-wysiwyg .appMobileSection__arguments p {
+        padding: 0 0 1.25rem;
+      }
+    }
+  
+    /********** HOW container **********/
+    .appMobileArticle__how {
+      flex-wrap: wrap;
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileArticle__how .appMobileSection__appStore {
+        margin-bottom: 3rem;
+      }
+    }
+  
+    .appMobileArticle__how .appMobileArticle__title {
+      width: 100%;
+    }
+  
+    .appMobileArticle__how .downloadVisual {
+      display: block;
+      width: 100%;
+      max-width: 270px;
+      margin: 0 auto;
+    }
+  
+    .appMobileArticle__how .sectionText {
+      margin-top: 2.5rem;
+      background-color: #EEF2F6;
+      padding: 2.5rem;
+      border-radius: .5rem;
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileArticle__how .sectionText {
+        padding: 1.25rem;
+      }
+    }
+  
+    .appMobileArticle__how .sectionTitle {
+      min-height: 4.375rem;
+    }
+  
+    /********** Contact container **********/
+    .appMobileContact {
+      width: 100%;
+      max-width: 1006px;
+      margin: 7.5rem auto;
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileContact {
+        margin: 2.5rem auto;
+      }
+    }
+  
+    .font-open-sans .block-wysiwyg .appMobileContact h4.contact__title {
+      width: fit-content;
+      margin: 0;
+      padding: .625rem 3.75rem .625rem 1.25rem;
+      background-color: #E75012;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  
+    .appMobileContact .contact__info {
+      margin-top: 1rem;
+      text-align: left;
+      color: #121926; 
+    }
+  
+    @media (max-width: 760px) {
+      .appMobileContact .contact__info {
+        max-width: 270px;
+        margin: 1rem 1.25rem 0;
+      }
+    }
+  
+    .appMobileContact .contact__info .contact__pageLink {
+      text-decoration: underline;
+    }
+  
+  </style>
+  
+  <section class="landingPage__appMobile">
+    <article class="appMobileArticle appMobileArticle__iframe">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/96P-aaze9cU?si=h9NTAhi-_GLLDIxG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </article>
+    <article class="appMobileArticle appMobileArticle__why">
+      <div class="appMobileSection appMobileSection__dashboard">
+        <img class="dashboardVisual" src="https://i.ibb.co/s58MyQw/app-mobile-dashboard.png" alt="Application mobile POINT.P - Dashboard">
+      </div>
+  
+      <section class="appMobileSection appMobileSection__arguments">
+        <h2 class="appMobileArticle__title"><span class="boldItem coloredItem">Pourquoi</span> télécharger l'appli ?</h2>
+  
+        <ul class="appMobileSection__list">
+          <li class="listItem">
+            <p class="listItem__text"><span class="boldItem">Recherche facile : </span>Vous cherchez un produit spécifique ? Utilisez notre fonction de recherche ou scannez directement le code-barre du produit pour le trouver en un clin d'œil parmi 100 000 références.</p>
+          </li>
+          <li class="listItem">
+            <p class="listItem__text"><span class="boldItem">Disponibilités et stocks en temps réel : </span>Soyez informé instantanément des stocks disponibles dans l'agence POINT.P de votre choix et accédez à vos prix personnalisés.</p>
+          </li>
+          <li class="listItem">
+            <p class="listItem__text"><span class="boldItem">Rapidité, simplicité, praticité : </span>Passez commande en quelques clics, que ce soit pour un retrait à l'agence, en DRIVE ou en livraison, sans tracas ni perte de temps.</p>
+          </li>
+          <li class="listItem">
+            <p class="listItem__text">Et enfin accédez en un seul clic à tous vos <span class="boldItem">factures, devis et commandes</span> grâce au nouveau <span class="boldItem">dashboard</span> et retrouvez facilement vos <span class="boldItem">listes de produits favoris</span>.</p>
+          </li>
+        </ul>
+      </section>
+    </article>
+  
+    <article class="appMobileArticle appMobileArticle__how">
+      <h2 class="appMobileArticle__title"><span class="boldItem coloredItem">Comment</span> télécharger l'appli ?</h2>
+      
+      <section class="appMobileSection appMobileSection__appStore">
+        <a href="https://apps.apple.com/fr/app/point-p-mat%C3%A9riaux/id634317935" target="_blank" class="downloadLink">
+          <img class="downloadVisual" src="https://i.ibb.co/MVpnZYj/apple.png" alt="QR code et téléchargement de l'application POINT.P sur l'app store">
+        </a>
+  
+        <article class="sectionText">
+          <p class="sectionTitle">Si votre téléphone est un <span class="boldItem">iPhone</span> :</p>
+          <ul class="appMobileSection__list">
+            <li class="listItem">
+              <p class="listItem__text">Se rendre dans l'application <span class="boldItem">Appstore</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Cliquer sur <span class="boldItem">"Rechercher"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Écrire <span class="boldItem">"POINT.P"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Sélectionner l'application <span class="boldItem">"POINT.P Matériaux"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Cliquer sur <span class="boldItem">"Télécharger"</span> ou <span class="boldItem">"Mettre à jour"</span> l'application</p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">L'application est installée sur votre écran d'accueil</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+  
+      <section class="appMobileSection appMobileSection__googleStore">
+        <a href="https://play.google.com/store/apps/details?id=com.pointp.android&hl=fr&gl=US" target="_blank" class="downloadLink">
+          <img class="downloadVisual" src="https://i.ibb.co/CQQpnfk/google.png" alt="QR code et téléchargement de l'application POINT.P sur le Google store">
+        </a>
+  
+        <article class="sectionText">
+          <p class="sectionTitle">Si votre téléphone mobile est <span class="boldItem">Android</span> (par exemple de la marque Samsung, Nokia, Pixel, Xiaomi, Huawei...) :</p>
+          <ul class="appMobileSection__list">
+            <li class="listItem">
+              <p class="listItem__text">Se rendre dans l'application <span class="boldItem">Play Store</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Cliquer sur <span class="boldItem">"Rechercher"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Écrire <span class="boldItem">"POINT.P"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Sélectionner l'application <span class="boldItem">"POINT.P Matériaux"</span></p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">Cliquer sur <span class="boldItem">"Télécharger"</span> ou <span class="boldItem">"Mettre à jour"</span> l'application</p>
+            </li>
+            <li class="listItem">
+              <p class="listItem__text">L'application est installée sur votre écran d'accueil</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </article>
+  
+    <aside class="appMobileContact">
+      <h4 class="contact__title">En cas de question</h4>
+      <p class="contact__info">N'hésitez pas à nous contacter via notre <a class="contact__pageLink boldItem coloredItem" href="https://www.pointp.fr/contactez-nous" target="_blank">page de contact</a></p>
+    </aside>
+  </section>
