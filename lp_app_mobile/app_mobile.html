@@ -425,6 +425,7 @@
 
     .lpAside--promoConditions .lpText span {
         color: #e74e12;
+        text-decoration: underline;
     }
 
     .lpMain .lpAside--promoConditions ul.lpList,
@@ -433,14 +434,25 @@
         max-height: 0;
         overflow: hidden;
         transition: all .3s ease-out;
+        padding: 0 20px;
+        font-size: .75rem;
     }
 
-    .lpAside--promoConditions .lpList .open {
+    .lpMain .lpAside--promoConditions.open ul.lpList,
+    .block-wysiwyg .lpMain .lpAside--promoConditions.open ul.lpList  {
         max-height: 500px;
         overflow: visible;
     }
 
-    .lpSection--promo .lpBlockImg--mobile {
+    .lpAside--promoConditions .ctaMoreLess .verticalLine {
+        transition: all .3s ease-out;
+    }
+
+    .lpAside--promoConditions.open .ctaMoreLess .verticalLine {
+        opacity: 0;
+    }
+
+    .lpSection--promo .lpBlockImg--mobile { 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -515,14 +527,14 @@
                 </a>
             </div>
         </article>
-        <aside class="lpAside lpAside--promoConditions">
+        <aside id="promoConditions" class="lpAside lpAside--promoConditions">
             <p class="lpText lpText--small">Uniquement sur l’application mobile POINT.P, du 01 au 15 octobre 2024, <span>voir conditions</span></p>
             <svg class="ctaMoreLess" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="6.5" cy="6.71338" r="6" stroke="#E75012"/>
-                <line x1="6.61108" y1="3.21338" x2="6.61108" y2="10.2134" stroke="#E75012"/>
-                <line x1="10" y1="6.82446" x2="3" y2="6.82446" stroke="#E75012"/>
+                <line class="verticalLine" x1="6.61108" y1="3.21338" x2="6.61108" y2="10.2134" stroke="#E75012"/>
+                <line class="horizontalLine" x1="10" y1="6.82446" x2="3" y2="6.82446" stroke="#E75012"/>
             </svg>
-            <ul class="lpList close">
+            <ul class="lpList">
                 <li class="lpList__item">Uniquement valable sur l’application mobile POINT.P.</li>
                 <li class="lpList__item">Valable une seule fois par client.</li>
                 <li class="lpList__item">Offre valable uniquement pendant la période de l'opération commerciale.</li>
@@ -644,3 +656,17 @@
         <p class="lpText">N'hésitez pas à nous contacter via notre <a aria-label="Contacter l'assistance client digitale de POINT.P" href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
     </section>
 </div>
+
+<script defer>
+document.addEventListener("DOMContentLoaded", function () {
+    console.log('ouesh sarah'); 
+
+    var promoConditions = document.querySelector('#promoConditions'); 
+
+    promoConditions.addEventListener("click", function(){
+        console.log('ouesh click ok'); 
+
+        promoConditions.classList.toggle('open'); 
+    })
+});
+</script>
