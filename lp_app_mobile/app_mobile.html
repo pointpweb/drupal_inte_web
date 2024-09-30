@@ -458,6 +458,30 @@
     .lpSection--visual .lpImage {
         max-width: 200px;
     }
+
+    .lpSection--card {
+        align-items: center;
+        border: 5px solid #F6F6F6;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .lpSection--card .lpTitle__h3 {
+        width: 100%;
+    }
+
+    .lpSection--card .lpTitle__h3 span {
+        color: #E75012;
+    }
+
+    .lpSection--card .lpList__item span {
+        font-weight: 600;
+    }
+
+    .lpSection--card .lpImage {
+        max-width: 200px;
+    }
+
 </style>
 
 <div class="lpMain lpMain--app_mobile">
@@ -475,12 +499,20 @@
                 Profitez de <span>-20€</span> (TTC)<br>tous les 200€ d’achat<br>avec le code <span>APP20</span>
             </p>
             <div class="lpBlockImg lpBlockImg--mobile">
-                <img src="/s/imgs/pages/landing_app_mobile/download_app_store_mobile.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
-                <img src="/s/imgs/pages/landing_app_mobile/download_google_play_mobile.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+                <a href="https://apps.apple.com/fr/app/point-p-mat%C3%A9riaux/id634317935" class="lpLink">
+                    <img src="/s/imgs/pages/landing_app_mobile/download_app_store_mobile.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.pointp.android&hl=fr&gl=US" class="lpLink">
+                    <img src="/s/imgs/pages/landing_app_mobile/download_google_play_mobile.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+                </a>
             </div>
             <div class="lpBlockImg lpBlockImg--desktop">
-                <img src="/s/imgs/pages/landing_app_mobile/download_app_store_desktop.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
-                <img src="/s/imgs/pages/landing_app_mobile/download_google_play_desktop.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+                <a href="https://apps.apple.com/fr/app/point-p-mat%C3%A9riaux/id634317935" class="lpLink">
+                    <img src="/s/imgs/pages/landing_app_mobile/download_app_store_desktop.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.pointp.android&hl=fr&gl=US" class="lpLink">
+                    <img src="/s/imgs/pages/landing_app_mobile/download_google_play_desktop.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+                </a>
             </div>
         </article>
         <aside class="lpAside lpAside--promoConditions">
@@ -569,19 +601,43 @@
         </section>
     </article>
 
-    <!-- <article class="lpArticle lpArticle--desc_and_visual">
-        <section class="lpSection lpSection--desc">
-            <h2 class="lpTitle__h2">
-                Tous vos services à portée de main
-            </h2>
-            <p class="lpText">
-                Grâce à un tableau de bord intuitif, profitez d’un accès en un clic à vos factures, devis, commandes et suivis d’encours. Vous retrouvez rapidement vos listes de produits favoris ainsi que les produits que vous avez le plus commandés en agence, sur le site web ou via l’application POINT.P.
-            </p>
+    <article class="lpArticle lpArticle--cards">
+        <h2 class="lpTitle__h2">
+            Comment télécharger l’appli ?
+        </h2>
+        <section class="lpSection lpSection--card">
+            <h3 class="lpTitle__h3">
+                Sur un téléphone mobile <span>Iphone</span>
+            </h3>
+            <ul class="lpList">
+                <li class="lpList__item">Se rendre dans l'application <span>Appstore</span></li>
+                <li class="lpList__item">Cliquer sur "Rechercher"</li>
+                <li class="lpList__item">Écrire "POINT.P"</li>
+                <li class="lpList__item">Sélectionner l'application "POINT.P Matériaux"</li>
+                <li class="lpList__item">Cliquer sur "Télécharger" ou "Mettre à jour" l'application</li>
+                <li class="lpList__item">L'application est installée sur votre écran d'accueil</li>
+            </ul>
+            <a href="https://apps.apple.com/fr/app/point-p-mat%C3%A9riaux/id634317935" class="lpLink">
+                <img src="/s/imgs/pages/landing_app_mobile/download_app_store_desktop.png" alt="Télécharger l'application mobile POINT.P sur l'Apple Store" class="lpImage">
+            </a>
         </section>
-        <section class="lpSection lpSection--visual">
-            <img src="/s/imgs/pages/landing_app_mobile/screen_app_mobile_home.jpg" alt="Accueil de l'application mobile POINT.P" class="lpImage">
+        <section class="lpSection lpSection--card">
+            <h3 class="lpTitle__h3">
+                Sur un téléphone mobile <span>Android</span>
+            </h3>
+            <ul class="lpList">
+                <li class="lpList__item">Se rendre dans l'application <span>Google Play</span></li>
+                <li class="lpList__item">Cliquer sur "Rechercher"</li>
+                <li class="lpList__item">Écrire "POINT.P"</li>
+                <li class="lpList__item">Sélectionner l'application "POINT.P Matériaux"</li>
+                <li class="lpList__item">Cliquer sur "Télécharger" ou "Mettre à jour" l'application</li>
+                <li class="lpList__item">L'application est installée sur votre écran d'accueil</li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.pointp.android&hl=fr&gl=US" class="lpLink">
+                <img src="/s/imgs/pages/landing_app_mobile/download_google_play_desktop.png" alt="Télécharger l'application mobile POINT.P sur Google Play" class="lpImage">
+            </a>
         </section>
-    </article> -->
+    </article>
 
     <section class="lpSection lpSection--help">
         <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
