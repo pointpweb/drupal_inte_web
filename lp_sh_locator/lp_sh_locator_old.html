@@ -1,0 +1,617 @@
+<style type="text/css">
+
+    /***** General settings imgs *****/
+    
+    .block-wysiwyg .landingPage__mesrdvsh img {
+        margin-bottom: 0;
+    }
+    
+    .landingPage__mesrdvsh .buttons .btn a {
+        padding: 1.5rem;
+    }
+    
+    .block-wysiwyg .landingPage__mesrdvsh p {
+        padding: 0;
+    }
+    
+    .block-wysiwyg .landingPage__mesrdvsh .buttons .btn {
+        margin: 0;
+    }
+    
+    /***** General settings h2 titles *****/
+    
+    .block-wysiwyg h2.mesrdvsh__title {
+        font-size: 1.55rem;
+        text-transform: uppercase;
+        margin: 0 0 1rem; 
+        line-height: 1.2;
+    }
+    
+    @media (max-width: 760px) {
+        .block-wysiwyg h2.mesrdvsh__title {
+            font-size: 1.25rem;
+        }
+    }
+    
+    /***** General settings text *****/
+    
+    .block-wysiwyg .landingPage__mesrdvsh h3 {
+        margin: 0;
+    }
+    
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p {
+        line-height: 2; 
+    }
+    
+    .mesrdvsh__content--final {
+        margin-top: 1rem;
+    }
+    
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p.mesrdvsh__content,
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p.listItem__text,
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh h2.mesrdvsh__title,
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p,
+    .block-wysiwyg .landingPage__mesrdvsh h3 {
+        color: #121926; 
+    }
+    
+    .landingPage__mesrdvsh .boldItem {
+        font-weight: 600;
+    }
+    
+    .landingPage__mesrdvsh .coloredItem {
+        color: #E75012;
+    }
+    
+    /***** General settings lists *****/
+    
+    .block-wysiwyg .landingPage__mesrdvsh ul li.listItem {
+        position: relative;
+        padding: 0 0 0 2rem;
+    }
+    
+    .block-wysiwyg .landingPage__mesrdvsh ul li:before {
+        top: 0.85rem;
+        content: "";
+        width: .625rem;
+        height: .625rem;
+        background-color: #E75012;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: 1.5rem;
+    }
+    
+    .block-wysiwyg .landingPage__mesrdvsh ul {
+        margin: 1rem 0 0;
+    }
+    
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p.listItem__text {
+        line-height: 2.5;
+    }
+    
+    /********** Page container **********/
+    .section-simple-block-text .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .section-simple-block-text .section-title {
+        margin: 0; 
+    }
+    
+      /********** Main container **********/
+      .mesrdvshSection {
+        width: 100%;
+        max-width: 1006px;
+        margin: 2rem auto 0;
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      @media (max-width: 760px) {
+        .mesrdvshSection {
+          margin: 3.5rem auto 0;
+          display: block;
+          padding: 0 1.25rem;
+        }
+      }
+    
+      @media (min-width: 761px) and (max-width: 1024px) {
+        .mesrdvshSection {
+          padding: 0 2.5rem;
+        }
+      }
+    
+      @media (max-width: 1023px) {
+        .block-wysiwyg img:not([data-not-responsive="1"]).custrev-avatar {
+            width: 40px!important;
+            height: 40px !important;
+        }
+      }
+    /***** h1 title *****/
+    .section .section-title {
+        letter-spacing: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.625rem; 
+        color: white;
+        font-family: OpenSans-regular; 
+        font-size: 2.625rem; 
+        font-weight: 600; 
+        text-transform: uppercase; 
+        background-image: url(https://www.pointp.fr/fstrz/r/s/www.pointp.fr/sites/default/files/2023-03/1480x90-Banni%C3%A8re-sans-texte.jpg?frz-v=4402);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: none;
+    }
+    
+    @media (max-width: 760px) {
+        .section .section-title {
+            font-size: 1.625rem;
+            text-align: center;
+        }
+    
+        .section .section-title span {
+            max-width: 270px;
+        }
+    }
+    
+    /***** First block *****/
+    
+    .mesrdvshSection__first {
+        flex-direction: column;
+    }
+    
+    /***** Second block *****/
+    
+    .mesrdvshSection__second {
+        position: relative;
+        height: 400px;
+    }
+    
+    .mesrdvshSection__second .mesrdvshVisual {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100% !important;
+    }
+    
+    .mesrdvshSection__second .mesrdvshArticle {
+        z-index: 2;
+        background-color: #ffffffe3;
+        margin: auto;
+        padding: 2rem;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .mesrdvshSection__second .buttons {
+        margin-top: 2rem;
+    }
+    
+    @media (max-width: 760px) {
+    
+        .landingPage__mesrdvsh .buttons .btn a {
+            padding: .8rem;
+        }
+    
+        .mesrdvshSection__second .mesrdvshVisual {
+            position: relative;
+        }
+    
+        .mesrdvshSection__second .mesrdvshArticle {
+            width: 100%;
+            padding: 2rem 0; 
+        }
+    
+        .mesrdvshSection__second .buttons .btn {
+            width: 100%;
+        }
+    }
+    
+    /***** Sixth block *****/
+    
+    .block-wysiwyg .landingPage__mesrdvsh .mesrdvshSection.mesrdvshSection__sixth h3 {
+        margin-top: 1.5rem;
+        font-size: 14px;
+    }
+    
+    /***** REVIEW CLIENT *****/
+    
+    .landingPage__mesrdvsh .ps-customer-feedback{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .landingPage__mesrdvsh .ps-customer-review{
+        display: flex;
+        flex-direction: row;
+        max-width: 30%;
+        background-color: #EEF2F6;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .landingPage__mesrdvsh .custrev-avatar {
+        height: 40px !important;
+        width: 40px !important;
+        margin-right: 10px !important;
+    }
+    
+    .landingPage__mesrdvsh .nomnoteetcommentaire{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .landingPage__mesrdvsh .nometnote{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh .nometnote p {
+        line-height: unset;
+    }
+    
+    .font-open-sans .block-wysiwyg .landingPage__mesrdvsh p.ps-review-showroom {
+        font-style: italic;
+        margin-top: .5rem;
+    }
+    
+    .font-open-sans .block-wysiwyg p.ps-rating-prenom {
+        font-weight: 700;
+    }
+    
+    .landingPage__mesrdvsh .ps-star-rating {
+        padding: 0 10px !important;
+        font-size: 1.5em !important;
+    }
+    
+    .landingPage__mesrdvsh .ps-etoile-oui {
+        color: #E75012;
+    }
+    
+    .landingPage__mesrdvsh .ps-etoile-non {
+        color: #777777;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__third {
+        flex-direction: column;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__third .mesrdvsh__title {
+        text-align: center;
+    }
+    
+    /***** MOBILE RESPONSIVE *****/
+    
+    @media (max-width: 760px) {
+    
+        .landingPage__mesrdvsh .ps-customer-feedback {
+            flex-direction: column;
+        }
+    
+        .landingPage__mesrdvsh .ps-customer-review {
+            max-width: 100%;
+            margin: .5rem 0;
+            padding: 1rem 1.5rem;
+        }
+    
+    }
+    
+    /********** Contact container **********/
+    .mesrdvshContact {
+        width: 100%;
+        max-width: 1006px;
+        margin: 7.5rem auto;
+    }
+    
+    @media (max-width: 760px) {
+        .mesrdvshContact {
+            margin: 2.5rem auto;
+        }
+    }
+    
+    .font-open-sans .block-wysiwyg .mesrdvshContact h4.contact__title {
+        width: fit-content;
+        margin: 0;
+        padding: .625rem 1.25rem;
+        background-color: #E75012;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    
+    .mesrdvshContact .contact__info {
+        margin-top: 1rem;
+        text-align: left;
+        color: #121926; 
+    }
+    
+    @media (max-width: 760px) {
+        .mesrdvshContact .contact__info {
+            margin: 1rem 1.25rem 0;
+        }
+    }
+    
+    .mesrdvshContact .contact__info .contact__pageLink {
+        text-decoration: underline;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .mesrdvshContact .contact__info .contact__pageLink:hover {
+        opacity: .7;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fourth,
+    .mesrdvshSection.mesrdvshSection__fifth {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fourth {
+        flex-direction: row-reverse;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fourth .mesrdvshVisual,
+    .mesrdvshSection.mesrdvshSection__fifth .mesrdvshVisual,
+    .mesrdvshSection.mesrdvshSection__fourth .mesrdvshArticle,
+    .mesrdvshSection.mesrdvshSection__fifth .mesrdvshArticle {
+        width: 50%;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fourth .mesrdvshArticle {
+        padding-right: 2rem;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fifth .mesrdvshArticle {
+        padding-left: 2rem;
+    }
+    
+    .mesrdvshSection.mesrdvshSection__fourth .buttons,
+    .mesrdvshSection.mesrdvshSection__fifth .buttons {
+        margin: 4rem auto 0;
+    }
+    
+    @media (max-width: 760px) {
+        .mesrdvshSection.mesrdvshSection__fourth .mesrdvshVisual, 
+        .mesrdvshSection.mesrdvshSection__fifth .mesrdvshVisual, 
+        .mesrdvshSection.mesrdvshSection__fourth .mesrdvshArticle, 
+        .mesrdvshSection.mesrdvshSection__fifth .mesrdvshArticle {
+            width: 100%;
+        }
+    
+        .mesrdvshSection.mesrdvshSection__fourth .mesrdvshArticle {
+            padding-right: 0;
+        }
+    
+        .mesrdvshSection.mesrdvshSection__fifth .mesrdvshArticle {
+            padding-left: 0;
+        }
+    
+        .mesrdvshSection.mesrdvshSection__fourth .mesrdvshArticle,
+        .mesrdvshSection.mesrdvshSection__fifth .mesrdvshArticle {
+            margin-top: 2rem;
+        }
+    }
+    
+    </style>
+    
+    <div class="landingPage__mesrdvsh">
+        <section class="mesrdvshSection mesrdvshSection__first">
+            <h2 class="mesrdvsh__title">
+                <span class="boldItem coloredItem">Concrétisez</span> votre projet en toute sérénité
+            </h2>
+            <p class="mesrdvsh__content">
+                Vous avez un projet d'agrandissement, de rénovation ou de travaux ? Prenez RDV en <span class="boldItem coloredItem">visio*</span> ou dans l’un de nos 235 showrooms partout en France. 
+            </p>
+        </section>
+    
+        <section class="mesrdvshSection mesrdvshSection__second">
+            <img class="mesrdvshVisual" src="https://www.pointp.fr/sites/default/files/2018-09/visuel-rdv.jpg" alt="Showroom POINT.P">
+            <article class="mesrdvshArticle">
+                <h2 class="mesrdvsh__title">
+                    Prenez <span class="boldItem coloredItem">rendez-vous</span>
+                </h2>
+                <p class="mesrdvsh__content">
+                    Nos conseillers POINT.P vous accueillent pour comprendre vos besoins <br>et vous apporter un conseil personnalisé.
+                </p>
+                <div class="buttons sg-cke-buttons text-center">
+                    <div class="btn">
+                        <a href="https://rdv.pointp.fr/" target="_blank">Prendre RDV en visio ou en showroom</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    
+        <section class="mesrdvshSection mesrdvshSection__third">
+            <h2 class="mesrdvsh__title">
+                Ce qu’en pensent <span class="boldItem coloredItem">nos clients</span>
+            </h2>
+            <div class="ps-customer-feedback">
+                <div class="ps-customer-review">
+                    <img class="custrev-avatar" src="/s/imgs/pages/landing-sea-showroom/avat-red.png">
+                    <div class="nomnoteetcommentaire">
+                        <div class="nometnote">
+                            <p class="ps-rating-prenom">Anthony</p>
+                            <p class="ps-star-rating"><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span></p>
+                        </div>
+                        <p class="ps-nom-showroom">Showroom de Champagne</p>
+                        <p class="ps-review-showroom">«&nbsp;Showroom avec un large choix de produits. Je recommande.&nbsp;»</p>
+                    </div>
+                </div>
+                <div class="ps-customer-review">
+                    <img class="custrev-avatar" src="/s/imgs/pages/landing-sea-showroom/avat-vert.png">
+                    <div class="nomnoteetcommentaire">
+                        <div class="nometnote">
+                            <p class="ps-rating-prenom">Dominique</p>
+                            <p class="ps-star-rating"><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span></p>
+                        </div>
+                        <p class="ps-nom-showroom">Showroom de Herblay</p>
+                        <p class="ps-review-showroom">«&nbsp;Showroom POINT.P Herblay super pro et arrangeant.&nbsp;»</p>
+                    </div>
+                </div>
+                <div class="ps-customer-review">
+                    <img class="custrev-avatar" src="/s/imgs/pages/landing-sea-showroom/avat-bleu.png">
+                    <div class="nomnoteetcommentaire">
+                        <div class="nometnote">
+                            <p class="ps-rating-prenom">Souad</p>
+                            <p class="ps-star-rating"><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-oui">★</span><span class="ps-etoile-non">★</span></p>
+                        </div>
+                        <p class="ps-nom-showroom">Showroom de Villeurbanne</p>
+                        <p class="ps-review-showroom">«&nbsp;Très bon accueil. Magasin avec beaucoup de choix de carrelage. Je conseille vivement.&nbsp;»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="mesrdvshSection mesrdvshSection__fourth">
+            <img class="mesrdvshVisual" src="https://i.goopics.net/p01tgt.jpg" alt="Showroom POINT.P">
+    
+            <article class="mesrdvshArticle">
+                <h2 class="mesrdvsh__title">
+                    Rencontrez des <span class="boldItem coloredItem">conseillers experts</span>
+                </h2>
+        
+                <p class="mesrdvsh__content">
+                    Nos conseillers vous apportent des conseils personnalisés quels que soient vos besoins et la thématique de votre projet : 
+                </p>
+        
+                <ul class="mesrdvsh__list">
+                    <li class="listItem">
+                      <p class="listItem__text">Carrelage, parquet ou autre revêtement sol et mur intérieur</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Aménagement extérieur</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Menuiserie, placard, dressing</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Projet d'agrandissement</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Sanitaire ou mobilier de salle de bains</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Ou pour un projet un peu plus spécifique</p>
+                    </li>
+                </ul>
+        
+                <p class="mesrdvsh__content mesrdvsh__content--final">
+                    Que votre projet concerne la rénovation de votre pièce de vie, un relooking de votre chambre ou de votre cuisine, nos conseillers experts sauront répondre à toutes vos demandes.
+                </p>
+            </article>
+    
+            <div class="buttons sg-cke-buttons text-center">
+                <div class="btn">
+                    <a href="https://rdv.pointp.fr/" target="_blank">Rencontrer nos experts en visio ou en showroom</a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="mesrdvshSection mesrdvshSection__fifth">
+            <img class="mesrdvshVisual" src="https://i.goopics.net/82azvj.jpg" alt="Showroom POINT.P">
+    
+            <article class="mesrdvshArticle">
+                <h2 class="mesrdvsh__title">
+                    Concrétisez <span class="boldItem coloredItem">votre projet</span>
+                </h2>
+        
+                <p class="mesrdvsh__content">
+                    Les showrooms POINT.P vous aident à trouver l'inspiration et à vous projeter chez vous.
+                </p>
+        
+                <ul class="mesrdvsh__list">
+                    <li class="listItem">
+                      <p class="listItem__text">Découvrez une large offre produit de plus de 1500 références</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Inspirez-vous des styles POINT.P pour une décoration à votre image</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Venez muni d'une photo de la pièce que vous souhaitez rénover et repartez avec une projection appliquée chez vous</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Repartez avec la liste de votre sélection de produits</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Obtenez un devis gratuit</p>
+                    </li>
+                </ul>
+        
+                <p class="mesrdvsh__content mesrdvsh__content--final">
+                    Aménagement extérieur, salle de bain, salon ou cuisine venez découvrir toute notre gamme de produits afin de vous projeter dans votre projet.
+                </p>
+            </article>
+    
+            <div class="buttons sg-cke-buttons text-center">
+                <div class="btn">
+                    <a href="https://rdv.pointp.fr/" target="_blank">Concrétiser mon projet en prenant RDV</a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="mesrdvshSection mesrdvshSection__sixth">
+            <article class="mesrdvshArticle">
+                <h2 class="mesrdvsh__title">
+                    <span class="boldItem coloredItem">*</span>Le RDV en <span class="boldItem coloredItem">visio</span> :
+                </h2>
+        
+                <p class="mesrdvsh__content">
+                    C’est un service gratuit proposé par POINT.P afin de vous aider dans vos choix sans avoir à vous déplacer. La durée du RDV en visio est d’1h.
+                </p>
+        
+                <h3 class="mesrdvsh__title">
+                    Les avantages sont nombreux : 
+                </h3>
+    
+                <ul class="mesrdvsh__list">
+                    <li class="listItem">
+                      <p class="listItem__text">Echanger avec un ou une conseillère dédiée pour vous pendant 1h</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Gagner du temps en évitant de vous déplacer</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Découvrir nos revêtements sols et murs à distance </p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Affiner vos choix et obtenir des réponses à vos questions</p>
+                    </li>
+                </ul>
+    
+                <h3 class="mesrdvsh__title">
+                    Pour vous connecter à votre RDV en visio le jour J, vous recevez par mail le matin même toutes les informations nécessaires à la connexion sur le logiciel TEAMS. 
+                </h3>
+    
+                <ul class="mesrdvsh__list">
+                    <li class="listItem">
+                      <p class="listItem__text">Depuis un téléphone, il est nécessaire d’installer l’application TEAMS au préalable pour que le RDV en visio puisse être réalisé.</p>
+                    </li>
+                    <li class="listItem">
+                      <p class="listItem__text">Depuis un ordinateur, il n’est pas nécassaire d’installer le logiciel ; le RDV en visio TEAMS se lance sur le navigateur directement.</p>
+                    </li>
+                </ul>
+    
+                <p class="mesrdvsh__content mesrdvsh__content--final">
+                    Le jour de votre RDV en visio, assurez-vous d’être installé dans un endroit calme où vous pouvez échanger librement avec votre conseiller et munissez-vous idéalement d’un casque ou oreillettes branchés à votre téléphone/ordinateur.  
+                </p>
+            </article>
+        </section>
+    
+        <aside class="mesrdvshContact">
+            <h4 class="contact__title">
+                En cas de question
+            </h4>
+            <p class="contact__info">
+                N'hésitez pas à nous contacter via notre <a class="contact__pageLink boldItem coloredItem" href="https://www.pointp.fr/contactez-nous" target="_blank">page de contact</a>.
+            </p>
+        </aside>
+    </div>
