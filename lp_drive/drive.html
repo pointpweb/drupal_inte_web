@@ -1,0 +1,729 @@
+<!-- RESET CSS -->
+<style>
+    /***** Back to top button *****/
+
+    /* To keep everywhere ? */
+    /* .block--backtotop {
+        display: none;
+    } */
+
+    /***** Breadcrumb *****/
+
+    /* Only for Page édito ? */
+    /* .block-breadcrumb {
+        width: 100%;
+        background-color: #fafafa;
+    } */
+
+    .block-breadcrumb ul {
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .block-breadcrumb .breadcrumb li {
+        display: block;
+    }
+
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+
+    /***** Page container *****/
+
+    .section-simple-block-text .container { 
+        max-width: 1480px;
+        padding: 0;
+    }
+
+    /***** <h1></h1> *****/
+
+    /* Le <h1> de la page est en dehors du container de la landing (.lpMain), son balisage n'est pas personnalisable, si il est décoré d'une image il faut intégrer celle-ci en background-image */
+
+    .page-template-builder .builder-header {
+        margin-top: 24px;
+    }
+
+    .page-template-builder .section-template-header,
+    .section-simple-block-text .section-title {
+        margin: 0;
+    }
+
+    .page-template-builder .section-template-header .section-title {
+        position: unset;
+        left: unset;
+    }
+
+    .page-template-builder .section-template-header .container picture {
+        display: none;
+    }
+
+    .font-open-sans .section h1.section-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+
+        /* Background style */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media (min-width: 768px) {
+        .font-open-sans .section h1.section-title {
+            /* Little (ex: LP Infos) */
+            font-size: 1.625rem; 
+            /* Big (ex: Pages Réno) */
+            height: 100px;
+            /* font-size: 2.25rem;  */
+        }
+    }
+
+    /***** Landing page main container *****/
+
+    /* Utiliser la classe "lpMain" pour le container principal */
+
+    .lpMain { 
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain {
+            font-size: 1rem;
+            padding: 40px;
+        }
+    }
+
+    /***** Titles *****/
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+
+    .lpTitle__h2,
+    .block-wysiwyg h2.lpTitle__h2 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg h2.lpTitle__h2 {
+            font-size: 1.375rem;
+            line-height: 1.875rem;
+        }
+    }
+
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+
+    .lpTitle__h2span {
+        display: block;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+
+    .lpTitle__h3,
+    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .lpTitle__h3,
+        .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
+            font-size: 1.25rem;
+        }
+    }
+
+    /***** Content *****/
+
+    /*** <p></p> ***/
+    /* Utiliser la classe "lpText" sur les balises <p> */
+
+    .lpMain p,
+    .block-wysiwyg .lpMain p {
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        padding: 0;
+    }
+
+    .lpMain p.lpText--small,
+    .block-wysiwyg .lpMain p.lpText--small {
+        font-size: .75rem;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain p {
+            font-size: 1rem;
+        }
+    }
+
+    /***** Lists *****/
+
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+
+    .lpMain ol,
+    .lpMain ul,
+    .block-wysiwyg .lpMain ol, 
+    .block-wysiwyg .lpMain ul {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @media (min-width: 768px) {
+        .block-wysiwyg .lpMain ol, 
+        .block-wysiwyg .lpMain ul {
+            font-size: 1rem;
+        }
+    }
+
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+
+    .lpMain ol li,
+    .lpMain ul li,
+    .block-wysiwyg .lpMain ol li, 
+    .block-wysiwyg .lpMain ul li {
+        padding: 0;
+    }
+
+    .lpMain ul li:before,
+    .lpMain ol li:before,
+    .block-wysiwyg .lpMain ul li:before,
+    .block-wysiwyg .lpMain ol li:before {
+        display: none;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item {
+        position: relative;
+        padding-left: 16px;
+    }
+
+    .block-wysiwyg .lpMain ul li.lpList__item::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute;
+        left: 20px;
+        top: 8px;
+    }
+
+    /***** Links *****/
+
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+
+    a.lpLink {
+        color: #E75012;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: underline;
+        transition: all .3s ease-out;
+    }
+
+    a.lpLink--uppercase {
+        text-transform: uppercase;
+    }
+
+    a.lpLink:hover {
+        opacity: .7;
+        text-decoration: underline;
+    }
+
+    /***** Images *****/
+
+    .lpMain img,
+    .lpMain figure,
+    .block-wysiwyg .lpMain img, 
+    .block-wysiwyg .lpMain figure {
+        margin: 0;
+    }
+
+    /***** Videos/iframes *****/
+    .block-wysiwyg iframe {
+        margin: 0;
+    }
+
+    /***** CTAS *****/
+
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+
+    .lpCTA,
+    .block-wysiwyg a.lpCTA {
+        display: block;
+        width: fit-content;
+        padding: 16px 26px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: .875rem;
+        border-radius: 26px;
+        transition: all .3s ease-out;
+    }
+
+    .lpCTA--primary,
+    .block-wysiwyg a.lpCTA--primary {
+        color: #FFFFFF;
+        background-color: #e74e12;
+    }
+
+    .lpCTA--primary:hover,
+    .block-wysiwyg a.lpCTA--primary:hover {
+        background-color: #EF855A;
+    }
+
+    .lpCTA--secondary,
+    .block-wysiwyg a.lpCTA--secondary {
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    .lpCTA--secondary:hover,
+    .block-wysiwyg a.lpCTA--secondary:hover {
+        color: #FFFFFF;
+        background-color: #000000;
+        border-color: #000000;
+    }
+
+    /***** Section HELP *****/
+
+    .lpSection.lpSection--help {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        background-color: #F6F6F6;
+        border-radius: 0 20px 20px 20px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .lpSection.lpSection--help {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    /***** Splide JS *****/
+
+    .lpMain .splide__arrows.splide__arrows--ltr .splide__arrow {
+        border-radius: 50%;
+    }
+
+    .lpMain .splide__slide img {
+        height: unset;
+    }
+
+    @media (min-width: 768px) {
+
+        .lpMain .splide__arrows {
+            display: flex;
+        }
+
+        .splide.is-initialized:not(.is-active) .splide__list {
+            display: flex !important;
+            justify-content: center;
+        }
+    }
+
+        /***** Encart CATEGORIES *****/    
+        .lpBlockCatCol {
+        background-color: #F6F6F6;
+        border-radius: 0 10px 10px 10px;
+        margin: 10px auto;
+    }
+    
+    .lpBlockCatCol .lpBlockCatCol--catImg {
+        border-radius: 0 10px 0 0;
+    }
+    
+    .lpBlockCatCol--catDesc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        padding: 10px;
+    }
+    /***** FIN Encart CATEGORIES *****/
+
+    @media (min-width: 768px) {
+        /***** Encart CATEGORIES *****/
+        .lpSection--promoCat .lpAside--promoCat {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .lpBlockCatCol {
+            /* 3 vignettes par ligne : width 25% */
+            /* 4 vignettes par ligne : width 24% */
+            /* 5 vignettes par ligne : width 19% */
+            width: 25%;
+        }
+    }
+</style>
+
+<!-- CSS -->
+<style>
+    .lpSection--intro {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .lpList--stepsWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block-wysiwyg .lpMain ul.lpList--stepsWrapper li {
+        position: relative;
+        width: 30%;
+        padding: 25px 10px 10px 10px;
+        border: 1px solid #E75012;
+        border-radius: 0 10px 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block-wysiwyg .lpList--stepsWrapper h2.lpTitle__h2 {
+        color: #E75012;
+        font-size: .75rem;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    @media (min-width: 768px) {
+
+        .lpList--stepsWrapper {
+            justify-content: center;
+            column-gap: 40px;
+        }
+
+        .block-wysiwyg .lpMain ul.lpList--stepsWrapper li  {
+            width: 20%;
+            padding: 25px 10px;
+        }
+
+        .block-wysiwyg .lpList--stepsWrapper h2.lpTitle__h2 {
+            font-size: 1rem;
+        }
+    }
+
+    .block-wysiwyg .lpList--stepsWrapper li img:not([data-not-responsive="1"]) {
+        position: absolute;
+        width: 50px !important;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .lpList--steps {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 10px;
+        justify-content: space-between;
+    }
+
+    .block-wysiwyg .lpMain ul.lpList--steps li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 10%;
+        padding: 20px;
+        border: 1px solid #E75012;
+        border-radius: 0 10px 10px 10px;
+        text-align: center;
+        row-gap: 10px;
+        width: calc(50% - 5px);
+    }
+
+    .block-wysiwyg .lpMain ul.lpList--steps li:last-child {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #E75012;
+        row-gap: 10px;
+    }
+
+    .block-wysiwyg .lpList--steps li:last-child .lpText {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .block-wysiwyg .lpList--steps li img:not([data-not-responsive="1"]) {
+        width: 100% !important;
+    }
+
+    .lpList--steps .stepDesc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    @media (min-width: 768px) {
+
+        .lpList--steps {
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .block-wysiwyg .lpMain ul.lpList--steps li  {
+            width: 15%;
+            min-height: 292px;
+        }
+
+        .block-wysiwyg .lpList--steps h2.lpTitle__h2 {
+            font-size: 1rem;
+        }
+    }
+
+    .lpAside--appMobile {
+        margin: 40px 0 80px;
+    }
+
+    @media (max-width: 640px) {
+        .lpAside--appMobile {
+            margin: 20px 0 40px;
+        }
+    }
+
+    .lpSection--steps {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+</style>
+
+<div class="lpMain lpMain--drive">
+
+    <section class="lpSection lpSection--intro">
+        <h2 class="lpTitle__h2">Tout juste garé, vite chargé</h2>
+        <p class="lpText">Un service d’enlèvement de la marchandise qui réduit le temps d’attente pour tous nos clients POINT.P, dans les 120 agences disposant du service DRIVE, exclusivement sur des produits en stocké en agence. </p>
+    </section>
+
+    <ul class="lpList lpList--stepsWrapper">
+        <li>
+            <img src="/s/imgs/pages/landing-drive/calender.svg" alt="">
+            <h2 class="lpTitle__h2">Retrait en 2h</h2>
+        </li>
+        <li>
+            <img src="/s/imgs/pages/landing-drive/timer.svg" alt="">
+            <h2 class="lpTitle__h2">Chargement en moins de 5 MIN</h2>
+        </li>
+        <li>
+            <img src="/s/imgs/pages/landing-drive/delivery.svg" alt="">
+            <h2 class="lpTitle__h2">Sans passer par le comptoir</h2>
+        </li>
+    </ul>
+
+    <section class="lpSection lpSection--steps">
+        <h2 class="lpTitle__h2">Comment ça fonctionne ?</h2>
+        <ul class="lpList lpList--steps">
+            <li>
+                <img src="/s/imgs/pages/landing-drive/step_1.png" alt="" class="lpImage descVisual">
+                <div class="stepDesc">
+                    <h3 class="lpTitle__h3">
+                        Je passe commande
+                    </h3>
+                    <p class="lpText">
+                        En ligne sur le site pointp.fr ou l’application mobile POINT.P, par téléphone ou par mail.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="/s/imgs/pages/landing-drive/step_2.png" alt="" class="lpImage descVisual">
+                <div class="stepDesc">
+                    <h3 class="lpTitle__h3">
+                        Je reçois un sms
+                    </h3>
+                    <p class="lpText">
+                        Quand ma commande est prête.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="/s/imgs/pages/landing-drive/step_3.png" alt="" class="lpImage descVisual">
+                <div class="stepDesc">
+                    <h3 class="lpTitle__h3">
+                        Je me rends à l’agence
+                    </h3>
+                    <p class="lpText">
+                        Et vais me garer dans la zone de retrait Drive.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="/s/imgs/pages/landing-drive/step_4.png" alt="" class="lpImage descVisual">
+                <div class="stepDesc">
+                    <h3 class="lpTitle__h3">
+                        Je clique sur le lien
+                    </h3>
+                    <p class="lpText">
+                        Dans le SMS pour signaler ma présence.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="/s/imgs/pages/landing-drive/step_5.png" alt="" class="lpImage descVisual">
+                <div class="stepDesc">
+                    <h3 class="lpTitle__h3">
+                        Un magasinier apporte
+                    </h3>
+                    <p class="lpText">
+                        Aussitôt ma commande.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <p class="lpText">
+                    Grâce au drive,
+                </p>
+                <p class="lpText">
+                    Je gagne du temps
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="lpSection lpSection--promoCat">
+        <h3 class="lpTitle__h3">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Découvrir
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                nos catégories de produit
+            </span>
+        </h3>
+        
+        <aside class="lpAside lpAside--promoCat">
+            
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/materiaux-gros-oeuvre">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-materiaux-gros-oeuvre.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Matériaux, gros œuvre</span>
+                    <a href="https://www.pointp.fr/materiaux-gros-oeuvre" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+            
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/materiel-de-chantier">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-materiel-chantier.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Matériel de chantier</span>
+                    <a href="https://www.pointp.fr/materiel-de-chantier" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/outillage">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-outillage.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Outillage</span>
+                    <a href="https://www.pointp.fr/outillage" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+            
+        </aside>
+        <aside class="lpAside lpAside--promoCat">
+            
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/platre-isolation">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-platre-isolation-plafond.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Plâtre, isolation, plafonds</span>
+                    <a href="https://www.pointp.fr/platre-isolation" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+            
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/fixation-quincaillerie">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-quincaillerie.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Quincaillerie</span>
+                    <a href="https://www.pointp.fr/fixation-quincaillerie" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+
+            <div class="lpBlockCatCol">
+                <a href="https://www.pointp.fr/toiture">
+                    <img alt="8" data-entity-type="file" class="lpBlockCatCol--catImg" src="/s/imgs/pages/LP-OPE/categories/cat-toiture.webp" />
+                </a>
+                <div class="lpBlockCatCol--catDesc">
+                    <span class="lpBlockCatCol--catTitle">Toiture</span>
+                    <a href="https://www.pointp.fr/toiture" class="lpBlockCatCol--catCTA lpCTA lpCTA--primary">Découvrir</a>
+                </div>
+            </div>
+            
+        </aside>
+    </section>
+
+    <section class="lpSection lpSection--help">
+        <h2 class="lpTitle__h2">Besoin d'aide ?</h2>
+        <p class="lpText">N'hésitez pas à nous contacter via notre <a aria-label="Contacter l'assistance client digitale de POINT.P" href="https://www.pointp.fr/contactez-nous" class="lpLink">page de contact</a>.</p>
+    </section>
+</div>
+
+<aside class="lpAside lpAside--appMobile">
+    <a aria-label="S'informer sur l'application mobile POINT.P" href="https://www.pointp.fr/decouvrez-notre-application-mobile">
+        <img src="/s/imgs/pages/landing-avantages-espace-perso/app_mobile.jpg" alt="S'informer sur l'application mobile POINT.P" class="lpImage ">
+    </a>
+</aside>
