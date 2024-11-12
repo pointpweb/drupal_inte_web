@@ -1,0 +1,180 @@
+<div id="bloc_sommaire" class="bloc_sommaire">
+    <p>SOMMAIRE
+        <span class="display_responsive" onclick="showFiltre()"></span>
+    </p>
+    <ul>
+        <li class="active">
+            <a class="widget-anchor-link" onclick="clic_ancre_active(this);" data-href="sommaire-1-71391">1 - Le bon mix : un carrelage mural rectangulaire blanc et un carrelage sol effet carreau de ciment</a>
+        </li>
+        <li>
+            <a class="widget-anchor-link" onclick="clic_ancre_active(this);" data-href="sommaire-2-71421">2 - Défi relevé : une salle d’eau lumineuse et épurée</a>
+        </li>
+        <li>
+            <a class="widget-anchor-link" onclick="clic_ancre_active(this);" data-href="sommaire-3-71561">3 - Questions Déco : Laurence Chiapale Vernet</a>
+        </li>
+       
+    </ul>
+</div>
+
+<style>
+    /*style Romain*/
+    .builder-header {
+        height: 0px;
+    }
+
+    .section-template-builder {
+        margin-top: 0px;
+    }
+
+    .section,
+    .block {
+        margin: 0 !important;
+    }
+
+    .section .container {
+        height: 100%;
+    }
+
+    .section.width-25 .blocks-container {
+        height: 100%;
+    }
+
+    .section.width-25 .blocks-container .block-content {
+        height: 100%;
+    }
+
+    .section.width-25 .blocks-container .block-content .block.block-free-html {
+        height: 100%;
+    }
+
+    #bloc_sommaire {
+        max-width: 270px;
+        width: 100%;
+        top: 120px;
+        min-height: 200px;
+        overflow: auto;
+        position: sticky;
+    }
+
+    #bloc_sommaire p {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    #bloc_sommaire p .display_responsive {
+        display: none;
+    }
+
+    #bloc_sommaire li {
+        padding: 15px 0;
+        border-bottom: 1px solid #ECECEC;
+        position: relative;
+    }
+
+    #bloc_sommaire li.active::before {
+        content: "";
+        width: 50%;
+        height: 1px;
+        background-color: #E75012;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transition: 1s;
+    }
+
+    #bloc_sommaire li a {
+        color: #333333;
+        font-weight: 400;
+        display: block;
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+    #bloc_sommaire li.active a {
+        color: #E75012;
+        font-weight: 700;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    #bloc_sommaire li.active a::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #E75012;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border-top-right-radius: 100%;
+    }
+
+    #bloc_sommaire li:hover a {
+        color: #E75012;
+    }
+
+    @media (max-width: 425px) {
+        #bloc_sommaire.bloc_sommaire {
+            position: static !important;
+            max-width: inherit;
+            width: inherit;
+            top: inherit;
+            min-height: inherit;
+            overflow: inherit;
+            position: inherit;
+        }
+
+        #bloc_sommaire.bloc_sommaire p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        #bloc_sommaire.bloc_sommaire p .display_responsive {
+            transform: rotate(135deg);
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            content: '';
+            display: inline-block;
+            height: 10px;
+            vertical-align: top;
+            width: 10px;
+            transition: 0.5s;
+        }
+
+        #bloc_sommaire.bloc_sommaire.active .display_responsive {
+            transform: rotate(-45deg);
+            color: #E75012;
+            transition: 0.5s;
+        }
+
+        #bloc_sommaire p .display_responsive {
+            display: flex;
+        }
+
+        #bloc_sommaire.bloc_sommaire.active ul {
+            display: block;
+            margin-top: 15px;
+        }
+
+        #bloc_sommaire.bloc_sommaire ul {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    function showFiltre() {
+        var element = document.getElementById("bloc_sommaire");
+        element.classList.toggle("active");
+    }
+    function clic_ancre_active(link) {
+        var current_link = document.querySelector('#bloc_sommaire ul li.active');
+        current_link.classList.remove("active");
+        link.parentNode.classList.add("active");
+    }  
+</script>

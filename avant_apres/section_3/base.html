@@ -1,0 +1,1073 @@
+<!-- CSS START -->
+<style>
+    .block-template-builder i strong {
+        font-style: italic;
+    }
+
+    strong.italique {
+        font-style: italic;
+    }
+
+    /*style Romain*/
+    .builder-header {
+        height: 0px;
+    }
+
+    .section-template-builder {
+        margin-top: 0px;
+    }
+
+    .section,
+    .block {
+        margin: 0 !important;
+    }
+
+    /*style Romain*/
+    .image-av-ap__content .content-head {
+        display: flex;
+        gap: 5px 0;
+        flex-direction: column;
+    }
+
+    .image-av-ap__content .content-head .content-head__left {
+        width: 100%;
+    }
+
+    .image-av-ap__content .content-head .content-head__right {
+        width: 100%;
+    }
+
+    .image-av-ap__content .img-wrapper {
+        position: relative;
+    }
+
+    .image-av-ap__content .img-wrapper::before {
+        padding: 5px;
+        background-color: #58575C;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        /* font-family: 'kh-blackline-scriptmedium'; */
+    }
+
+    .image-av-ap__content .img-wrapper--av::before {
+        content: "AVANT";
+    }
+
+    .image-av-ap__content .img-wrapper--ap::before {
+        content: "APRÈS";
+    }
+
+    .image-av-ap__content img {
+        height: 460px;
+        object-fit: cover;
+    }
+
+    .image-av-ap__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .image-av-ap__content .content-head {
+            gap: 0 5px;
+            flex-direction: row;
+        }
+
+        .image-av-ap__content .content-head__left {
+            width: 50%;
+        }
+
+        .image-av-ap__content .content-head__right {
+            width: 50%;
+        }
+    }
+
+    /*style Romain*/
+    .builder-header {
+        height: 0px;
+    }
+
+    .section-template-builder {
+        margin-top: 0px;
+    }
+
+    .section,
+    .block {
+        margin: 0 !important;
+    }
+
+    /*style Romain*/
+    .bloc-30-70__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc-30-70__content .content-head {
+        display: flex;
+        gap: 20px 0;
+        flex-direction: column;
+    }
+
+    .bloc-30-70__content .content-head__left,
+    .bloc-30-70__content .content-head__right {
+        width: 100%;
+    }
+
+    .bloc-30-70__content .img-wrapper {
+        background-color: transparent;
+        position: relative;
+    }
+
+    .bloc-30-70__content .img-wrapper::before {
+        padding: 10px;
+        background-color: #f6f6f6;
+        font-size: 33px;
+        line-height: 36px;
+        font-weight: 400;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        font-family: 'kh-blackline-scriptmedium';
+    }
+
+    .bloc-30-70__content h3,
+    .bloc-30-70__content h4 {
+        font-size: 17px;
+        line-height: 21px;
+        font-weight: 700;
+        color: #393939;
+        margin-bottom: 20px;
+    }
+
+    .bloc-30-70__content p {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #777777;
+        margin-bottom: 10px;
+    }
+
+    .bloc-30-70__content a {
+        font-weight: 700;
+        color: #e75012;
+    }
+
+    .bloc-30-70__content .conseil {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        border-left: 10px solid #e75012;
+    }
+
+    .bloc-30-70__content ul,
+    .bloc-30-70__content ol {
+        color: #777777;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 24px;
+    }
+
+    .bloc-30-70__content ol {
+        counter-reset: li;
+    }
+
+    .bloc-30-70__content ul li,
+    .bloc-30-70__content ol li {
+        padding: 0 0 6px 20px;
+    }
+
+    .bloc-30-70__content ol li {
+        counter-increment: li;
+    }
+
+    .bloc-30-70__content ul li::before {
+        content: "•";
+        display: inline-block;
+        width: 20px;
+        margin-left: -20px;
+    }
+
+    .bloc-30-70__content ol li:before {
+        content: counter(li) ".";
+        display: inline-block;
+        width: 20px;
+        margin-left: -20px;
+    }
+
+    .bloc-30-70 .list-blackline {
+        font-family: 'kh-blackline-scriptmedium';
+        font-size: 26px;
+        line-height: 1.1;
+    }
+
+    .bloc-30-70 .list-blackline li {
+        padding-left: 0;
+    }
+
+    .bloc-30-70 .list-blackline li::before {
+        display: none;
+    }
+
+    .bloc-30-70 .list-blackline span {
+        color: #e75012;
+    }
+
+    @media (min-width: 768px) {
+        .bloc-30-70__content .content-head {
+            display: flex;
+            gap: 0 25px;
+            flex-direction: row;
+        }
+
+        .bloc-30-70__content .content-head__left {
+            width: 40%;
+        }
+
+        .bloc-30-70__content .content-head__right {
+            width: 60%;
+        }
+
+        .bloc-30-70__content .content-head__right.content-head__right--center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    /*style Romain*/
+.builder-header {
+        height: 0px;
+    }
+
+    .section-template-builder {
+        margin-top: 0px;
+    }
+
+    .section,
+    .block {
+        margin: 0 !important;
+    }
+
+    /*style Romain*/
+    .image-av-ap__content .content-head {
+        display: flex;
+        gap: 5px 0;
+        flex-direction: column;
+    }
+
+    .image-av-ap__content .content-head .content-head__left {
+        width: 100%;
+    }
+
+    .image-av-ap__content .content-head .content-head__right {
+        width: 100%;
+    }
+
+    .image-av-ap__content .img-wrapper {
+        position: relative;
+    }
+
+    .image-av-ap__content .img-wrapper::before {
+        padding: 5px;
+        background-color: #58575C;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        /* font-family: 'kh-blackline-scriptmedium'; */
+    }
+
+    .image-av-ap__content .img-wrapper--av::before {
+        content: "AVANT";
+    }
+
+    .image-av-ap__content .img-wrapper--ap::before {
+        content: "APRÈS";
+    }
+
+    .image-av-ap__content img {
+        height: 460px;
+        object-fit: cover;
+    }
+
+    .image-av-ap__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .image-av-ap__content .content-head {
+            gap: 0 5px;
+            flex-direction: row;
+        }
+
+        .image-av-ap__content .content-head__left {
+            width: 50%;
+        }
+
+        .image-av-ap__content .content-head__right {
+            width: 50%;
+        }
+    }
+  /*style Romain*/
+	.builder-header {
+		height: 0px;
+	}
+	.section-template-builder {
+		margin-top: 0px;
+	}
+	.section, .block {
+		margin: 0 !important;
+	}
+    /*style Romain*/
+    .img-layout-60-40-simple--A .img-layout-60-40-simple__wrapper--A {
+        display: flex;
+        flex-direction: column;
+        gap: 5px 0;
+    }
+    .img-layout-60-40-simple--A .left,
+    .img-layout-60-40-simple--A .right {
+        width: 100%;
+    }
+
+    .img-layout-60-40-simple--A .left .left__img,
+    .img-layout-60-40-simple--A .right .right__img {
+        position: relative;
+    }
+
+    .img-layout-60-40-simple--A .left .left__img::before,
+    .img-layout-60-40-simple--A .right .right__img::before {
+        padding: 10px;
+        background-color: #f6f6f6;
+        font-size: 33px;
+        line-height: 36px;
+        font-weight: 400;
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        font-family: 'kh-blackline-scriptmedium';
+    }
+
+    .img-layout-60-40-simple--A img {
+        height: 320px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .img-layout-60-40-simple--A .img-layout-60-40-simple__wrapper--A {
+            flex-direction: row;
+            gap: 0 5px;
+        }
+
+        .img-layout-60-40-simple--A .left {
+            width: 60%;
+        }
+
+        .img-layout-60-40-simple--A .right {
+            width: 40%;
+        }
+    }
+
+
+    .img-layout-60-40-simple--A .right  .right__img--01::before {
+        content: "Zoom";
+    }
+
+    /* Carousel */
+
+    /*style Romain*/
+    .builder-header {
+        height: 0px;
+    }
+    .section-template-builder {
+        margin-top: 0px;
+    }
+    .section, .block {
+        margin: 0 !important;
+    }
+    /*style Romain*/
+    .carousel h2 {
+        font-size:24px;
+        line-height:28px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 24px;
+    }
+    .slideshow-container .mySlides01 {
+        display: none
+    }
+    
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+    }
+    
+    .slideshow-container .prev,
+    .slideshow-container .next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        border-radius: 100%;
+        background-color: white;
+        color: #E65012;
+        cursor: pointer;
+        user-select: none;
+        transform: translateY(-50%);
+        border: 1px solid #DFDFDF;
+        transition: 0.6s ease;
+    }
+
+    .slideshow-container .prev span,
+    .slideshow-container .next span {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-style: solid;
+        vertical-align: top;
+        transition: 0.5s;
+    }
+    
+    .slideshow-container .prev span {
+        margin-left: 4px;
+        border-width: 2px 0 0 2px;
+        transform: rotate(-45deg);
+    }
+
+    .slideshow-container .next span {
+        margin-right: 4px;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+    
+    .slideshow-container .prev {
+        left: 0;
+        margin-left: -20px;
+    }
+    
+    .slideshow-container .next {
+        right: 0;
+        margin-right: -20px;
+    }
+    
+    .slideshow-container .prev:hover,
+    .slideshow-container .next:hover {
+        background-color: #DFDFDF;
+    }
+    
+    .slideshow-container .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    .carousel .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        opacity: .42;
+        background-color: #a3a5b3;
+        border-radius: 50%;
+        display: inline-block;
+        transition: .2s;
+    }
+    
+    .carousel .dot.active {
+        opacity: 1;
+        background-color: #e75012;
+    }
+
+    .carousel .dot:hover {
+        opacity: 1;
+    }
+    
+    @media only screen and (max-width: 300px) {
+        .slideshow-container .prev,
+        .slideshow-container .next,
+        .slideshow-container .text {
+            font-size: 11px
+        }
+    }
+    @media (max-width: 425px) {
+        .carousel h2 {
+            font-size:18px;
+            line-height:21px;
+            margin-left: 0;
+        }
+    }
+
+    /* CTA SHOWROOM */
+    .builder-header {
+        height: 0px;
+    }
+
+    .section-template-builder {
+        margin-top: 0px;
+    }
+
+    .section,
+    .block {
+        margin: 0 !important;
+    }
+
+    #cta_hub_agence {
+        width: 100%;
+        padding: 50px 80px 40px 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #DFDFDF;
+        border-radius: 0px 40px 40px 40px;
+        max-width: 870px;
+        margin: 0 auto 35px;
+    }
+
+    .title_cta_hub {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        white-space: pre;
+    }
+
+    .des_cta_hub {
+        font-size: 12px;
+        font-weight: 400;
+        color: #333333;
+        margin-bottom: 16px;
+    }
+
+    .cta_hub2 {
+        margin-left: 14rem;
+        width: max-content;
+        font-size: 10px;
+        line-height: 13px;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-align: center;
+        background-color: #E75012;
+        padding: 13px 32px;
+        border-radius: 35px;
+        display: block;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .cta_hub:hover {
+        color: #333333;
+        background-color: #FFFFFF;
+    }
+
+    .cta-texte_bloc {
+        text-align: center;
+    }
+
+
+    #cta_hub_agence .des_cta_hub {
+        margin-bottom: 16px;
+        line-height: 1rem;
+    }
+
+
+
+    @media (max-width: 425px) {
+        #cta_hub_agence {
+            width: 100%;
+            padding: 56px 50px 50px 50px;
+            display: flex;
+        }
+
+        .title_cta_hub {
+            width: 100%;
+            padding-left: 0px;
+            white-space: revert;
+        }
+
+        #cta_hub_agence {
+            margin-bottom: 0;
+        }
+
+        a.cta_hub {
+            margin-left: 2rem;
+        }
+
+
+    }
+</style>
+<!-- CSS END -->
+
+<!-- INTRO - START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <p>
+                    A Carry-le-Rouet, cette salle d’eau lumineuse marie avec brio un carrelage rectangulaire blanc à l’aspect vieilli et des carreaux graphiques ornés d’étoiles.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- INTRO END -->
+<!-- A/A START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div class="image-av-ap">
+                    <div class="image-av-ap__content">
+                        <div class="content-head">
+                            <div class="content-head__left">
+                                <div class="img-wrapper img-wrapper--av">
+                                    <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/1_IMG_2552.png" alt="avant travaux salle d'eau">
+                                </div>
+                            </div>
+                            <div class="content-head__right">
+                                <div class="img-wrapper img-wrapper--ap">
+                                    <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/2_B_4I5A0078.png" alt="après travaux salle d'eau">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- A/A END -->
+<!-- Vignette + projet START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div class="bloc-30-70">
+                    <div class="bloc-30-70__content">
+                        <div class="content-head">
+                            <div class="content-head__left">
+                                <div class="img-wrapper img-wrapper--01">
+                                    <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/3_4I5A6635.png" alt="Laurence Chiapale Vernet">
+                                </div>
+                            </div>
+                            <div class="content-head__right content-head__right--center">
+                                <ul class="list-blackline">
+                                    <li><span>Le projet :</span>Moderniser une salle de bain familiale</li>
+                                    <li><span>L'envie :</span>Créer un espace pratique et cosy</li>
+                                    <li><span>Superficie :</span>6 m²</li>
+                                    <li><span>Emplacement :</span>Carry-le-Rouet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vignette + projet END -->
+<!-- WYSIWYG START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <p>
+                    Céline, la propriétaire des lieux, a acquis cette vaste maison qui appartenait auparavant à ses grands-parents. Toute la tribu avait pour habitude de s’y retrouver lors des vacances estivales.<br>Afin de <strong>moderniser le rez-de-chaussée et l’adapter à son mode de vie</strong>, Céline a fait appel à l’expertise de l’architecte d’intérieur Laurence Chiapale Vernet.
+                </p>
+                <p>
+                    <i>« Au premier étage, nous avons effectué une mise aux normes de la salle de bain et des WC pour que Céline puisse vivre au premier étage avec sa famille pendant toute la durée des travaux du rez-de-chaussée où nous avons tout déposé afin de remanier entièrement le plan et refaire tous les revêtements et aménagements »</i>, explique Laurence. 
+                </p>
+                <p>
+                    Dans cette bâtisse peuplée de trésors de famille, la propriétaire souhaitait <strong>conserver l’histoire des lieux tout en injectant une touche contemporaine au décor</strong>. Pour cela, le couple a sélectionné des <strong>revêtements authentiques et rétro</strong> au <a href="https://www.google.com/url?q=https://www.pointp.fr/infos-showroom/marseille-prado-point-p-1429&sa=D&source=docs&ust=1731410041849706&usg=AOvVaw0eU9biJra3l2lVlKQUnOwh"><strong>showroom POINT.P de Marseille Prado</strong></a>. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- WYSIWYG END -->
+<!-- H2 START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <h2>
+                    <span style="color:#000000;"><strong>1 - LE BON MIX : UN CARRELAGE MURAL RECTANGULAIRE BLANC ET UN CARRELAGE SOL EFFET CARREAUX DE CIMENT</strong></span>
+                </h2>
+                <p>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- H2 END -->
+<!-- ZOOM START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div class="img-layout-60-40-simple--A">
+                    <div class="img-layout-60-40-simple__wrapper--A">
+                        <div class="left">
+                            <div class="left__img left__img--01">
+                                <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/4_B_4I5A0101.png" alt="salle d'eau blanche et carrelage sol effet carreaux de ciment noir et blanc" />
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="right__img right__img--01">
+                                <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/6_B_4I5A0135.png" alt="carrelage grès cérame émaillé effet carreaux de ciment motif star noir" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ZOOM END -->
+<!-- WYSIWYG START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <h3>
+                    Quel carrelage pour le sol d’une salle d’eau ?
+                </h3>
+                <h3>
+                    Un carrelage effet carreaux de ciment
+                </h3>
+                <p>
+                    <a href="https://www.google.com/url?q=https://www.pointp.fr/p/revetements-sols-et-murs/carrelage-sol-interieur-gres-emaille-fs-damero-star-noir-45x45-A6478977&sa=D&source=docs&ust=1731410041850733&usg=AOvVaw3UnQVUJ-w7p1d0BkOMbDZR"><strong>Carrelage carreau de ciment sol intérieur FS Damero - grès cérame émaillé - star noir - 45x45 cm – Peronda - Réf. : 6478977</strong></a>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Le point fort de ce carrelage effet carreaux de ciment 
+                </h3>
+                <p>
+                    <strong>Robuste et graphique</strong>, ce grès cérame émaillé adopte des motifs d’étoiles contrastés pour <strong>apporter du peps au décor</strong>.
+                </p>
+                <p>
+                    Découvrez ici <a href="https://www.google.com/url?q=https://www.pointp.fr/c/imitation-carreaux-de-ciment/x3visu_dig_ub_2055961&sa=D&source=docs&ust=1731410041850904&usg=AOvVaw2Pk0V_BNy-vwr-jq1ZyzC2"><strong>notre gamme de carrelages imitation carreaux de ciment</strong></a>.
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Quel carrelage mural pour une salle d’eau ?
+                </h3>
+                <h3>
+                    Un carrelage rectangulaire blanc 
+                </h3>
+                <p>
+                    Ce carrelage blanc à l’aspect vieilli<strong>apporte un maximum de clarté en s’intégrant particulièrement bien dans une ambiance rétro</strong>.
+                </p>
+                <center>
+                    <img 
+                    class="img-solo" 
+                    alt="salle de bain carrelage mural rectangulaire blanc sol carrelage effet carreaux de ciment"
+                    src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/5_B_4I5A0245.png"
+                    style="max-width: 45%;">
+                </center>
+                <p>
+                    Découvrez ici <a href="https://www.google.com/url?q=https://www.pointp.fr/c/carrelage-mur-uni/x3snv3_dig_2026914?filters%3Df%252Fcatalogue_xml_couleur_simple%252Fblanc&sa=D&source=docs&ust=1731410041851152&usg=AOvVaw0k4f-s9-5O2CmgeoOGNwR9"><strong>notre gamme de carrelages muraux blanc</strong></a>.
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Quel carrelage pour un receveur de douche ?
+                </h3>
+                <h3>
+                    Une mosaïque blanche 
+                </h3>
+                <p>
+                    <a href="https://www.google.com/url?q=https://www.pointp.fr/p/decoration-interieure/mosaique-pour-receveur-gres-cerame-emaille-grip-blanc-31-4x31-A6565626&sa=D&source=docs&ust=1731410041851411&usg=AOvVaw3QpvRxJ0r7FCyG8AIWAGnU"><strong>Mosaïque sol intérieur grès cérame Grip - blanc - trame 31,4x31,4 cm - carreaux 5x5 cm – Arte Deco - Réf. : 6565626</strong></a>
+                </p>
+                <center>
+                    <img 
+                    class="img-solo" 
+                    alt="carrelage mosaique blanc receveur de douche"
+                    src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/7_B_4I5A0290.png"
+                    style="max-width: 45%;">
+                </center>
+                <h3>
+                    Le point fort de cette mosaïque
+                </h3>
+                <p>
+                    <strong>Sobre et intemporel</strong>, ce grès cérame s’intègre à merveille dans une douche en s’accordant avec tous les styles de déco. .
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- WYSIWYG END -->
+<!-- H2 START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <h2>
+                    <span style="color:#000000;"><strong>2 - DÉFI RELEVÉ : UNE SALLE D’EAU LUMINEUSE ET ÉPURÉE</strong></span>
+                </h2>
+                <p>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- H2 END -->
+<!-- CAROUSEL START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div class="carousel">
+                    <div class="slideshow-container">
+                            <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/8_B_4I5A0073.png" style="width:100%" alt="salle de bain carrelage mural rectangulaire blanc et carrelage sol effet carreaux de ciment noirs et blancs" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/9_B_4I5A0091.png" style="width:100%" alt="salle de douche blanche carrelage mosaique blanche receveur de douche" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/10_B_4I5A0068.png" style="width:100%" alt="carrelage de paroi de douche rectangulaire blanc" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/11_B_4I5A0121.png" style="width:100%" alt="salle de bain noir et blanc carrelage mural blanc rectangulaire vasque noire" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/12_B_4I5A0036.png" style="width:100%" alt="carrelage mural blanc rectangulaire et carrelage sol effet carreaux de ciment noir et blanc" />
+                        </div>
+                        <a class="prev" onclick="plusSlides01(-1)">
+                            <span></span>
+                        </a>
+                        <a class="next" onclick="plusSlides01(1)">
+                            <span></span>
+                        </a>
+                    </div>
+                    
+                    <div style="text-align:center">
+                        <span class="dot dot01" onclick="currentSlide01(1)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(2)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(3)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(4)"></span>
+                        <span class="dot dot01" onclick="currentSlide01(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CAROUSEL END -->
+<!-- WYSIWYG START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <p>
+                    Électricité, plomberie, peintures, revêtements… Tout a été refait à neuf dans cet espace<strong>mariant trois carrelages blancs : un carrelage mural rectangulaire, un effet carreaux de ciment au sol et une mosaïque dans l’espace douche</strong>.
+                </p>
+                <p>
+                    <i>« Pour faire entrer la lumière et créer un espace en harmonie avec les autres pièces de la maison, nous avons mixé trois <strong>formats différents qui semblent patinés par le temps, avec notamment ce carrelage de sol orné d’étoiles</strong> permettant d’ajouter une note graphique et authentique au décor »</i>, nous livre l’architecte d’intérieur.
+                </p>
+                <p>
+                    Faisant face à la douche aux dimensions généreuses, <strong>le meuble-vasque a pris place dans une niche ouverte</strong>. Robinetterie, vasque et miroir arborent <strong>un noir intense, distillant une ambiance industrielle en contraste avec les revêtements aux tons clairs</strong>. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- WYSIWYG END -->
+<!-- H2 START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <h2>
+                    <span style="color:#000000;"><strong>3 - QUESTION DÉCO : LAURENCE CHIAPALE VERNET</strong></span>
+                </h2>
+                <p>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- H2 END -->
+<!-- Vignette + insta START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <div class="bloc-30-70">
+                    <div class="bloc-30-70__content">
+                        <div class="content-head">
+                            <div class="content-head__left">
+                                <div class="img-wrapper img-wrapper--02">
+                                    <img 
+                                    src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/13_A_4I5A0038.jpg" 
+                                    alt="Laurence Chiapale Vernet" />
+                                </div>
+                            </div>
+                            <div class="content-head__right">
+                                <h3>Laurence Chiapale Vernet en quelques mots</h3>
+                                <p>
+                                    <i>
+                                        « Marseillaise depuis quatre générations, je suis passionnée par les voyages, l’art et le design ! <strong>A mon compte depuis huit ans, je suis décoratrice et architecte d’intérieur à Marseille et dans le Var</strong>. En parallèle de ce métier de passion, je suis également <strong>investisseur immobilier</strong>. Cette double casquette me permet de <strong>maîtriser les budgets en m’adaptant à un cahier des charges bien défini, quelle que soit la typologie du bien à rénover</strong> ».
+                                    </i>
+                                </p>
+                                <a 
+                                href="https://www.google.com/url?q=https://www.instagram.com/laurence_v_design/&sa=D&source=docs&ust=1731410041851517&usg=AOvVaw1cyOzrkq48pyADXI2NhDTR" 
+                                target="_blank">@laurence_v_design</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vignette + insta END -->
+<!-- WYSIWYG START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block-wysiwyg">
+                <h3>
+                    Son dernier coup de cœur 
+                </h3>
+                <p>
+                    <i>
+                        « J'aime particulièrement <strong>le parquet et le stratifié mais aussi le carrelage de qualité</strong>, et tout particulièrement <strong>les grands formats qui s’adaptent aussi bien dans les grands espaces que les petites pièces</strong>. Cela permet d’agrandir visuellement les volumes ».
+                    </i>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Son astuce pour aménager une salle d’eau
+                </h3>
+                <p>
+                    <i>
+                        « J’évite toujours de surélever un receveur, <strong>en effectuant les agencements au plus proche des évacuations</strong>. Je privilégie également la <strong>fonctionnalité et l’ergonomie tout en travaillant les éclairages</strong> en mixant lumières chaude et froide ».
+                    </i>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Sa citation préférée
+                </h3>
+                <p>
+                    <i>
+                        « Je ne perds jamais : soit je gagne soit j’apprends », Nelson Mandela.
+                    </i>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    Quel a été votre parti pris pour ce projet ?
+                </h3>
+                <p>
+                    <i>
+                        « Pour aménager cette salle de douche, comme toutes les autres pièces de la maison, <strong>nous nous sommes inspirés de l’âme de cette ancienne maison de vacances</strong> ». 
+                    </i>
+                </p>
+                <center>
+                    <img 
+                    class="img-solo" 
+                    alt="salle d'eau blanche robinetterie noire carrelage sol effet carreaux de ciment noirs et blancs"
+                    src="/s/imgs/efficience/avant-apres/Projet_sdb_look_vintage/14_B_4I5A0113.png"
+                    style="max-width: 45%;">
+                </center>
+                <p>
+                    &nbsp;
+                </p>
+                <h3>
+                    De quoi êtes-vous la plus fière ?  
+                </h3>
+                <p>
+                    <i>
+                        « Avoir <strong>réussi à créer un écrin cosy où tout le monde se sent bien</strong> ». 
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- WYSIWYG END -->
+<!-- CTA SHOWROOM START -->
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div id="cta_hub_agence">
+                    <div class="cta-texte_bloc">
+                        <p class="title_cta_hub">VOUS SOUHAITEZ VOUS FAIRE ACCOMPAGNER POUR VOTRE PROJET ?</p>
+                        <a href="https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous" class="cta_hub2"
+                            java-script="try{tc_events_global(this,'Event',{'category':'Engagement','action':'Clic CTA','label':this.innerText.toLowerCase()})}catch(e){};">EN SAVOIR PLUS ICI !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CTA SHOWROOM END -->
+
+<!-- JS START -->
+<script>
+    // Carousel 1
+    var slideIndex = 1;
+    showSlides01(slideIndex);
+    
+    function plusSlides01(n) {
+        showSlides01(slideIndex += n);
+    }
+    
+    function currentSlide01(n) {
+        showSlides01(slideIndex = n);
+    }
+    
+    function showSlides01(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides01");
+        var dots = document.getElementsByClassName("dot01");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+<!-- JS END -->

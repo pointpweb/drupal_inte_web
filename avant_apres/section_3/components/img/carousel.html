@@ -1,0 +1,206 @@
+<div class="block block-template-builder width-100">
+    <div class="container">
+        <div class="block-content">
+            <div class="block block-free-html">
+                <div class="carousel">
+                    <div class="slideshow-container">
+                            <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet-suite-parentale/6_4L1A2060.jpg" style="width:100%" alt="chambre scandinave parquet" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet-suite-parentale/7_4L1A2107.jpg" style="width:100%" alt="suite parentale blanche parquet chêne porte bois" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet-suite-parentale/8_4L1A2070.jpg" style="width:100%" alt="chambre blanche minimaliste" />
+                        </div>
+                        <div class="mySlides01 fade">
+                            <img src="/s/imgs/efficience/avant-apres/Projet-suite-parentale/9_4L1A2446.jpg" style="width:100%" alt="sol stratifié parquet chêne naturel clair ARTE DECO" />
+                        </div>
+                        <a class="prev" onclick="plusSlides01(-1)">
+                            <span></span>
+                        </a>
+                        <a class="next" onclick="plusSlides01(1)">
+                            <span></span>
+                        </a>
+                    </div>
+                    
+                    <div style="text-align:center">
+                        <span class="dot dot01" onclick="currentSlide01(1)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(2)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(3)"></span> 
+                        <span class="dot dot01" onclick="currentSlide01(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style> 
+    /*style Romain*/
+    .builder-header {
+        height: 0px;
+    }
+    .section-template-builder {
+        margin-top: 0px;
+    }
+    .section, .block {
+        margin: 0 !important;
+    }
+    /*style Romain*/
+    .carousel h2 {
+        font-size:24px;
+        line-height:28px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 24px;
+    }
+    .slideshow-container .mySlides01 {
+        display: none
+    }
+    
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+    }
+    
+    .slideshow-container .prev,
+    .slideshow-container .next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        border-radius: 100%;
+        background-color: white;
+        color: #E65012;
+        cursor: pointer;
+        user-select: none;
+        transform: translateY(-50%);
+        border: 1px solid #DFDFDF;
+        transition: 0.6s ease;
+    }
+
+    .slideshow-container .prev span,
+    .slideshow-container .next span {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-style: solid;
+        vertical-align: top;
+        transition: 0.5s;
+    }
+    
+    .slideshow-container .prev span {
+        margin-left: 4px;
+        border-width: 2px 0 0 2px;
+        transform: rotate(-45deg);
+    }
+
+    .slideshow-container .next span {
+        margin-right: 4px;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+    
+    .slideshow-container .prev {
+        left: 0;
+        margin-left: -20px;
+    }
+    
+    .slideshow-container .next {
+        right: 0;
+        margin-right: -20px;
+    }
+    
+    .slideshow-container .prev:hover,
+    .slideshow-container .next:hover {
+        background-color: #DFDFDF;
+    }
+    
+    .slideshow-container .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    .carousel .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        opacity: .42;
+        background-color: #a3a5b3;
+        border-radius: 50%;
+        display: inline-block;
+        transition: .2s;
+    }
+    
+    .carousel .dot.active {
+        opacity: 1;
+        background-color: #e75012;
+    }
+
+    .carousel .dot:hover {
+        opacity: 1;
+    }
+    
+    @media only screen and (max-width: 300px) {
+        .slideshow-container .prev,
+        .slideshow-container .next,
+        .slideshow-container .text {
+            font-size: 11px
+        }
+    }
+    @media (max-width: 425px) {
+        .carousel h2 {
+            font-size:18px;
+            line-height:21px;
+            margin-left: 0;
+        }
+    }
+</style>
+
+<script>
+    var slideIndex = 1;
+    showSlides01(slideIndex);
+    
+    function plusSlides01(n) {
+        showSlides01(slideIndex += n);
+    }
+    
+    function currentSlide01(n) {
+        showSlides01(slideIndex = n);
+    }
+    
+    function showSlides01(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides01");
+        var dots = document.getElementsByClassName("dot01");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
