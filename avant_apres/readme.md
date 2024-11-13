@@ -14,13 +14,13 @@
 
 ## HUB
 
-[Url BO](https://www.pointp.fr/node/5141/edit?destination=/admin/content%3Ftitle%3Davant%26type%3DAll%26status%3DAll%26langcode%3DAll)
-[Url FO](https://www.pointp.fr/espace-deco/avant-apres/les-projets-de-renovation-realises-avec-nos-produits)
+- [Url BO](https://www.pointp.fr/node/5141/edit?destination=/admin/content%3Ftitle%3Davant%26type%3DAll%26status%3DAll%26langcode%3DAll)
+- [Url FO](https://www.pointp.fr/espace-deco/avant-apres/les-projets-de-renovation-realises-avec-nos-produits)
 
 ## A/A
 
-[Exemple de page sur le BO](https://www.pointp.fr/node/8846/edit?destination=/admin/content)
-[Exemple de page sur le FO](https://www.pointp.fr/avant-apres-une-salle-deau-familiale-au-look-vintage)
+- [Exemple de page sur le BO](https://www.pointp.fr/node/8846/edit?destination=/admin/content)
+- [Exemple de page sur le FO](https://www.pointp.fr/avant-apres-une-salle-deau-familiale-au-look-vintage)
 
 ## Infos
 
@@ -28,5 +28,5 @@
 
 ## Contacts
 
-Questions intégration : Sarah Güngör ou Maëlle Eveno
-Questions contenu / process : Carine Kouassi ou Charlotte Thizy
+- Questions intégration : Sarah Güngör ou Maëlle Eveno
+- Questions contenu / process : Carine Kouassi ou Charlotte Thizy
