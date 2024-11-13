@@ -10,7 +10,7 @@
 
 ## Assets
 
-[TEAMS pour récupérer les images](https://teams.microsoft.com/l/channel/19%3A49eb88518d9a4cbfa248d6be486dd4f4%40thread.tacv2/Pages%20Avant%20Apr%C3%A8s?groupId=8972e4bc-67e5-4919-8f03-8d3c0fea97be&tenantId=e339bd4b-2e3b-4035-a452-2112d502f2ff)
+[SharePoint pour récupérer les images + le contenu](https://saintgobain.sharepoint.com/sites/AVANTAPRESTEAM/Documents%20partages/Forms/AllItems.aspx?csf=1&web=1&e=abAPfp&OR=Teams%2DHL&CT=1731502378842&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDEwMjAwMTMxNiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D&CID=f2eb7ead%2D4a71%2D41b9%2D9306%2D90a82fb67826&FolderCTID=0x012000EFD29225D090064C828BBF59DB3EB1E1&id=%2Fsites%2FAVANTAPRESTEAM%2FDocuments%20partages%2FGeneral)
 
 ## HUB
 
