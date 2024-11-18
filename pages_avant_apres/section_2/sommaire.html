@@ -50,10 +50,15 @@
     #bloc_sommaire {
         max-width: 270px;
         width: 100%;
-        top: 120px;
+        top: 40px;
         min-height: 200px;
         overflow: auto;
-        position: sticky;
+    }
+
+    @media (min-width: 768px) {
+        #bloc_sommaire {
+            position: sticky;
+        }
     }
 
     #bloc_sommaire p {
