@@ -1,6 +1,71 @@
 <!-- CSS Bloc rdv sh START -->
 <style>
 
+    /***** RESET GLOBAL OF THE PAGE - START *****/
+    .page-template-builder {
+        padding-top: 0;
+    }    
+
+    .builder-header {
+        display: none;
+    }
+
+    .head-full {
+        margin: 0;
+        height: unset;
+    }
+
+    .head-full .head-full__title {
+        min-width: unset;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .sections-container .section:first-child .container,
+    .sections-container .section:first-child .blocks-container .container {
+        padding: 0;
+    }
+
+    .sections-container section:nth-child(3) .blocks-container .block-template-builder:first-child .container {
+        padding: 0;
+    } 
+
+    @media (max-width: 768px) {
+
+        .sections-container .section:nth-child(2) {
+            height: 0;
+        }
+
+        .sections-container .section:nth-child(2) .container,
+        .sections-container .section:nth-child(2) .blocks-container .container {
+            padding: 0;
+        }
+
+        #bloc_sommaire {
+            min-height: 0;
+        }
+
+        .sections-container .section:nth-child(2) #bloc_sommaire p:not(.rdvShText):not(.rdvShCtaText),
+        .sections-container .section:nth-child(2) #bloc_sommaire ul {
+            display: none;
+        }
+    }
+
+    /* SUMMARY START */
+    #bloc_sommaire {
+        position: unset;
+    }
+
+    @media (min-width: 768px) {
+        #bloc_sommaire {
+            position: sticky;
+        }
+    }
+    /* SUMMARY END */
+
+    /***** RESET GLOBAL OF THE PAGE - END *****/
+
     /***** GLOBAL START *****/
     .element--mobile {
         display: block;
@@ -50,7 +115,7 @@
         font-weight: 400;
         font-size: 1rem;
         border-radius: 50px;
-        padding: 4px 16px;
+        padding: 4px 32px;
     }
 
     @media (min-width: 768px) {
@@ -104,7 +169,7 @@
         color: #333333;
         background-color: #FFFFFF;
         border: 1px solid #ffffff;
-        max-width: 340px;
+        width: fit-content;
     }
 
     @media (min-width: 768px) {
@@ -122,13 +187,11 @@
 
     /***** Bloc 2 START *****/
     .blocRdvSh.blocRdvSh--2 {
-        /* background-color: #EDEDED; */
         background-color: #333333;
         padding: 16px;
     }
 
     .blocRdvSh--2 .rdvShContent {
-        /* color: #333333; */
         color: #FFFFFF;
         padding: 16px 0;
     }
@@ -154,23 +217,20 @@
     .blocRdvSh--2 .itemText {
         font-weight: 400;
         line-height: 1.5;
-        font-size: 1rem;
+        font-size: .875rem;
     }
 
     .blocRdvSh--2 .rdvShCta {
-        /* color: #ffffff; */
         color: #333333;
-        /* background-color: #333333;
-        border: 1px solid #333333; */
         background-color: #FFFFFF;
         border: 1px solid #FFFFFF;
-        max-width: 280px;
+        width: fit-content;
     }
 
     @media (min-width: 768px) {
 
         .blocRdvSh--2 .rdvShContent {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 0;
             justify-content: center;
@@ -183,12 +243,16 @@
         .blocRdvSh--2 .rdvShReassurance {
             justify-content: center;
             column-gap: 32px;
-            margin-bottom: 16px;
+            margin: 16px;
+        }
+
+        .blocRdvSh--2 .itemText {
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 1rem;
         }
 
         .blocRdvSh--2 .rdvShCta:hover {
-            /* background-color: #EDEDED;
-            color: #333333; */
             background-color: #333333;
             color: #FFFFFF;
         }
@@ -249,9 +313,6 @@
     @media (min-width: 768px) {
 
         .blocRdvSh.blocRdvSh--3 {
-            /* position: sticky;
-            top: calc(100vh - 151px);
-            bottom: unset; */
             position: unset;
             padding: 16px;
             border-radius: 0 10px 10px 10px;
