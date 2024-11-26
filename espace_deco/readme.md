@@ -25,6 +25,7 @@
 - Créer une "Page éditoriale"
 - Configuration :
     - Général => Titre => Renseigner le titre de la page
+    - Affichage du titre -> Aucun(e)
     - Menu latéral droit
         - Metatags => Basic Tags :
             - Page title => Renseigner le titre de la page
