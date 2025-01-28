@@ -1,7 +1,7 @@
 <!-- HEADER TITLE -->
 <style>
     .head-full {
-        background-image: url("/s/imgs/efficience/avant-apres/Projet-salle-a-manger-exterieur/0_HEADER_Terrasse_Anoste_Bois_6868.webp");
+        background-image: url("/s/imgs/efficience/avant-apres/Projet-terrasse-ambiance-minerale/0_HEADER_B_4I5A0596.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -18,7 +18,6 @@
         padding: 20px;
         margin: 20px 0;
         text-align: center;
-        max-width: 85%;
     }
 
     .head-full .head-full__title .main-title {
@@ -114,7 +113,7 @@
         color: #E75012;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         #bloc_sommaire {
             display: none;
         }
@@ -158,6 +157,7 @@
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
+        gap: 4rem;
     }
     .main_content .right_part {
         width: 100%;
@@ -275,7 +275,7 @@
     /* SECTIONS */
 
     /* INTRO - A/A */
-    .av_ap__content  {
+    .av_ap__content {
         display: flex;
         gap: 5px 0;
         flex-direction: column;
@@ -284,15 +284,15 @@
     .av_ap__content img {
         width: 100%;
         position: relative;
-        height: 460px;
+        max-height: 460px;
         object-fit: cover;
     }
 
-    .content_img_avant {
+    .content_img_avant, .content_img_apres {
         position: relative;
     }
 
-    .av_ap__content .content_img_avant::before, .av_ap__content .content_img_apres::before{
+    .av_ap__content .content_img_avant::before, .av_ap__content .content_img_apres::before {
         padding: 5px;
         background-color: #58575C;
         color: white;
@@ -309,47 +309,76 @@
         content: "APRÈS";
     }
 
-    .sub_section_cles_projet {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-        gap: 1rem;
-        flex-direction: column;
-    }
-
-
     /* 3 IMGS */
-    .content_2_images {
+    .content_3_images {
         display: flex;
         gap: 5px 0;
         flex-direction: column;
     }
 
-    .content_2_images img {
+    .content_3_images div {
+        position: relative;
         width: 100%;
-        position: relative;
-        height: 320px;
-        object-fit: cover;
-        object-position: 0 100%;
     }
 
-    .content_2_images .img_2_zoom {
-        position: relative;
+    .content_3_images div img {
+        width: 100%;
     }
 
-    .content_2_images .img_2_zoom::before {
-        content: "Zoom";
-        padding: 10px;
+    .content_3_images div::before {
+        padding: 5px;
+        background-color: #58575C;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        content: "";
+        z-index: 1;
+    }
+
+    .content_3_images .neo_indus::before {
+        content: "Néo indus’";
+    }
+
+    .content_3_images .boheme_chic::before {
+        content: "Bohème chic";
+    }
+
+    .content_3_images .ambiance_japandi::before {
+        content: "Ambiance Japandi";
+    }
+
+    /* ZOOM */
+    .content_zoom {
+        display: flex;
+        gap: 5px 0;
+        flex-direction: column;
+    }
+
+    .content_zoom div {
+        position: relative;
+        width: 100%
+    }
+
+    .content_zoom div img {
+        width: 100%
+    }
+
+    .content_zoom .img_zoom::before {
+        padding: 10px 10px 0px 10px;
         background-color: #f6f6f6;
+        color: #333333;
+        font-family: 'kh-blackline-scriptmedium';
         font-size: 33px;
         line-height: 36px;
         font-weight: 400;
         position: absolute;
         left: 0;
-        bottom: 15px;
-        font-family: 'kh-blackline-scriptmedium';
-        z-index: 5;
+        top: 15px;
+        content: "Zoom";
+        z-index: 1;
     }
 
     /* 60 - 40 */
@@ -385,8 +414,27 @@
     .post_main_content .card_tendance .card_tendance_wrapper .item .card_cta {
         margin-top: 24px;
     }
-
     /* RESPONSIVE */
+    @media (min-width: 768px) { 
+        .av_ap__content {
+            flex-direction: row;
+            justify-content: center;
+            gap: 0px 5px;
+        }
+        .content_3_images {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0px 5px;
+        }
+        .content_zoom {
+            flex-direction: row;
+            justify-content: center;
+            gap: 0px 5px;
+        }
+        .post_main_content .card_tendance .card_tendance_wrapper {
+            flex-direction: row;
+        }
+    }
     @media (min-width: 1024px) { 
         /* TEXTS AND TITLES */
         .page_content_text {
@@ -431,32 +479,20 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
-        }
-        .sub_section_cles_projet {
-            flex-direction: row;
-        }
-        .av_ap__content {
-            flex-direction: row;
             justify-content: center;
-            gap: 0px 5px;
         }
-        .content_2_images {
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 0px 5px;
-        }
-        .content_2_images div {
-            width: calc(100% / 2 - 5px);
+        .content_3_images div {
+            width: calc(100% / 3 - 5px);
         }
         .content_40_60 {
             flex-direction: row;
         }
+        .content_3_images div {
+            width: calc(100% / 2 - 5px);
+        }
         .right_part .img_end_content {
             max-width: 40%;
             margin: 0 auto;
-        }
-        .post_main_content .card_tendance .card_tendance_wrapper {
-            flex-direction: row;
         }
         .post_main_content .card_tendance .card_tendance_wrapper .item {
             width: calc(33% - 5px);
