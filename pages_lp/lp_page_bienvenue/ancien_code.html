@@ -1,0 +1,592 @@
+<style type="text/css">
+
+    #landing {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .font-open-sans .block-wysiwyg h2 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .block-wysiwyg ol li, .block-wysiwyg ul li {
+        color: #333333;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .font-open-sans .block-wysiwyg p {
+        color: #333333;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .block-wysiwyg a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+
+    .section-simple-block-text .container {
+        padding-top: 20px;
+    }
+
+    .block-wysiwyg .list_pictos li {
+        padding-left: 0;
+    }
+
+    .block-wysiwyg .list_pictos li::before {
+        content: none;
+    }
+
+    .list_pictos li i {
+        margin-right: 10px;
+    }
+
+    .bloc-bienvenue {
+        margin-bottom: 32px;
+    }
+
+    .font-open-sans .block-wysiwyg .bloc-bienvenue > p {
+        padding-bottom: 25px;
+    }
+
+    .btn_sign_up {
+        background-color: #e75012;
+        border-radius: 26px;
+        border: none;
+        width: 220px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .btn_sign_up a {
+        color: #ffffff;
+    }
+
+    .containerLame10 .row2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .containerLame10 .columnA {
+        width: calc(25% - 12px);
+        text-align: center;
+    }
+
+    .containerLame10 .columnA h3 {
+        font-size: 16px;
+    }
+
+    .containerLame10 .columnA .cardA {
+        background-color: #f3f3f34d;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 0px 10px 10px 10px;
+        border: solid 1px #e3e3e3f0;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .cardA:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .block-miniA {
+        padding: 0px 5px 20px 5px;
+        min-height: 108px;
+    }
+
+    .block-miniA span {
+        font-weight: 600;
+    }
+
+    .containerLame10 .columnA .cardA img {
+        margin-bottom: 0;
+        border-radius: 0 10px 0px 0px;
+    }
+    
+    .containerLame10 .columnA .cardA h3 {
+        margin-bottom: 0;
+    }
+
+    .containerLame10 .columnA .cardA a {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .bloc-conditions p,
+    .bloc-conditions ul li {
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 1023px) {
+        .font-open-sans .block-wysiwyg h2 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .block-wysiwyg ol li, .block-wysiwyg ul li {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .font-open-sans .block-wysiwyg p {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .block-wysiwyg a {
+            font-size: 14px;
+        }
+        .containerLame10 .columnA {
+            width: calc(33% - 12px);
+        }
+        .imgLand {
+            display: none !important;
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 745px) {
+        .containerLame10 .columnA {
+            width: calc(50% - 8px);
+        }
+    }
+
+    /***** CTAS - START *****/
+        
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+    .lpCTA,
+    .c-wysiwyg a.lpCTA {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 200px;
+        min-height: 40px;
+        padding: 16px 26px;
+        text-align: center;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: .75rem;
+        border-radius: 26px;
+        transition: all .3s ease-out; 
+        text-decoration-line: none;
+    }
+    
+    @media (min-width: 768px) {
+        .lpCTA,
+        .c-wysiwyg a.lpCTA {
+            font-size: 1rem;
+            line-height: .875rem;
+            min-height: 46px;
+        }
+    }
+    
+    .lpCTA--primary,
+    .block-wysiwyg a.lpCTA--primary,
+    .c-wysiwyg a.lpCTA--primary {
+        background-color: #e75012;
+        color: #FFFFFF;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--primary:hover,
+        .block-wysiwyg a.lpCTA--primary:hover,
+        .c-wysiwyg a.lpCTA--primary:hover,
+        .c-wysiwyg a.lpCTA--primary:not(.is-disabled):hover {
+            background-color: #EF855A;
+            color: #FFFFFF;
+        }
+    }
+    
+    .lpCTA--secondary,
+    .block-wysiwyg a.lpCTA--secondary,
+    .c-wysiwyg a.lpCTA--secondary {
+        background-color: #000000;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary:hover,
+        .block-wysiwyg a.lpCTA--secondary:hover,
+        .c-wysiwyg a.lpCTA--secondary:hover,
+        .c-wysiwyg a.lpCTA--secondary:not(.is-disabled):hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+    }
+
+    .lpCTA--tertiary,
+    .block-wysiwyg a.lpCTA--tertiary,
+    .c-wysiwyg a.lpCTA--tertiary {
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary:hover,
+        .block-wysiwyg a.lpCTA--tertiary:hover,
+        .c-wysiwyg a.lpCTA--tertiary:hover,
+        .c-wysiwyg a.lpCTA--tertiary:not(.is-disabled):hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+    }
+
+    /*** CTA + Icon - START ***/
+    .lpCTA--icon,
+    .c-wysiwyg a.lpCTA--icon {
+        column-gap: 8px;
+    }
+
+    .lpCTA--icon::before,
+    .c-wysiwyg a.lpCTA--icon::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Icon mail - START */
+    .lpCTA--icon:not(.lpCTA--tertiary).icon--mail::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--mail::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_mail_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--mail::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--mail::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_mail_white.svg");
+        }
+    }
+    /* Icon mail - END */
+
+    /* Icon new tab - START */
+    .lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_new_tab_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--newTab::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--newTab::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_new_tab_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_new_tab_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_new_tab_white.svg");
+        }
+    }
+    /* Icon new tab - END */
+
+    /* Icon copy/past - START */
+    .lpCTA--icon:not(.lpCTA--tertiary).icon--copyPast::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--copyPast::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_copy_past_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--copyPast::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--copyPast::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_copy_past_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--copyPast:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--copyPast:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_copy_past_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--copyPast:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--copyPast:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_copy_past_white.svg");
+        }
+    }
+    /* Icon copy/past - END */
+
+    /*** CTA + Icon - END ***/
+
+    /*** Block CTA - START ***/
+    .lpBlock__CTA {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+    }
+
+    @media (min-width: 768px) {
+        .lpBlock__CTA {
+            flex-direction: row;
+            column-gap: 16px;
+            justify-content: center;
+        }
+    }
+    /** Block CTA - END **/
+
+    /***** CTAS - END *****/
+
+</style>
+
+<div class="section section-simple-block-text" id="landing">
+    <div class="containerLand">
+        <div>
+            <img class="imgLand" alt="Offre de bienvenue" data-entity-type="file"
+                data-entity-uuid="ddc49ea0-694e-4cb9-bba2-ae76e07dfc4f" data-not-responsive="0"
+                src="/s/imgs/pages/bienvenue-pp/img-desktop.png" />
+        </div>
+
+        <div class="bloc-bienvenue">
+            <p>
+                Pour vous souhaiter la bienvenue sur notre site, <strong class="orange">POINT.P vous offre 10€ TTC</strong> avec
+                le code promo <strong class="orange">BIENVENUE10</strong> par tranche de 100€ TTC d'achat sur votre commande en
+                ligne de produits et matériaux.*
+            </p>
+            <div class="lpBlock__CTA lpBlock__CTA--connexion">
+                <a href="https://www.pointp.fr/inscription/nouveau-client" class="lpCTA lpCTA--primary">
+                    Créer mon compte
+                </a>
+                <a href="https://www.pointp.fr/connexion" class="lpCTA lpCTA--secondary">
+                    Me connecter
+                </a>
+            </div>
+        </div>
+    
+        <div>
+            <h2>Comment entrer un code promo ?</h2>
+    
+            <ol>
+                <li><strong>Ajoutez les articles</strong> de votre choix dans votre panier.</li>
+                <li>Rendez-vous dans votre panier en <strong>cliquant sur le panier en haut à droite</strong> de votre page.</li>
+                <li>Enfin, <strong>ajoutez le code BIENVENUE10</strong> dans le champ "Code promo" puis cliquez sur "Appliquer".</li>
+                <li>Votre code promo est activé, vous n'avez plus qu'à <strong>valider votre panier</strong> et suivre le process pour finaliser votre commande.</li>
+            </ol>
+    
+            <h2>Besoin d’aide pour commander vos produits et matériaux ?</h2>
+            <ul>
+                <li><a href="/s/imgs/pages/bienvenue-pp/aide-code-promo.jpg" target="_blank">Visualisez en image comment entrer votre code promo</a></li>
+                <li><a class="file file--mime-application-pdf file--application-pdf" data-entity-type="file"
+                        data-entity-uuid="040fd8a0-4e17-42c1-9f85-959e3d4cecae"
+                        href="https://www.pointp.fr/sites/default/files/wysiwyg-files/POINTP_Memo-Commande-Web_V4_0.pdf"
+                        target="_blank">Téléchargez notre guide pour vous aider à passer votre commande</a></li>
+                <li><a href="/contactez-nous" target="_blank">Contactez-nous</a></li>
+            </ul>
+    
+            <h2>Pourquoi ouvrir un compte sur pointp.fr ?</h2>
+    
+            <p>
+                Créez votre compte en seulement <strong>2 minutes</strong> pour profiter de tous nos avantages :
+            </p>
+    
+            <ul class="list_pictos">
+                <li><i class="fa-solid fa-tags" aria-hidden="true"></i>Les <strong>meilleurs prix</strong> sur tous nos produits et matériaux</li>
+                <li><i class="fa-solid fa-cubes" aria-hidden="true"></i>L’accès aux <strong>stocks en temps réels</strong></li>
+                <li><i class="fa-solid fa-clock" aria-hidden="true"></i>Le <strong>retrait GRATUIT</strong> en 2H</li>
+                <li><i class="fa-solid fa-file-lines" aria-hidden="true"></i>Les <strong>documents techniques</strong></li>
+            </ul>
+    
+        </div>
+    </div>
+
+
+    <div class="containerLame10">
+        <h2>Découvrez tous nos produits et matériaux</h2>
+
+        <div class="row2">
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/materiaux-gros-oeuvre"><img alt="Matériaux, bois, gros œuvre" data-entity-type="file"
+                            data-entity-uuid="0aadb64b-fa77-44e6-ac92-15cc8b2706f3"
+                            src="/sites/default/files/wysiwyg-images/Mat%20bois%20gros%20oeuvre.JPG"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/materiaux-gros-oeuvre"><h3>Matériaux, bois, gros œuvre</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="/platre-isolation"><img alt="Matériaux Plâtre isolation" data-entity-type="file"
+                            data-entity-uuid="52b452f1-3d56-4df9-ae08-c21b12615767"
+                            src="/sites/default/files/wysiwyg-images/platre%20isolation.JPG"/></a>
+
+                    <div class="block-miniA">
+                        <a href="/platre-isolation"><h3>Plâtre, isolation</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/toiture"><img alt="Matériaux toiture charpente" data-entity-type="file"
+                            data-entity-uuid="c2440e6a-4fb8-4959-a085-f09f41d50444"
+                            src="/sites/default/files/wysiwyg-images/toiture%20charpentes.JPG"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/toiture"><h3>Toiture, charpente</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="/portes-fenetres-menuiserie"><img alt="Portes, fenêtres" data-entity-type="file"
+                            data-entity-uuid="b2b7fb33-7daa-4c25-9483-e536a034c280"
+                            src="/sites/default/files/wysiwyg-images/portes%20fenetres%20menuiserie.JPG"/></a>
+
+                    <div class="block-miniA">
+                        <a href="/portes-fenetres-menuiserie"><h3>Portes, fenêtres, menuiserie</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/bois-panneaux"><img alt="Bois panneaux" data-entity-type="file"
+                            data-entity-uuid="b2b7fb33-7daa-4c25-9483-e536a034c280"
+                            src="/s/imgs/pages/bienvenue-pp/Vignette-bois-panneaux.png"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/bois-panneaux"><h3>Bois panneaux</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/autres-revetements-interieur"><img alt="revêtements sol et mur" data-entity-type="file"
+                            data-entity-uuid="221b815f-f0ec-4727-bcfb-021bd7a3e31b"
+                            src="/sites/default/files/wysiwyg-images/rev%C3%AAtements%20sol%20mur.JPG"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/autres-revetements-interieur"><h3>Revêtements sols et murs</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/carrelage-interieur"><img alt="Carrelage intérieur" data-entity-type="file"
+                            data-entity-uuid="b2b7fb33-7daa-4c25-9483-e536a034c280"
+                            src="/s/imgs/pages/bienvenue-pp/Vignette-carrelage-interieur.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/carrelage-interieur"><h3>Carrelage intérieur</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="/terrasses-et-exterieurs"><img alt="Revêtements terrasse" data-entity-type="file"
+                            data-entity-uuid="666a4783-aaab-45f4-ad3d-0fb875f4243b"
+                            src="/sites/default/files/wysiwyg-images/terrasses%20et%20exterieurs.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="/terrasses-et-exterieurs"><h3>Terrasses et extérieurs</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/electricite-ventilation"><img alt="Electricité et ventilation" data-entity-type="file"
+                            data-entity-uuid="387216f6-b3e0-494d-854d-bb0deb9ee61f"
+                            src="/sites/default/files/wysiwyg-images/electricite-plomberie-sanitaire_b_0.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/electricite-ventilation"><h3>Electricité, ventilation</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/outillage"><img alt="Outillage" data-entity-type="file"
+                            data-entity-uuid="f6a49738-cd01-4faf-9b00-71aacd0d5dbf"
+                            src="/sites/default/files/wysiwyg-images/outils-equipement-accessoires_b_0.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/outillage"><h3>Outillage</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/materiel-de-chantier"><img alt="Matériel de chantier" data-entity-type="file"
+                            data-entity-uuid="387216f6-b3e0-494d-854d-bb0deb9ee61f"
+                            src="/s/imgs/pages/bienvenue-pp/Vignette-materiel-de-chantier.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/materiel-de-chantier"><h3>Matériel de chantier</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnA">
+                <div class="cardA">
+                    <a href="https://www.pointp.fr/protection-individuelle-securite"><img alt="Casques, lunettes de chantier, EPI" data-entity-type="file"
+                            data-entity-uuid="387216f6-b3e0-494d-854d-bb0deb9ee61f"
+                            src="/s/imgs/pages/bienvenue-pp/Vignette-casque-lunettes-chantier-epi.jpg"/></a>
+
+                    <div class="block-miniA">
+                        <a href="https://www.pointp.fr/protection-individuelle-securite"><h3>Equipement de protection, sécurité</h3><span>- DÉCOUVRIR -</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bloc-conditions">
+        <p>*Conditions d’utilisation du code promo BIENVENUE10 :</p>
+        <ul>
+            <li>Code non fractionnable et non cumulable avec d’autres opérations en cours.</li>
+            <li>Code valable dans la limite maximum de 5000€ TTC de commande.</li>
+            <li>Offre valable une fois par client.</li>
+            <li>Offre non valable sur les devis.</li>
+            <li>Offre non valable pour le personnel Saint-Gobain.</li>
+        </ul>
+    </div>
+</div>

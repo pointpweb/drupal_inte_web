@@ -1,0 +1,1916 @@
+<!-- RESET CSS - START -->
+<style>
+
+    .c-wysiwyg * {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+
+    .font-open-sans .section .section-title,
+    .font-open-sans .block-wysiwyg h2,
+    .font-open-sans .block-wysiwyg p {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    /***** Global spaces - START *****/
+    .page-template-builder .block-template-builder .container,
+    .page-template-builder .block-template-builder,
+    .tw-px-6,
+    .page-template-builder,
+    .section-simple-block-text .container,
+    .block-wysiwyg p,
+    .block-wysiwyg ol li, 
+    .block-wysiwyg ul li,
+    .c-wysiwyg li,
+    .c-wysiwyg ul {
+        padding: 0;
+    }
+
+    .page-template-builder .section-template-builder, 
+    .page-template-builder .block-template-builder,
+    .tw-container,
+    .tw-my-4,
+    #status-messages-placeholder,
+    .section-simple-block-text .container,
+    .section-simple-block-text .section-title,
+    .block-wysiwyg img,
+    .block-wysiwyg img:not([data-not-responsive="1"]),
+    .block-wysiwyg ol, 
+    .block-wysiwyg ul,
+    .block-wysiwyg ul li:before,
+    .c-wysiwyg h1,
+    .c-wysiwyg h2,
+    .c-wysiwyg h3,
+    .c-wysiwyg h4,
+    .c-wysiwyg li,
+    .c-wysiwyg ul,
+    .c-wysiwyg p,
+    .block-wysiwyg h1,
+    .block-wysiwyg h2,
+    .block-wysiwyg h3,
+    .block-wysiwyg h4,
+    .block-wysiwyg li,
+    .block-wysiwyg ul, 
+    .block-wysiwyg p {
+        margin: 0;
+    }
+
+    .tw-container,
+    .section-simple-block-text .container {
+        max-width: 1480px;
+    }
+    /***** Global spaces - END *****/
+
+    /***** Breadcrumb - START *****/
+    .builder-header:not(#builderHeader) {
+        display: none;
+    }
+
+    .block.block-breadcrumb {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    @media (min-width: 768px) {
+        .block.block-breadcrumb {
+            margin: 8px 40px;
+        }
+
+        .block.block-breadcrumb .container {
+            padding: 0;
+        }
+    }
+    
+    .block-breadcrumb ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        white-space: normal;
+    }
+    
+    .block-breadcrumb .breadcrumb li:first-child {
+        display: block;
+    }
+
+    .block-breadcrumb .breadcrumb li:not(:first-child) {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        column-gap: 8px;
+    }
+
+    .block-breadcrumb li:before {
+        position: unset;
+        left: unset;
+        bottom: unset;
+    }
+    
+    .block-breadcrumb + #status-messages-placeholder {
+        margin: 0;
+    }
+    /***** Breadcrumb - END *****/
+</style>
+<!-- RESET CSS - END -->
+
+<!-- GLOBAL STYLES - START -->
+<style>
+    /****** Main - START *****/
+    .lpMain {
+        font-family: "Open Sans", sans-serif;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        padding: 56px 20px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        .lpMain {
+            padding: 56px 40px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+
+    /*** <p></p> ***/
+    p.lpText {
+        font-size: .875rem;
+        line-height: 1.375rem;
+        color: #333333;
+    }
+
+    @media (min-width: 768px) {
+        p.lpText {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+    /****** Main - END *****/
+
+
+    /***** Titles - START *****/
+
+    /*** <h1></h1> ***/
+    .lpTitle__h1--promo,
+    .section-title,
+    .section .section-title {
+        width: 100%;
+        padding: 16px 20px;
+        background-color: #FFCC00;
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h1--promo,
+        .section-title,
+        .section .section-title {
+            padding: 16px 40px;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    /*** <h2></h2> ***/
+    /* Utiliser la classe "lpTitle__h2" sur les balises <h2> */
+    .lpTitle__h2,
+    .block-wysiwyg h2 *,
+    .block-wysiwyg h2,
+    .c-wysiwyg h2 {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h2,
+        .block-wysiwyg h2 *,
+        .block-wysiwyg h2,
+        .c-wysiwyg h2  {
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+        }
+    }
+    
+    /** h2 highlighted **/
+    /* Utiliser la classe "lpTitle__h2span" sur des balise span dans les h2 surlignés et leurs identifiers "--black" / "--orange" */
+    .lpTitle__h2span {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 6px;
+        color: #FFFFFF;
+    }
+    
+    .lpTitle__h2span--black {
+        background-color: #000000;
+    }
+    
+    .lpTitle__h2span--orange {
+        background-color: #E75012;
+    }
+
+    /*** <h3></h3> ***/
+    /* Utiliser la classe "lpTitle__h3" sur les balises <h3> */
+    
+    .lpTitle__h3,
+    .c-wysiwyg h3,
+    .block-wysiwyg h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+    
+    @media (min-width: 768px) {
+        .lpTitle__h3,
+        .c-wysiwyg h3,
+        .block-wysiwyg h3 {
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+    }
+    /***** Titles - END *****/
+
+    /****** Images - START *****/
+    .lpImage--mobile {
+        display: block;
+    }
+
+    .lpImage--desktop {
+        display: none;
+    }
+    
+    @media (min-width: 768px) {
+        .lpImage--mobile {
+            display: none;
+        }
+
+        .lpImage--desktop {
+            display: block;
+        }
+    }
+    /****** Images - END *****/
+
+    /***** CTAS - START *****/
+        
+    /* Utiliser la classe "lpCTA" sur les ctas et ses identifiers "--primary" / "--secondary" */
+    .lpCTA,
+    .c-wysiwyg a.lpCTA,
+    .block-wysiwyg a.lpCTA {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 200px;
+        min-height: 40px;
+        padding: 16px 26px;
+        text-align: center;
+        font-weight: 700;
+        font-size: .875rem;
+        line-height: .75rem;
+        border-radius: 26px;
+        transition: all .3s ease-out; 
+        text-decoration-line: none;
+    }
+    
+    @media (min-width: 768px) {
+        .lpCTA,
+        .c-wysiwyg a.lpCTA,
+        .block-wysiwyg a.lpCTA {
+            font-size: 1rem;
+            line-height: .875rem;
+            min-height: 46px;
+        }
+    }
+    
+    .lpCTA--primary,
+    .block-wysiwyg a.lpCTA--primary,
+    .c-wysiwyg a.lpCTA--primary {
+        background-color: #e75012;
+        color: #FFFFFF;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--primary:hover,
+        .block-wysiwyg a.lpCTA--primary:hover,
+        .block-wysiwyg a.lpCTA--primary:not(.is-disabled):hover,
+        .c-wysiwyg a.lpCTA--primary:hover,
+        .c-wysiwyg a.lpCTA--primary:not(.is-disabled):hover {
+            background-color: #EF855A;
+            color: #FFFFFF;
+        }
+    }
+    
+    .lpCTA--secondary,
+    .block-wysiwyg a.lpCTA--secondary,
+    .c-wysiwyg a.lpCTA--secondary {
+        background-color: #000000;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary:hover,
+        .block-wysiwyg a.lpCTA--secondary:hover,
+        .block-wysiwyg a.lpCTA--secondary:not(.is-disabled):hover,
+        .c-wysiwyg a.lpCTA--secondary:hover,
+        .c-wysiwyg a.lpCTA--secondary:not(.is-disabled):hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+    }
+
+    .lpCTA--tertiary,
+    .block-wysiwyg a.lpCTA--tertiary,
+    .c-wysiwyg a.lpCTA--tertiary {
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary:hover,
+        .block-wysiwyg a.lpCTA--tertiary:hover,
+        .block-wysiwyg a.lpCTA--tertiary:not(.is-disabled):hover,
+        .c-wysiwyg a.lpCTA--tertiary:hover,
+        .c-wysiwyg a.lpCTA--tertiary:not(.is-disabled):hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+    }
+
+    .lpCTA--quaternary,
+    .block-wysiwyg a.lpCTA--quaternary,
+    .c-wysiwyg a.lpCTA--quaternary {
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--quaternary:hover,
+        .block-wysiwyg a.lpCTA--quaternary:hover,
+        .block-wysiwyg a.lpCTA--quaternary:not(.is-disabled):hover
+        .c-wysiwyg a.lpCTA--quaternary:hover,
+        .c-wysiwyg a.lpCTA--quaternary:not(.is-disabled):hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+    }
+
+    /*** CTA + Icon - START ***/
+    .lpCTA--icon,
+    .c-wysiwyg a.lpCTA--icon,
+    .block-wysiwyg a.lpCTA--icon {
+        column-gap: 8px;
+    }
+
+    .lpCTA--icon::before,
+    .c-wysiwyg a.lpCTA--icon::before,
+    .block-wysiwyg a.lpCTA--icon::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Icon mail - START */
+    .lpCTA--icon:not(.lpCTA--tertiary).icon--mail::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--mail::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_mail_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--mail::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--mail::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_mail_white.svg");
+        }
+    }
+    /* Icon mail - END */
+
+    /* Icon new tab - START */
+    .lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_new_tab_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--newTab::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--newTab::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_new_tab_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_new_tab_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_new_tab_white.svg");
+        }
+    }
+    /* Icon new tab - END */
+
+    /* Icon copy/past - START */
+    .lpCTA--icon:not(.lpCTA--tertiary, .lpCTA--quaternary).icon--copyPast::before,
+    .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary, .lpCTA--quaternary).icon--copyPast::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_copy_past_white.svg");
+    }
+
+    .lpCTA--icon.lpCTA--tertiary.icon--copyPast::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--copyPast::before, 
+    .lpCTA--icon.lpCTA--quaternary.icon--copyPast::before,
+    .c-wysiwyg a.lpCTA--icon.lpCTA--quaternary.icon--copyPast::before {
+        background-image: url("/s/imgs/pages/landing-global/icon_copy_past_black.svg");
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--secondary.lpCTA--icon.icon--copyPast:hover::before,
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--copyPast:hover::before {
+            background-image: url("/s/imgs/pages/landing-global/icon_copy_past_black.svg");
+        }
+    }
+
+    @media (min-width: 768px) {
+        .lpCTA--tertiary.lpCTA--icon.icon--copyPast:hover::before,
+        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--copyPast:hover::before,
+        .lpCTA--icon.lpCTA--quaternary.icon--copyPast:hover::before,
+        .c-wysiwyg a.lpCTA--icon.lpCTA--quaternary.icon--copyPast:hover::before  {
+            background-image: url("/s/imgs/pages/landing-global/icon_copy_past_white.svg");
+        }
+    }
+    /* Icon copy/past - END */
+
+    /*** CTA + Icon - END ***/
+
+    /*** Block CTA - START ***/
+    .lpBlock__CTA {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: center;
+    }
+
+    @media (min-width: 768px) {
+        .lpBlock__CTA {
+            flex-direction: row;
+            column-gap: 16px;
+            justify-content: center;
+        }
+    }
+    /** Block CTA - END **/
+
+    /***** CTAS - END *****/
+
+    /***** Lists *****/
+    
+    /*** <ol></ol> / <ul></ul> ***/
+    /* Utiliser la classe "lpList" sur les balises <ol>/<ul> */
+    
+    .lpList {
+        overflow: visible;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+    
+    @media (min-width: 768px) {
+        .lpList {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    
+    /*** <li></li> ***/
+    /* Utiliser la classe "lpList__item" sur les balises <li> */
+    .lpList__item,
+    .block-wysiwyg ul li.lpList__item,
+    .c-wysiwyg li.lpList__item {
+        position: relative;
+        padding-left: 24px;
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @media (min-width: 768px) {
+        .lpList__item,
+        .block-wysiwyg ul li.lpList__item,
+        .c-wysiwyg li.lpList__item {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        } 
+    }
+    
+    .lpList__item::before,
+    .block-wysiwyg ul li.lpList__item:before,
+    .c-wysiwyg ul li.lpList__item:before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #E75012;
+        position: absolute; 
+        left: 8px;
+        top: 8px;
+    }
+
+    /***** Links *****/
+    
+    /* Utiliser la classe "lpLink" sur les balises <a> pour les liens textuels et son identifier "--uppercase" */
+    .lpLink,
+    .c-wysiwyg a.lpLink,
+    .block-wysiwyg a.lpLink {
+        width: fit-content;
+        color: #333333;
+        text-decoration: underline;
+        font-size: .875rem;
+        line-height: 1.125rem;
+        font-weight: 600;
+        transition: all .3s ease-out;
+    }
+    
+    @media (min-width: 768px) {
+        .lpLink,
+        .c-wysiwyg a.lpLink,
+        .block-wysiwyg a.lpLink {
+            font-size: 1rem;
+            line-height: 1.125rem;
+            width: 100%;
+        }
+    
+        .lpLink:hover,
+        .c-wysiwyg a.lpLink:hover,
+        .c-wysiwyg a.lpLink:not(.is-disabled):hover,
+        .block-wysiwyg a.lpLink:hover,
+        .block-wysiwyg a.lpLink:not(.is-disabled):hover {
+            color: #333333;
+            -webkit-text-decoration-line: underline;
+            text-decoration: underline;
+            text-decoration-thickness: 15% !important;
+        }
+    }
+</style>
+<!-- GLOBAL STYLES - END -->
+
+<!-- PROMO STYLES - START -->
+<style>
+    .lpSection--promo {
+        flex-direction: column;
+        row-gap: 16px;
+        display: none;
+    }
+
+    #sectionPromoLoggedIn.visible, #sectionPromoNotLoggedIn.visible  {
+        display: flex;
+    }
+
+    .lpArticle--promo {
+        border: 8px dashed #FFCC00;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        padding: 32px;
+    }
+
+    @media (min-width: 768px) {
+        .lpArticle--promo {
+            flex-direction: row;
+            column-gap: 16px;
+        }
+    }
+
+
+    .lpArticle--promo .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+        .lpArticle--promo .desc {
+            width: 100%;
+        }
+    }
+
+    .lpMain p.lpText--promo,
+    .block-wysiwyg .lpMain p.lpText--promo {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .lpText--promo span {
+        color: #e75012;
+    }
+
+    .lpAside--promoConditions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 8px;
+        row-gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+        .lpAside--promoConditions {
+            cursor: pointer;
+            column-gap: 16px;
+        } 
+    }
+
+    .lpAside--promoConditions .lpText,
+    .font-open-sans .block-wysiwyg .lpAside--promoConditions p.lpText {
+        font-style: italic;
+        width: calc(100% - 24px);
+    }
+
+    @media (min-width: 768px) {
+        .lpAside--promoConditions .lpText,
+        .font-open-sans .block-wysiwyg .lpAside--promoConditions p.lpText {
+            width: fit-content;
+            max-width: calc(100% - 32px);
+        }
+    }
+
+    .lpAside--promoConditions .lpText span {
+        color: #e75012;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    .lpMain .lpAside--promoConditions ul.lpList,
+    .block-wysiwyg .lpMain .lpAside--promoConditions ul.lpList {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease-out;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        opacity: 0;
+
+    }
+
+    .lpMain .lpAside--promoConditions .lpLink.open + ul.lpList,
+    .block-wysiwyg .lpMain .lpAside--promoConditions.open ul.lpList  {
+        max-height: 500px;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    .lpAside--promoConditions .ctaMoreLess .verticalLine {
+        transition: all .3s ease-out;
+    }
+
+    .lpAside--promoConditions .lpLink.open .ctaMoreLess .verticalLine {
+        opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+        .lpAside--promoConditions:hover .ctaMoreLess circle {
+            fill: #E75012;
+        }
+
+        .lpAside--promoConditions:hover .ctaMoreLess line {
+            stroke: #FFFFFF;
+        }
+    }
+
+    /***** Info message - START *****/
+    .lpMessage {
+        z-index: -1;
+        opacity: 0;
+        background-color: aquamarine;
+        transition: all .3s ease-out;
+        position: fixed;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F6F6F6;
+        transition: all .3s ease-out;
+        padding: 16px;
+        border-radius: 0 10px 10px 10px;
+        font-weight: 700;
+        border: 4px solid #000000;
+    }
+
+    .lpMessage.visible {
+        z-index: 1;
+        opacity: 1;
+    }
+    /***** Info message - END *****/
+</style>
+<!-- PROMO STYLES - END -->
+
+
+<!-- THIS PAGE STYLES - START -->
+<style>
+
+    /* OVERRIDE PADDINGS */
+    .lpMain {
+        padding: 56px 0px 2rem 0px;
+    }
+    .lpSection {
+        padding: 0 20px;
+    }
+
+    /* MAIN PAGE TITLE */
+    .section .section-title {
+        background-color: unset;
+        padding-bottom: 0;
+        position: relative;
+        text-align: left;
+        padding-left: 60px;
+    }
+    .section .section-title span {
+        position: relative;
+    }
+    .section .section-title span::before {
+        content: '';
+        background:url('/s/imgs/pages/00-commun/pictos/picto-bonjour.svg');
+        background-size: cover;
+        display: block;
+        width: 30px;
+        height: 32px;
+        position: absolute;
+        left: -40px;
+        bottom: 0;
+        top: 8px;
+    }
+
+    /* MAIN CONTENT */
+    .lpMain.lpMain--bienvenue {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+    .highlight_text {
+        font-weight: 700;
+    }
+    .lpCTA--tertiary, .block-wysiwyg a.lpCTA--tertiary, .c-wysiwyg a.lpCTA--tertiary {
+        border: solid 2px #000000;
+    }
+
+    /* ENCART PROMO */
+    .lpArticle.lpArticle--promo {
+        border: none;
+        background-color: #FFCC00;
+        border-radius: 0 10px 10px 10px;
+        padding-bottom: 40px;
+    }
+    .lpAside--promoConditions .lpText,
+    .font-open-sans .block-wysiwyg .lpAside--promoConditions p.lpText {
+        font-style: initial;
+    }
+    .lpSection--promo .desc .lpCTA--quaternary,
+    .block-wysiwyg .lpBanniere--promo .lpCTA--quaternary {
+        background-color: #000000;
+        min-height: unset;
+        height: 32px;
+        padding: 0 16px;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 18px;
+        position: relative;
+    }
+    .lpSection--promo .desc .lpCTA--quaternary::before,
+    .block-wysiwyg .lpBanniere--promo .lpCTA--quaternary::before {
+        background: url("https://www.pointp.fr/s/imgs/pages/landing-global/icon_copy_past_white.svg?frz-v=6780");
+    }
+    .lpSection--promo .confirmCopy,
+    .lpBanniere--promo .confirmCopy {
+        z-index: -5;
+        position: absolute;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        padding: 4px 16px;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        font-weight: 500;
+        font-size: 18px;
+        color: #FFFFFF;
+        border-radius: 4px;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+    .lpSection--promo .confirmCopy.visible,
+    .lpBanniere--promo .confirmCopy.visible {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+    }
+    .lpSection--promo .confirmCopy.hiding,
+    .lpBanniere--promo .confirmCopy.hiding {
+        opacity: 0;
+    }
+    .desc.loginSection {
+        padding-top: 40px;
+    }
+    .desc.loginSection .lpCTA--icon {
+        height: 44px;
+        width: 286px;
+        font-size: 18px;
+    }
+    .desc.loginSection .lpCTA--icon::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-creation-compte-noir.svg");
+    }
+    .desc.loginSection .alreadyRegistered {
+        font-size: 18px;
+        color: #000000;
+    }
+    #promoConditions {
+        row-gap: unset;
+    }
+    #promoConditions > .lpList .lpText:first-child {
+        margin-top: 16px;
+    }
+    #promoConditions > .lpLink {
+        color: #000000;
+        font-weight: 400;
+    }
+    #promoConditions > .lpLink::after {
+        content: '';
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        margin-left: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    #promoConditions.open > .lpLink::after {
+        transform: rotate(45deg) translateY(-2px);
+        -webkit-transform: rotate(45deg) translateY(-2px);
+    }
+
+    /* SECTIONS AVANTAGES */
+    .lpSection--avantages {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background-color: #F6F6F6;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: none;
+    }
+    .containerAvantages {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 2rem;
+    }
+    #avantagesPART.visible {
+        display: block;
+    }
+    #avantagesPRO.visible {
+        display: block;
+    }
+    .lpSection--avantages .lpTitle__h2 {
+        margin-bottom: 8px;
+    }
+    .lpSection--avantages .avantageContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 64px;
+        position: relative;
+    }
+    .lpSection--avantages .avantageContainer::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 3px;
+    }
+    /* AVANTAGES PRO */
+    .lpSection--avantages .avantageMeilleurPrix::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-etiquette.svg");
+    }
+    .lpSection--avantages .avantageStocks::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-synchro.svg");
+    }
+    .lpSection--avantages .avantageRetrait::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-horloge.svg");
+    }
+    .lpSection--avantages .avantageDocuments::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-documents.svg");
+    }
+    .font-open-sans .lpSection--avantages .avantageTitle {
+        font-weight: 700;
+    }
+    /* AVANTAGES PARTs */
+    .lpSection--avantages .reductionsExclusives::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-promo.svg");
+    }
+    .lpSection--avantages .livraison48::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-livraison.svg");
+    }
+    .lpSection--avantages .conseilsExperts::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-conseils.svg");
+    }
+    .lpSection--avantages .inspirationDeco::before {
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-inspiration.svg");
+    }
+
+    /* SECTIONS AVANTAGES */
+    .lpSection--offreBienvenue .lpTitle__h2 {
+        margin-bottom: 2rem;
+    }
+    .lpSection--offreBienvenue .etapeOffre {
+        background-color: #F6F6F6;
+        border-radius: 0 10px 10px 10px;
+        padding: 17px;
+        width: 79% !important;
+    }
+    .lpSection--offreBienvenue #slider_etapes:not(.splide--ltr) .etapeOffre {
+        width: 75%;
+        margin-right: 10%;
+    }
+    .lpSection--offreBienvenue .lpText:first-child {
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* SECTION OFFRE BIENVENUE */
+    .lpSection--offreBienvenue {
+        margin-bottom: 3rem;
+    }
+
+    /* SECTION AIDE COMMANDE MATERIAUX */
+    .font-open-sans .lpSection--commandeMateriaux .lpText {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .lpSection--commandeMateriaux .lpList .lpList__item::before {
+        background-color: #000000;
+    }
+    .lpSection--commandeMateriaux .lpList .lpList__item .lpLink {
+        font-weight: 300;
+        text-underline-offset: 2px;
+    }
+
+    /* SECTION APPLICATION MOBILE */
+    .lpSection--applicationMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #F6F6F6;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .block-wysiwyg .lpSection--applicationMobile .imgApplicationMobile {
+        max-width: 215px;
+        margin: 0 auto;
+        transform: rotate(-7deg);
+    }
+    .lpSection--applicationMobile .containerLinksApps div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 10px;
+    }
+    .lpSection--applicationMobile .containerLinksApps img {
+        max-width: 170px;
+    }
+    .lpSection--applicationMobile .rightPart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .rightPart .imgQrCode {
+        display: none;
+    }
+
+    /* SECTION OFFRE PRODUITS */
+    .lpSection--offreProduits {
+        margin-bottom: 3rem;
+    }
+    .lpSection--offreProduits .lpTitle__h2 {
+        margin-bottom: 2rem;
+    }
+    .lpSection--offreProduits .offreProduit {
+        border-radius: 0 10px 10px 10px;
+        background-color: #F6F6F6;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-right: 5%;
+    }
+    .lpSection--offreProduits .imgOffreProduit {
+        border-radius: 0 10px 0 0;
+    }
+    .font-open-sans .block-wysiwyg .lpSection--offreProduits .lpText {
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 6px 1rem 6px;
+    }
+
+    /* SPLIDE SLIDER */
+    .splide > .splide__pagination {
+        position: absolute;
+        bottom: -37.5px;
+        gap: 8px;
+    }
+    .splide > .splide__pagination li::before {
+        content: none;
+    }
+    .splide > .splide__pagination .splide__pagination__page {
+        opacity: 1;
+        border: solid 1px black;
+        background-color: #FFFFFF;
+        height: 10px;
+        width: 10px;
+    }
+    .splide > .splide__pagination .splide__pagination__page.is-active {
+        background-color: #000000;
+    }
+    .splide > .splide__arrows--ltr {
+        display: block;
+        bottom: -42px;
+        display: flex;
+        transform: unset;
+        --tw-translate-y: unset;
+        top: unset;
+        right: unset;
+        height: unset;
+        left: unset;
+    }
+    .splide > .splide__arrows .splide__arrow svg {
+        height: 1em;
+        width: 1em;
+        opacity: .7;
+    }
+    .splide > .splide__arrows .splide__arrow.splide__arrow--prev,
+    .splide > .splide__arrows .splide__arrow.splide__arrow--next {
+        width: 25px;
+        border-radius: 50%;
+        height: 25px;
+        background: #D9D9D9;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .splide > .splide__arrows .splide__arrow--prev:not(.disabled),
+    .splide > .splide__arrows .splide__arrow--next:not(.disabled) {
+        opacity: 1;
+    }
+    .splide > .splide__arrows.splide__arrows--ltr .splide__arrow:disabled {
+        opacity: .3;
+    }
+    /* BANNIERE PROMO STICKY */
+    .lpBanniere--promo {
+        position: sticky;
+        width: 100%;
+        height: 80px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFCC00;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        opacity: 0;
+        transition: opacity .2s linear;
+        z-index: 50;
+        display: none;
+    }
+    #asideNotLoggedIn.visible {
+        display: flex;
+    }
+    #asideLoggedIn.visible {
+        display: flex;
+    }
+
+    .lpBanniere--promo.increaseOpacity {
+        opacity: 1;
+    }
+    .lpBanniere--promo .lpText {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.1rem;
+    }
+    .lpBanniere--promo .lpText span {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .lpBanniere--promo .confirmCopy {
+        width: 100%;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: initial;
+    }
+    .linebreak {
+        display: none;
+    }
+    /* RESPONSIVE -- DESKTOP */
+
+    @media (min-width: 768px) {
+        .linebreak {
+            display: initial;
+        }
+        .linebreak_mobile {
+            display: none;
+        }
+        .lpMain {
+            row-gap: 40px;
+        }
+        /* TITLE + INTRO TXT */
+        .section .section-title {
+            text-align: left;
+            width: fit-content;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+        .section .section-title span::before {
+            top: 0;
+        }
+        .lpSection.lpSection--intro {
+            text-align: center;
+        }
+        /* SECTION PROMO */
+        .lpSection.lpSection--promo {
+            position: relative;
+        }
+        .lpSection.lpSection--promo::before {
+            background-image: url("/s/imgs/pages/bienvenue-pp/intro_promo_bienvenue.jpg");
+            content: '';
+            position: absolute;
+            width: 32%;
+            background-repeat: no-repeat;
+            height: 316px;
+        }
+        .lpArticle--promo {
+            flex-direction: column;
+        }
+        .lpArticle.lpArticle--promo {
+            width: 67.5%;
+            height: 316px;
+            align-self: end;
+            border-radius: 0 10px 10px 0px;
+            gap: 56px;
+        }
+        .lpArticle--promo .desc {
+            padding: 0 6.5%;
+        }
+        #sectionPromoLoggedIn .lpArticle.lpArticle--promo {
+            justify-content: center;
+        }
+        #sectionPromoLoggedIn .lpArticle--promo .desc {
+            row-gap: 24px;
+        }
+        .lpSection--promo .desc .lpCTA--quaternary {
+            height: 42px;
+        }
+        .lpSection--promo .confirmCopy {
+            top: 2px;
+        }
+        .block-wysiwyg .lpBanniere--promo .lpCTA--quaternary {
+            height: 50px;
+            width: 300px;
+        }
+        /* SECTION AVANTAGES */
+        .containerAvantages {
+            flex-direction: row;
+        }
+        .lpSection--avantages .avantageContainer {
+            text-align: center;
+            padding-left: 0;
+            padding-top: 84px;
+        }
+        .lpSection--avantages .avantageContainer::before {
+            width: 60px;
+            height: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .lpSection--avantages .containerAvantages {
+            gap: 40px;
+        }
+        /* SECTION OFFRE BIENVENUE */
+        #slider_etapes:not(.splide--ltr) .splide__list {
+            gap: 40px;
+            justify-content: space-between;
+        }
+        #slider_etapes:not(.splide--ltr) .splide__list .etapeOffre {
+            margin-right: 0;
+            width: calc(25% - 40px);
+        }
+        .lpSection--offreBienvenue .etapeOffre {
+            width: 22.5% !important;
+        }
+        /* SECTION APPLICATION MOBILE */
+        .lpSection--applicationMobile .rightPart {
+            flex-direction: row;
+            padding-top: 2rem;
+            max-width: 885px;
+            margin: 0 auto;
+            gap: 24px;
+        }
+        .block-wysiwyg .lpSection--applicationMobile .imgApplicationMobile {
+            max-width: 239px;
+            transform: rotate(0deg);
+        }
+        .lpSection--applicationMobile .subRightPart .lpText {
+            text-align: center;
+        }
+        .lpSection--applicationMobile .subRightPart .containerLinksApps {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            padding-top: 24px;
+        }
+        .lpSection--applicationMobile .subRightPart .containerLinksApps  > div {
+            display: flex;
+            flex-direction: column;
+        }
+        .rightPart .imgQrCode {
+            display: block;
+        }
+        /* SECTION OFFRE PRODUITS ET MATERIAUX */
+        #slider_offreProduits:not(.splide--ltr) .splide__list {
+            display: flex;
+            gap: 32px;
+        }
+        #slider_offreProduits:not(.splide--ltr) .splide__list .offreProduit {
+            flex-shrink: 0;
+            width: 13%;
+            margin-right: unset;
+        }
+        .lpSection--offreProduits .offreProduit {
+            margin-right: initial;
+        }
+        #slider_offreProduit .splide__list .offreProduit a {
+            display: flex;
+            flex-direction: column;
+        }
+        .lpSection--offreProduits .offreProduit a {
+            display: flex;
+            flex-direction: column;
+        }
+        .font-open-sans .block-wysiwyg .lpSection--offreProduits .lpText {
+            padding: 1rem 24px 1rem 24px;
+        }
+        /* BANNIERE PROMO */
+        .lpBanniere--promo {
+            gap: 56px;
+        }
+        .lpBanniere--promo .lpText {
+            font-size: 18px;
+        }
+        .lpBanniere--promo .lpText span {
+            font-size: 18px;
+            margin-top: 7px;
+            display: block;
+        }
+    }
+    @media (max-width: 1280px) {
+        .lpArticle.lpArticle--promo {
+            gap: 23px;
+        }
+        #slider_etapes:not(.splide--ltr) .splide__list {
+            gap: 10px;
+        }
+        #slider_etapes:not(.splide--ltr) .splide__list .etapeOffre {
+            width: calc(25% - 10px);
+        }
+    }
+
+</style>
+<!-- THIS PAGE STYLES - END -->
+
+
+<!-- HTML - START -->
+<div class="lpMain lpMain--bienvenue">
+    <!-- INTRO TXT SECTION START -->
+    <section class="lpSection lpSection--intro">
+        <p class="lpText">Pour vous souhaiter la bienvenue sur notre site, POINT.P vous offre un code promo pour votre première commande de produits et matériaux sur pointp.fr ou sur l’application mobile POINT.P.</p>
+    </section>
+    <!-- INTRO TXT SECTION END -->
+
+    <!-- ENCART PROMO - START -->
+    <section class="lpSection lpSection--promo" id="sectionPromoNotLoggedIn">
+        <article class="lpArticle lpArticle--promo">
+            <section class="desc">
+                <p class="lpText lpText--promo">
+                    Profitez de 10€ (TTC) de remise par tranche de 100€ (ttc) d’achat* <br class="linebreak">avec le code :
+                </p>
+                <a data-text="AMEX80" class="lpCTA lpCTA--quaternary lpCTA--icon icon--copyPast">
+                    BIENVENUE10
+                    <p class="lpText confirmCopy">Code promo copié !</p>
+                </a>
+            </section>
+
+            <section class="desc loginSection">
+                <a href="https://www.pointp.fr/inscription" class="lpCTA lpCTA--tertiary lpCTA--icon">Créer mon compte</a>
+                <a href="https://www.pointp.fr/connexion" class="alreadyRegistered lpLink">Déjà inscrit ? Me connecter</a>
+            </section>
+        </article>
+
+        <aside id="promoConditions" class="lpAside lpAside--promoConditions">
+
+            <span class="lpLink">*Voir conditions</span>
+
+            <ul class="lpList">
+                <p class="lpText">Code promo valable :</p>
+                <li class="lpList__item">Uniquement ur le site pointp.fr et sur l’application mobile POINT.P.</li>
+                <li class="lpList__item">Uniquement sur la première commande.</li>
+                <li class="lpList__item">Pour un montant minimum d’achat de 100€ HT et un montant maximum d’achat de 5000€ HT.</li>
+                <li class="lpList__item">Une seule fois par client.</li>
+                <li class="lpList__item">Uniquement sur les articles commandables en ligne.</li>
+                <li class="lpList__item">Le client s’engage à retirer les produits à la date de retrait choisie et au plus tard dans les 48 heures ouvrées suivant cette date.</li>
+                <p class="lpText">Code promo non éligible :</p>
+                <li class="lpList__item">Sur les produits concernés par les opérations commerciales en cours.</li>
+                <li class="lpList__item">Sur les produits en barème quantité ( « prix dégressif » sur le site).</li>
+                <li class="lpList__item">Sur les tarifs collaborateurs.</li>
+                <li class="lpList__item">Sur les frais de livraison.</li>
+                <li class="lpList__item">Sur la validation des devis en ligne.</li>
+            </ul>
+        </aside>
+    </section>
+    <!-- ENCART PROMO - END -->
+
+
+    <!-- ENCART PROMO LOGGED IN - START -->
+    <section class="lpSection lpSection--promo" id="sectionPromoLoggedIn">
+        <article class="lpArticle lpArticle--promo">
+            <section class="desc">
+                <p class="lpText lpText--promo">
+                    Profitez de 10€ (TTC) de remise par tranche de 100€ (ttc) d’achat* <br class="linebreak">avec le code :
+                </p>
+                <a data-text="AMEX80" class="lpCTA lpCTA--quaternary lpCTA--icon icon--copyPast">
+                    BIENVENUE10
+                    <p class="lpText confirmCopy">Code promo copié !</p>
+                </a>
+            </section>
+        </article>
+
+        <aside id="promoConditions" class="lpAside lpAside--promoConditions">
+
+            <span class="lpLink">*Voir conditions</span>
+
+            <ul class="lpList">
+                <p class="lpText">Code promo valable :</p>
+                <li class="lpList__item">Uniquement ur le site pointp.fr et sur l’application mobile POINT.P.</li>
+                <li class="lpList__item">Uniquement sur la première commande.</li>
+                <li class="lpList__item">Pour un montant minimum d’achat de 100€ HT et un montant maximum d’achat de 5000€ HT.</li>
+                <li class="lpList__item">Une seule fois par client.</li>
+                <li class="lpList__item">Uniquement sur les articles commandables en ligne.</li>
+                <li class="lpList__item">Le client s’engage à retirer les produits à la date de retrait choisie et au plus tard dans les 48 heures ouvrées suivant cette date.</li>
+                <p class="lpText">Code promo non éligible :</p>
+                <li class="lpList__item">Sur les produits concernés par les opérations commerciales en cours.</li>
+                <li class="lpList__item">Sur les produits en barème quantité ( « prix dégressif » sur le site).</li>
+                <li class="lpList__item">Sur les tarifs collaborateurs.</li>
+                <li class="lpList__item">Sur les frais de livraison.</li>
+                <li class="lpList__item">Sur la validation des devis en ligne.</li>
+            </ul>
+        </aside>
+    </section>
+    <!-- ENCART PROMO LOGGED IN - END -->
+
+
+    <!-- SECTION AVANTAGES PRO - START -->
+    <section class="lpSection lpSection--avantages" id="avantagesPRO">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Vos avantages
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                Sur pointp.fr
+            </span>
+        </h2>
+        <div class="containerAvantages">
+            <article class="avantageContainer avantageMeilleurPrix">
+                <p class="lpText avantageTitle">Les meilleurs prix sur tous nos <br class="linebreak">produits et matériaux</p>
+                <p class="lpText avantageDesc">Profitez de tarifs compétitifs sur une large gamme de produits et matériaux de construction.</p>
+            </article>
+            <article class="avantageContainer avantageStocks">
+                <p class="lpText avantageTitle">L’accès aux stocks <br class="linebreak">en temps réels</p>
+                <p class="lpText avantageDesc">Vérifiez la disponibilité des produits en temps réel pour optimiser vos achats.</p>
+            </article>
+            <article class="avantageContainer avantageRetrait">
+                <p class="lpText avantageTitle">Le retrait gratuit <br class="linebreak">en 2 heures</p>
+                <p class="lpText avantageDesc">Commandez en ligne et récupérez vos produits gratuitement en seulement 2 heures.</p>
+            </article>
+            <article class="avantageContainer avantageDocuments">
+                <p class="lpText avantageTitle">Les documents techniques <br class="linebreak">en un clic</p>
+                <p class="lpText avantageDesc">Accédez facilement à la documentation technique nécessaire pour vos projets, directement en ligne.</p>
+            </article>
+        </div>
+    </section>
+    <!-- SECTION AVANTAGES PRO - END -->
+
+
+    <!-- SECTION AVANTAGES PARTs - START -->
+    <section class="lpSection lpSection--avantages" id="avantagesPART">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Vos avantages
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                Sur pointp.fr
+            </span>
+        </h2>
+        <div class="containerAvantages">
+            <article class="avantageContainer reductionsExclusives">
+                <p class="lpText avantageTitle">Promotions</p>
+                <p class="lpText avantageDesc">Profitez de réductions exclusives sur une sélection de produits et matériaux de construction.</p>
+            </article>
+            <article class="avantageContainer livraison48">
+                <p class="lpText avantageTitle">Livraison 48H</p>
+                <p class="lpText avantageDesc">Commandez en ligne et recevez vos produits en 48 heures chez vous.</p>
+            </article>
+            <article class="avantageContainer conseilsExperts">
+                <p class="lpText avantageTitle">Conseils d'experts</p>
+                <p class="lpText avantageDesc">Obtenez des conseils personnalisés pour vos projets de rénovation.</p>
+            </article>
+            <article class="avantageContainer inspirationDeco">
+                <p class="lpText avantageTitle">Inspirations</p>
+                <p class="lpText avantageDesc">Trouvez des idées et des inspirations pour vos projets de décoration.</p>
+            </article>
+        </div>
+    </section>
+    <!-- SECTION AVANTAGES PARTs - END -->
+
+
+    <!-- SECTION COMMENT BENEFICIER - START -->
+    <section class="lpSection lpSection--offreBienvenue">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Comment bénéficier
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                De l'offre de bienvenue ?
+            </span>
+        </h2>
+        <!-- SPLIDE SLIDER STEPS -->
+        <div id="slider_etapes" class="containerEtapesOffre splide" aria-label="Slider des etapes">
+            <div class="splide__track">
+                <div class="splide__list">
+                    <article class="splide__slide etapeOffre">
+                        <p class="lpText">
+                            <span>Etape 1</span>
+                            <span>Créez votre compte</span>
+                        </p>
+                        <p class="lpText">Saisissez vos coordonnées personnelles (email, téléphone, nom, prénom). <span class="highlight_text">Pour un compte PRO, munissez-vous de votre numéro de SIRET,</span> obligatoire pour valider votre statut de professionnel.</p>
+                    </article>
+
+                    <article class="splide__slide etapeOffre">
+                        <p class="lpText">
+                            <span>Etape 2</span>
+                            <span>Choisissez vos produits</span>
+                        </p>
+                        <p class="lpText"><span class="highlight_text">Ajoutez les articles</span> de votre choix dans votre panier en cliquant sur les produits souhaités. Ensuite, accédez à votre panier <span class="highlight_text">en cliquant sur l'icône en haut à droite</span> de votre page.</p>
+                    </article>
+
+                    <article class="splide__slide etapeOffre">
+                        <p class="lpText">
+                            <span>Etape 3</span>
+                            <span>Appliquez le code promo</span>
+                        </p>
+                        <p class="lpText"><span class="highlight_text">Saisissez le code BIENVENUE10</span> dans le champ "Code promo," puis cliquez sur "Appliquer". Votre code promo sera pris en compte et vous verrez la réduction dans votre panier.</p>
+                    </article>
+
+                    <article class="splide__slide etapeOffre">
+                        <p class="lpText">
+                            <span>Etape 4</span>
+                            <span>Validez votre panier</span>
+                        </p>
+                        <p class="lpText">Après avoir appliqué le code promo, cliquez sur <span class="highlight_text">"Valider votre panier"</span> pour finaliser votre commande. Assurez-vous de suivre les étapes de paiement et de livraison pour compléter l'achat.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION COMMENT BENEFICIER - END -->
+
+
+    <!-- SECTION AIDE COMMANDE MATERIAUX START -->
+    <section class="lpSection lpSection--commandeMateriaux">
+        <p class="lpText">Besoin d’aide pour commander vos produits et matériaux ?</p>
+        <ul class="lpList">
+            <li class="lpList__item"><a target="_blank" href="https://www.pointp.fr/s/imgs/pages/bienvenue-pp/aide-code-promo.jpg" class="lpLink">Visualisez nos aide en ligne pour utiliser le code promo</a></li>
+            <li class="lpList__item"><a target="_blank" href="https://www.pointp.fr/sites/default/files/wysiwyg-files/POINTP_Memo-Commande-Web_V4_0.pdf" class="lpLink">Téléchargez notre guide pour vous aider à passer commande</a></li>
+            <li class="lpList__item"><a href="https://www.pointp.fr/contactez-nous" class="lpLink">Contactez nous</a></li>
+        </ul>
+    </section>
+    <!-- SECTION AIDE COMMANDE MATERIAUX END -->
+
+
+    <!-- SECTION APPLICATION MOBILE START-->
+    <section class="lpSection lpSection--applicationMobile">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Plus qu'un outil :
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                Notre application mobile
+            </span>
+        </h2>
+        <div class="rightPart">
+            <img class="imgApplicationMobile" src="s\imgs\pages\00-commun\banniere-app-mobile/mockup-application-mobile.png" alt="Application mobile pointp.fr">
+            <div class="subRightPart">
+                <p class="lpText">Elle ne sait ni visser, ni clouer, ni tracer, mais c’est notre meilleur outil. Découvrez notre application mobile POINT.P, en téléchargement gratuit sur l’App Store et sur Google Play. Notre offre de bienvenue fonctionne aussi sur l’appli !</p>
+           
+                <div class="containerLinksApps">
+                    <img src="s\imgs\pages\bienvenue-pp\code_qr.jpg" alt="qr code application mobile pointp.fr" class="imgQrCode">
+                    <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.pointp.android&hl=fr&gl=US" class="lpLink">
+                            <img src="s\imgs\pages\00-commun\banniere-app-mobile/cta-google-play.png" alt="Google Play">
+                        </a>
+                        <a href="https://apps.apple.com/fr/app/point-p-mat%C3%A9riaux/id634317935" class="lpLink">
+                            <img src="s\imgs\pages\00-commun\banniere-app-mobile/cta-app-store.png" alt="App store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION APPLICATION MOBILE END-->
+
+
+    <!-- SECTION DECOUVRIR OFFRE PRODUITS START-->
+    <section class="lpSection lpSection--offreProduits">
+        <h2 class="lpTitle__h2">
+            <span class="lpTitle__h2span lpTitle__h2span--black">
+                Découvrir l'offre
+            </span>
+            <span class="lpTitle__h2span lpTitle__h2span--orange">
+                De produits et matériaux
+            </span>
+        </h2>
+
+        <!-- SPLIDE SLIDER OFFRE PRODUITS -->
+        <div id="slider_offreProduits" class="splide" aria-label="Slider offre produits">
+            <div class="splide__track">
+                <div class="splide__list">
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/materiaux-gros-oeuvre">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/mat-bois-gros-oeuvre.jpg" alt="Matériaux, bois, gros oeuvre">
+                            <p class="lpText">Matériaux, bois, gros oeuvre</p>
+                        </a> 
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/platre-isolation">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/platre-isolation.jpg" alt="Plâtre, isolation">
+                            <p class="lpText">Plâtre, isolation</p>
+                        </a>
+                    </article>
+                    
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/toiture">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/toiture-charpentes.jpg" alt="Toiture, charpentes">
+                            <p class="lpText">Toiture, charpentes</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/portes-fenetres-menuiserie">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/portes-fenetres-menuiserie.jpg" alt="Portes fenêtres menuiseries">
+                            <p class="lpText">Portes, fenêtres, menuiseries</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/bois-panneaux">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits\bois-panneaux.jpg" alt="Bois panneaux">
+                            <p class="lpText">Bois panneaux</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/autres-revetements-interieur">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/revetements-sol-mur.jpg" alt="Revêtements sol et mur">
+                            <p class="lpText">Revêtements sol et mur</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/carrelage-interieur">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits\carrelage-interieur.jpg" alt="Carrelage intérieur">
+                            <p class="lpText">Carrelage intérieur</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/terrasses-et-exterieurs">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/terrasses-et-exterieurs.jpg" alt="Terrasses et extérieurs">
+                            <p class="lpText">Terrasses et extérieurs</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/electricite-ventilation">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/electricite-plomberie-sanitaire.jpg" alt="Electricité, ventilation">
+                            <p class="lpText">Electricité, ventilation</p>
+                        </a>
+                    </article>
+
+                    
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/outillage">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits/outils-equipement-accessoires.jpg" alt="Outillage">
+                            <p class="lpText">Outillage</p>
+                        </a>
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/materiel-de-chantier">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits\materiel-de-chantier.jpg" alt="Matériel de chantier">
+                            <p class="lpText">Matériel de chantier</p>    
+                        </a>             
+                    </article>
+
+                    <article class="splide__slide offreProduit">
+                        <a href="https://www.pointp.fr/protection-individuelle-securite">
+                            <img class="imgOffreProduit" src="s\imgs\pages\00-commun\categories-produits\casque-lunettes-chantier-epi.jpg" alt="Equipement de protection, sécurité">
+                            <p class="lpText">Equipement de protection, sécurité</p>    
+                        </a>             
+                    </article>
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION DECOUVRIR OFFRE PRODUITS END-->
+
+
+    <!-- BANNIERE PROMO START -->
+    <aside class="lpBanniere--promo" id="asideNotLoggedIn">
+        <div class="leftPartTxt">
+            <p class="lpText">
+                Jusqu'à<br><span>500€* de remise</span>
+            </p>
+        </div>
+        <a href="https://www.pointp.fr/connexion" class="lpCTA lpCTA--tertiary">J'en profite !</a>
+    </aside>
+    <!-- BANNIERE PROMO END -->
+
+
+    <!-- BANNIERE PROMO LOGGED IN START -->
+    <aside class="lpBanniere--promo" id="asideLoggedIn">
+        <div class="leftPartTxt">
+            <p class="lpText">
+                Jusqu'à<br><span>500€* de remise</span>
+            </p>
+        </div>
+        <a data-text="AMEX80" class="lpCTA lpCTA--quaternary lpCTA--icon icon--copyPast">
+            BIENVENUE10
+            <p class="lpText confirmCopy">Code promo copié !</p>
+        </a>
+    </aside>
+    <!-- BANNIERE PROMO LOGGED IN END -->
+
+</div>
+<!-- HTML - END -->
+
+<!-- JS - START -->
+<script defer>
+
+    /***** DISPLAY CONTENT START *****/
+    document.addEventListener("DOMContentLoaded", function () {
+        let contentAvantages;
+        let contentPromo;
+        let contentBanniere;
+        
+        if (tc_vars.user_profile == 'VI' && tc_vars.user_subprofile == 'PART') {
+            contentAvantages = document.getElementById('avantagesPART');
+        }
+        if (tc_vars.user_profile == 'VI' && tc_vars.user_subprofile == 'PRO' || tc_vars.user_logged == 'non') {
+            contentAvantages = document.getElementById('avantagesPRO');
+        }
+        if (tc_vars.user_logged == 'non') {
+            contentPromo = document.getElementById('sectionPromoNotLoggedIn');
+            contentBanniere = document.getElementById('asideNotLoggedIn');
+        }
+        if (tc_vars.user_logged == 'oui') {
+            contentPromo = document.getElementById('sectionPromoLoggedIn');
+            contentBanniere = document.getElementById('asideLoggedIn');
+        }
+
+        contentAvantages.classList.add('visible');
+        contentPromo.classList.add('visible');
+        contentBanniere.classList.add('visible');
+        
+        /***** CHECK IF ELEMENT IS IN VIEWPORT START *****/
+        // Toggle class if targeted element disapear from viewport
+        let observer = new IntersectionObserver(([entry]) => {
+            contentBanniere.classList.toggle('increaseOpacity', !entry.isIntersecting);
+        }, { threshold: 0.1 });
+
+        observer.observe(contentPromo);
+        /***** CHECK IF ELEMENT IS IN VIEWPORT END *****/
+            
+    });
+    /***** DISPLAY CONTENT END *****/
+
+    /***** Affichage des conditions - START *****/
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sélectionne tous les éléments avec la classe "lpAside--promoConditions"
+        var promoConditionsElements = document.querySelectorAll('.lpAside--promoConditions .lpLink');
+
+        // Ajoute un écouteur d'événement à chaque élément
+        promoConditionsElements.forEach(function (element) {
+            element.addEventListener("click", function () {
+                // Vérifie si l'élément cliqué a déjà la classe "open"
+                var isOpen = element.classList.contains('open');
+
+                // Retire la classe "open" de tous les éléments
+                promoConditionsElements.forEach(function (el) {
+                    el.classList.remove('open');
+                });
+
+                // Si l'élément cliqué n'avait pas la classe "open", on l'ajoute
+                if (!isOpen) {
+                    element.classList.add('open');
+                }
+            });
+        });
+    });
+    /***** Affichage des conditions - END *****/
+
+    /***** Copy text to clipboard - START *****/
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Function to copy text
+        function copyToClipboard(text) {
+            // Create a temporary element to hold the text
+            var tempElement = document.createElement("textarea");
+            tempElement.value = text;
+            document.body.appendChild(tempElement);
+
+            // Select and copy the text
+            tempElement.select();
+            document.execCommand("copy");
+
+            // Remove the temporary element
+            document.body.removeChild(tempElement);
+        }
+
+        // Add an event listener for each CTA button
+        var buttons = document.querySelectorAll('.icon--copyPast');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                var textToCopy = button.getAttribute('data-text');
+                copyToClipboard(textToCopy);
+                
+                // Display a confirmation message
+                var confirmationMessage = button.querySelector('.confirmCopy');
+                confirmationMessage.classList.add('visible');
+                
+                setTimeout(() => {
+                confirmationMessage.classList.add('hiding');
+                }, 1700);
+
+                // Hide the message after 2 seconds
+                setTimeout(() => {
+                    confirmationMessage.classList.remove('visible');
+                    confirmationMessage.classList.remove('hiding');
+                }, 2000);
+            });
+        });
+    });
+    /***** Copy text to clipboard - END *****/
+
+
+    /***** SPLIDE SLIDERS *****/
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // CHECK DEVICE'S WIDTH
+        function isMobile() {
+            return window.matchMedia("(max-width: 768px)").matches;
+        }
+
+        function checkSplide() {
+            if (typeof Splide !== "undefined") {
+                // SLIDER ETAPES MOBILE
+                if (isMobile() && document.querySelectorAll('#slider_etapes .splide__slide').length > 1) {
+                    const splide = new Splide("#slider_etapes", {
+                        gap: 24,
+                        arrows: true,
+                        perMove  : 1,
+                        drag     : true,
+                        snap     : true,
+                    });
+                    splide.mount();
+                }
+                // SLIDER ETAPES DESKTOP
+                if (!isMobile() && document.querySelectorAll('#slider_etapes .splide__slide').length > 4) {
+                    console.log('oui');
+                    const splide = new Splide("#slider_etapes", {
+                        gap: 24,
+                        arrows: true,
+                        perPage: 4,
+                    });
+                    splide.mount();
+                }
+
+                // SLIDER OFFRE PRODUITS MOBILE
+                if (isMobile() && document.querySelectorAll('#slider_offreProduits .splide__slide').length > 2) {
+                    const splide = new Splide("#slider_offreProduits", {
+                        // gap: 24,
+                        perPage: 2,
+                        gap: { right: "10.5%" },
+                        arrows: true,
+                        perMove  : 1, 
+                        drag     : true,     
+                        snap     : true,
+                    });
+                    splide.mount();
+                }
+                // SLIDER OFFRE PRODUITS DESKTOP
+                if (!isMobile() && document.querySelectorAll('#slider_offreProduits .splide__slide').length > 6) {
+                    const splide = new Splide("#slider_offreProduits", {
+                        gap: 40,
+                        perPage: 6,
+                        arrows: true
+                    });
+                    splide.mount();
+                }
+
+            } else {
+                setTimeout(checkSplide, 500);
+            }
+        }
+        checkSplide();
+    });
+    /***** SPLIDE SLIDERS END *****/
+
+
+    /***** TITLE FIRST WORD COLOR EDIT START *****/
+    document.addEventListener("DOMContentLoaded", function () {
+        let htmlContent = document.querySelector('.section-title');
+
+        if (htmlContent) { 
+            let text = htmlContent.textContent.trim();
+            let words = text.split(" ");
+
+            if (words.length > 1) {
+                let firstWord = words[1]; // Récupérer le 2ᵉ mot (index 1)
+
+                // Construire un nouvel élément sécurisé
+                let newHtml = `<span style="color:#E75012">Bienvenue</span> sur pointp.fr : <br class="linebreak_mobile">Votre code promo`;
+
+                // Injection contrôlée
+                htmlContent.innerHTML = newHtml;
+            }
+        }
+    });
+    /***** TITLE FIRST WORD COLOR EDIT END *****/
+
+
+</script>
+<!-- JS - END -->
