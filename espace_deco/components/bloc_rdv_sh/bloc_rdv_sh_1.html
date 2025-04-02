@@ -1,18 +1,285 @@
+<!-- CTA SHOWROOM -->
+<style>
+    .element--mobile {
+        display: block;
+    }
+
+    .element--desktop {
+        display: none;
+    }
+
+    .blocRdvSh {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 10px 10px 10px;
+        overflow: hidden;
+    }
+
+    img:not([width]).rdvShImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .rdvShContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        text-align: center;
+    }
+
+    .rdvShTitle__h2 {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .rdvShText {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: .875rem;
+    }
+
+    .rdvShCta {
+        width: 100%;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 1rem;
+        border-radius: 50px;
+        padding: 4px 32px;
+    }
+
+    @media (min-width: 768px) {
+        .element--mobile {
+            display: none;
+        }
+
+        .element--desktop {
+            display: block;
+        }
+
+        .blocRdvSh {
+            flex-direction: row;
+        }
+
+        .rdvShTitle__h2 {
+            font-size: 1.625rem;
+        }
+
+        .rdvShDesc {
+            display: flex;
+            align-items: center;
+        }
+
+        .rdvShText {
+            font-size: 1rem;
+        }
+
+        img:not([width]).rdvShImg--iconClick {
+            max-width: 60px;
+        }
+
+        .rdvShCta {
+            font-size: 1.125rem;
+            transition: all .3s ease-out;
+        }
+    }
+    /***** GLOBAL END *****/
+
+    /***** Bloc 1 START *****/
+    .blocRdvSh.blocRdvSh--1 {
+        background-color: #333333;
+    }
+
+    .blocRdvSh--1 .rdvShContent {
+        color: #ffffff;
+        padding: 16px 32px;
+    }
+
+    .blocRdvSh--1 .rdvShCta {
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #ffffff;
+        width: fit-content;
+    }
+
+    @media (min-width: 768px) {
+
+        img:not([width]).rdvShImg--visual {
+            max-width: 330px;
+        }
+
+        .blocRdvSh--1 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+    }
+    /***** Bloc 1 END *****/
+
+    /***** Bloc 2 START *****/
+    .blocRdvSh.blocRdvSh--2 {
+        background-color: #333333;
+        padding: 16px;
+    }
+
+    .blocRdvSh--2 .rdvShContent {
+        color: #FFFFFF;
+        padding: 16px 0;
+    }
+
+    .blocRdvSh--2 .rdvShReassurance {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blocRdvSh--2 .reassuranceItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4px;
+        width: calc(100% / 3);
+    }
+
+    .blocRdvSh--2 img:not([width]).rdvShImg--reassurance {
+        max-width: 48px;
+    }
+
+    .blocRdvSh--2 .itemText {
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: .875rem;
+    }
+
+    .blocRdvSh--2 .rdvShCta {
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        width: fit-content;
+    }
+
+    @media (min-width: 768px) {
+
+        .blocRdvSh--2 .rdvShContent {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .blocRdvSh--2 img:not([width]).rdvShImg--visual {
+            max-width: 420px;
+        }
+
+        .blocRdvSh--2 .rdvShReassurance {
+            justify-content: center;
+            column-gap: 32px;
+            margin: 16px;
+        }
+
+        .blocRdvSh--2 .itemText {
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        .blocRdvSh--2 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+    }
+    /***** Bloc 2 END *****/
+
+    /***** Bloc 3 START *****/
+
+    /* Reset END */
+
+    .blocRdvSh.blocRdvSh--3 {
+        background-color: #333333;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        border-radius: 0;
+        padding: 16px 32px;
+    }
+
+    .blocRdvSh--3 .rdvShContent {
+        color: #FFFFFF; 
+    }
+
+    .blocRdvSh--3 .rdvShCta {
+        display: flex;
+        column-gap: 4px;
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #ffffff;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding: 8px 16px;
+    }
+
+    .blocRdvSh--3 .rdvShImg--calendar {
+        width: 48px;
+        height: 48px;
+    }
+
+    @media (min-width: 768px) {
+
+        .blocRdvSh.blocRdvSh--3 {
+            position: unset;
+            padding: 16px;
+            border-radius: 0 10px 10px 10px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .blocRdvSh--3 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+
+        .blocRdvSh--3 .rdvShImg--calendar {
+            width: 24px;
+            height: 24px;
+        }
+
+        .blocRdvSh--3 .rdvShCta:hover .rdvShSvg--calendar path {
+            fill: #FFFFFF;
+        }
+    }
+
+</style>
+
 <!-- Bloc rdv sh START -->
-<section class="blocRdvSh blocRdvSh--1">
-    <img src="/s/imgs/efficience/bloc_rdv_sh/block_1/carrelage_beige_mobile.webp" alt="" class="rdvShImg rdvShImg--visual element--mobile">
-    <img src="/s/imgs/efficience/bloc_rdv_sh/block_1/carrelage_beige_desktop.webp" alt="" class="rdvShImg rdvShImg--visual element--desktop">
+<section class="blocRdvSh blocRdvSh--2">
+    <img src="/s/imgs/efficience/bloc_rdv_sh/block_2_reassurance/visual_mobile_1.webp" alt="" class="rdvShImg rdvShImg--visual element--mobile">
+    <img src="/s/imgs/efficience/bloc_rdv_sh/block_2_reassurance/visual_desktop_1.webp" alt="" class="rdvShImg rdvShImg--visual element--desktop">
     <article class="rdvShContent">
-        <h2 class="rdvShTitle__h2">Vous voulez découvrir toutes les tendances sol 2025 ?</h2>
-        <div class="rdvShDesc">
-            <p class="rdvShText element--mobile">
-                Laissez-vous guider par nos conseillers en showroom ou en visio :
-            </p>
-            <p class="rdvShText element--desktop">
-                Laissez-vous guider par nos conseillers en showroom ou en visio :
-            </p>
-            <img src="/s/imgs/efficience/bloc_rdv_sh/block_1/icon_click.png" alt="" class="rdvShImg rdvShImg--iconClick element--desktop">
-        </div>
+        <h2 class="rdvShTitle__h2">
+            Besoin de conseils pour votre projet ?
+        </h2>
+        <p class="rdvShText">
+            Faites-vous accompagner par nos conseillers en showroom ou en visio !
+        </p>
+        <ul class="rdvShReassurance">
+            <li class="reassuranceItem">
+                <img src="/s/imgs/efficience/bloc_rdv_sh/block_2_reassurance/icon_reassurance_1.svg" alt="" class="rdvShImg rdvShImg--reassurance">
+                <p class="itemText">Gratuit</p>
+            </li>
+            <li class="reassuranceItem">
+                <img src="/s/imgs/efficience/bloc_rdv_sh/block_2_reassurance/icon_reassurance_2.svg" alt="" class="rdvShImg rdvShImg--reassurance">
+                <p class="itemText">Conseils personnalisés</p>
+            </li>
+            <li class="reassuranceItem">
+                <img src="/s/imgs/efficience/bloc_rdv_sh/block_2_reassurance/icon_reassurance_3.svg" alt="" class="rdvShImg rdvShImg--reassurance">
+                <p class="itemText">Sans engagement</p>
+            </li>
+        </ul>
         <a href="https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous" class="rdvShCta">
             Me faire accompagner
         </a>
