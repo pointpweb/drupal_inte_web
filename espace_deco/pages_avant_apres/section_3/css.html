@@ -496,6 +496,7 @@
         border-radius: 50%;
         display: inline-block;
         transition: .2s;
+        margin-top: 10px;
     }
     
     .carousel .dot.active {
@@ -970,5 +971,49 @@
     }
     /***** Bloc 3 END *****/
 
+        .section-template-builder.width-75 .blocRdvSh {
+            margin-top: 30px;
+           margin-bottom: 60px;
+       }
+       .section-template-builder.width-100 .blocRdvSh {
+           margin-top: 20px;
+           margin-bottom: 40px;
+       }
+
 </style>
 <!---------- CSS Bloc rdv sh END ---------->
+
+
+<!---------- CUSTOM START -------->
+<style>
+    .tw-my-4 {
+        margin: 0;
+        padding: 1rem 0 1rem 0;
+    }
+    .tw-w-3\/4.tw-my-4 .tw-container.tw-px-6 .block-template-builder.width-100:first-child {
+        display: none;
+    }
+    .tw-w-full.tw-my-4:first-child {
+        padding-bottom: 0;
+    }
+    .tw-w-full.tw-my-4:first-child .container {
+        padding-bottom: 0;
+    }
+    /* STICKY SUMMARY */
+    /* Set all div children to height 100% to allow sticky scroll */
+    .tw-w-1\/4.tw-my-4 div {
+        height: 100%;
+    }
+    /* Set summary div on height fit-content to let it scroll */
+    #bloc_sommaire {
+        height: fit-content;
+    }
+    .tw-container .block-wysiwyg a {
+        font-weight: 600;
+    }
+    .block-content .carousel .dot {
+        margin-top: 10px;
+    }
+</style>
+<!---------- CUSTOM END ---------->
+
