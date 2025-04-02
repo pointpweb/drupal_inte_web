@@ -817,7 +817,7 @@
         top: 0;
         visibility: hidden;
         opacity: 0;
-        padding: 4px 16px;
+        padding: 3px 16px;
         width: 100%;
         height: 100%;
         background-color: #000000;
@@ -844,10 +844,31 @@
         height: 44px;
         width: 286px;
         font-size: 18px;
+        position: relative;
     }
     .desc.loginSection .lpCTA--icon::before {
         background-image: url("/s/imgs/pages/00-commun/pictos/picto-creation-compte-noir.svg");
+        opacity: 1;
+        transition: opacity .2s linear;
     }
+    .desc.loginSection .lpCTA--icon::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("/s/imgs/pages/00-commun/pictos/picto-creation-compte.png");
+        opacity: 0;
+        transition: opacity .2s linear;
+        position: absolute;
+        left: 53px;
+    }
+    .desc.loginSection .lpCTA--icon:hover::after {
+        opacity: 1;
+    }
+
     .desc.loginSection .alreadyRegistered {
         font-size: 18px;
         color: #000000;
@@ -868,14 +889,15 @@
         border-width: 0 1px 1px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
         margin-left: 10px;
         transition: transform 0.3s ease-in-out;
+        margin-bottom: 3px;
     }
-    #promoConditions.open > .lpLink::after {
-        transform: rotate(45deg) translateY(-2px);
-        -webkit-transform: rotate(45deg) translateY(-2px);
+    #promoConditions > .lpLink.open::after {
+        transform: rotate(225deg) translateY(-2px);
+        -webkit-transform: rotate(225deg) translateY(-2px);
     }
 
     /* SECTIONS AVANTAGES */
@@ -1171,11 +1193,15 @@
             text-align: left;
             width: fit-content;
             margin: 0 auto;
-            font-size: 1.5rem;
-            line-height: 1.3;
+            font-size: 2.188rem;
+            height: 50px;
+            padding-left: 70px;
         }
         .section .section-title span::before {
-            top: 0;
+            top: 0px;
+            width: 50px;
+            height: 50px;
+            left: -60px;
         }
         .lpSection.lpSection--intro {
             text-align: center;
@@ -1191,6 +1217,7 @@
             width: 32%;
             background-repeat: no-repeat;
             height: 316px;
+            border-radius: 0 0 0 10px;
         }
         .lpArticle--promo {
             flex-direction: column;
@@ -1220,6 +1247,10 @@
         .block-wysiwyg .lpBanniere--promo .lpCTA--quaternary {
             height: 50px;
             width: 300px;
+        }
+        .lpSection--promo .confirmCopy,
+        .lpBanniere--promo .confirmCopy {
+            padding: 6px 16px;
         }
         /* SECTION AVANTAGES */
         .containerAvantages {
@@ -1865,7 +1896,7 @@
                         perPage: 2,
                         gap: { right: "10.5%" },
                         arrows: true,
-                        perMove  : 1, 
+                        // perMove  : 1, 
                         drag     : true,     
                         snap     : true,
                     });
