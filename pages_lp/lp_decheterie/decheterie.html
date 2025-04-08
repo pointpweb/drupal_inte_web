@@ -1,904 +1,806 @@
-<!DOCTYPE html>
-<html lang="fr" class="font-open-sans">
+<style>
+    @media (max-width: 767px) {
+        .tw-w-1\/4, .tw-w-3\/4 {
+            width: 100%;
+        }
+    }
+    .tw-gap-10 {
+        gap: unset;
+    }
+    .lpMain {
+        background-color: white;
+    }
+    .font-open-sans h1.section-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.875rem;
+        text-transform: uppercase;
+        /* Background style */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-align: center;
+        background-image: url('/s/imgs/pages/landing-avantages-espace-perso/title_background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base pour Local</title>
-    <link rel="stylesheet" href="./reset_local.css"> <!-- NOT TO BE MODIFIED -->
-    <link rel="stylesheet" href="./reset_drupal.css"> <!-- NOT TO BE MODIFIED -->
-</head>
+    @media (min-width: 768px) {
+        .font-open-sans h1.section-title {
+            font-size: 1.625rem; 
+            height: 100px;
+        }
+        .page-template-builder .block-template-builder .container {
+            padding: 0;
+        }
+    }
+    @media (max-width: 768px) {
+        .page-template-builder .block-template-builder .container {
+              padding: 0;
+        }
+        .lpMain .container__video {
+            padding: 20px;
+        }
+        .lpMain .lpArticle {
+            padding: 20px;
+        }
+    }
 
-<body>
-    <header>
-        <div class="header-bg">
+    section.lpSection {
+        display: flex;
+        text-align: left;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    h1.section-title {
+        text-wrap: balance;
+    }
+
+    .lpTitle__h2span,
+    .lpTitle__h2span {
+        width: fit-content;
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .lpTitle__h2span__text--black {
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .lpTitle__h2span__text--orange {
+        color: #E75012;
+        text-transform: uppercase;
+    }
+
+    .lpTitle__h2 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 2rem !important;
+    }
+    .lpTitle__h3 {
+        text-transform: uppercase;
+    }
+    .lpText__p {
+        width: 100%;
+        text-align: left;
+    }
+    .font-open-sans h3.lpTitle__h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    article.lpArticle {
+        margin-top: 2rem;
+    }
+
+    .container__center {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .container__double {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        padding: 3rem;
+        column-gap: 4rem;
+    }
+
+    section.lpSection__left {
+        width: 50%;
+    }
+
+    span.lpTitle__h2--orange {
+        color: #E84F13;
+    }
+
+    .container__centre {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    .container__texte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 3rem;
+
+    }
+    .container.lpTitle__img {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+    }
+    .container__img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    img.déchèterie.image {
+        width: 50%;
+        height: auto;
+    }
+    .container__cards {
+        background-color: #ededed;
+        padding-bottom: 4rem;
+    }
+
+    .section.icone__center {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .lpSection2 > .introTxt {
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .lpSection2 {
+        display: flex;
+        text-align: left;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+    }
+    section.section.section-template-header {
+        display: none;
+    }
+    p.decheterie_condition {
+        line-height: 12px !important;
+        font-size: 12px !important;
+        padding-top: 8px;
+    }
+
+    .icone__img_double {
+        display: flex;
+        align-items: center;
+    }
+
+    .container__video {
+        display: flex;
+        margin-bottom: 5rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+        text-align: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    p.lpSection__center {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem;
+    }
+
+
+    @media (max-width: 1024px) {
+        .container__double {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section.lpSection__left,
+        section.lpSection__right {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .header-bg {
+            height: auto;
+            max-width: 100%;
+            background-image: url(https://www.pointp.fr/s/imgs/pages/landing-déchèterie/LP_header_bg3_mobile.svg);
+            background-repeat: no-repeat;
+        }
+        video.video_decheterie {
+            width: 300px;
+            height: 220px;
+        }
+
+        section.lpSection {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-open-sans .section h1.section-title {
+            font-size: 19px;
+        }
+
+        .icone__img_double {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container__double {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        /* UPDATE CSS 08/04/25 - DESKTOP */
+        .container__cards .grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .grid-container .grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            padding-bottom: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 85%;
+        }
+
+    }
+    /*  */
+    /* UPDATE CSS 08/04/25 - DESKTOP */
+    /*  */
+    .grid-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .grid-item {
+        border: 1px solid #ddd;
+        padding: 20px;
+        padding-bottom: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        width: 30%;
+    }
+    .grid-item .decheterie__item {
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .grid-item .icone__img {
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .grid-item .item.img {
+        max-width: 85px;
+        margin: 0 auto;
+    }
+    .grid-item .decheterie__img {
+        max-width: 75px;
+        margin: 0 auto;
+    }
+    .icone__img_double .decheterie__img {
+        max-width: 75px;
+        margin: 0;
+    }
+    .icone__img_double {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    .grid-item .voirConditions {
+        text-align: center;
+    }
+    /* Display conditions */
+    .grid-item .voirConditions .lpLink {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .grid-item .voirConditions .lpLink:hover {
+        cursor: pointer;
+    }
+    .lpList__item .highlight_text {
+        font-weight: 700;
+    }
+    .grid-item .voirConditions .lpLink::after {
+        content: '';
+        border: solid black;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-left: 10px;
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 3px;
+    }
+    .grid-item .voirConditions .lpLink.open::after {
+        transform: rotate(225deg) translateY(-2px);
+        -webkit-transform: rotate(225deg) translateY(-2px);
+    }
+    .grid-item .lpList {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .6s ease-out;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        opacity: 0;
+        padding-top: 1rem;
+
+    }
+    .grid-item .lpLink.open + ul.lpList {
+        max-height: 500px;
+        overflow: visible;
+        opacity: 1;
+    }
+
+
+    /***** DEBUT Bloc chiffres *****/
+    .lpSection--decheterieChiffre {
+        background-color: #E75012;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
+        padding: 20px;
+    }
+    .lpSection--decheterieChiffre img:not([data-not-responsive="1"]) {
+        width: 150px !important;
+        margin: 0 auto;
+    }
+    .lpSection--decheterieChiffre .desc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.375rem;
+    }
+
+    .lpMain .lpSection--decheterieChiffre .desc p {
+        line-height: 2rem !important;
+    }
+
+    .lpSection--decheterieChiffre .desc p:first-child {
+        font-size: 3.125rem;
+        font-weight: 900;
+    }
+
+    .lpSection--decheterieChiffre .desc p:first-child,
+    .lpSection--decheterieChiffre .desc p:nth-child(2) {
+        color: #fff;
+    }
+
+    .lpSection--decheterieChiffre .desc p:nth-child(3) {
+        color: black;
+    }
+
+    .lpSection--decheterieChiffre .desc p:nth-child(2),
+    .lpSection--decheterieChiffre .desc p:nth-child(3) {
+        font-size: 1.625rem;
+        font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+        section.lpSection.lpSection--intro {
+            justify-content: space-around;
+        }
+        section.lpSection.lpSection--intro > .container{
+            width: 50%;
+        }
+
+        .lpSection--decheterieChiffre {
+            width: 430px;
+        }
+    }
+
+    /***** FIN Bloc chiffres *****/
+</style>
+
+<div class="lpMain">
+    
+    <h1 class="section-title"><span>L’économie circulaire est en marche et ça change tout</span></h1>
+    
+    <article class="lpArticle">
+        <section class="lpSection lpSection--intro">
             <div class="container">
-                <h1 class="section-title">L’économie circulaire est en marche et ça change tout.</h1>
+                <h2 class="lpTitle__h2">
+                    <span class="lpTitle__h2span lpTitle__h2span--black">Le service déchetterie</span>
+                    <span class="lpTitle__h2span lpTitle__h2span--orange">POINT.P</span>
+                </h2>
+                <p class="lpText">POINT.P, au plus près des besoins de ses clients, a
+                    déployé le plus grand réseau de déchetteries du bâtiment de la distribution de
+                    matériaux de construction.
+                </p>
+
+                <p class="lpText">La loi ne prévoit pas que tous les flux soient repris sans
+                    frais
+                    car certaines filières de recyclage ne sont pas encore structurées et les déchets ne
+                    sont pas revalorisés. Ils partent alors en Déchets Non Dangereux qui sont payants.
+                </p>
             </div>
+
+            <div class="lpSection lpSection--decheterieChiffre">
+                <img class="lpImage lpSvg" src="/s/imgs/pages/landing-déchèterie/decheterie.svg">
+                <div class="desc">
+                    <p>+660</p>
+                    <p>Agences POINT.P</p>
+                    <p>Sont désormais équipées<br>d'une déchetterie</p>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <article class="lpArticle">
+        <div class="container__double">
+            <section class="lpSection__left">
+                <h2 class="lpTitle__h2">
+                    <span class="lpTitle__h2span lpTitle__h2span--black">Cadre réglementaire :</span>
+                    <span class="lpTitle__h2span lpTitle__h2span--orange"> la Responsabilité Elargie du Producteur</span>
+                </h2>
+                <p class="lpSection__left lpText__p">
+                    La Loi n° 2020-105 du 10 février 2020, dite « Loi AGEC » pour Loi
+                    Anti-Gaspillage et
+                    Economie Circulaire, lançait la REP PMCB, avec son décret n° 2021-1941 le 31
+                    décembre 2021. <br>La REP PMCB, c’est la Responsabilité Elargie du Producteur
+                    pour
+                    les
+                    Produits et Matériaux de Construction du Batiment.<br><br>Le principe est simple
+                    :
+                    une écocontribution vient intégrer le prix des produits.
+                    Cette Eco-contribution est collectée par les éco-organismes agréés.
+                    La mission de ces éco-organismes est d’organiser la reprise sans frais des
+                    déchets
+                    du
+                    bâtiment.<br><br>
+
+                    A date, 6 types de déchets sont inscrits au décret et font l’objet de cette
+                    reprise
+                    sans frais.
+                    <br><br>Plâtre, gravats inertes, plastiques rigides, métaux ferreux et non
+                    ferreux,
+                    bois de
+                    construction et fenêtre intègres.
+                </p>
+            </section>
+
+            <section class="lpSection__right">
+                <img src="https://www.pointp.fr/s/imgs/pages/landing-déchèterie/image_decheterie.svg"
+                    alt="Explication déchetterie" class="lpSection__right lpImage">
+            </section>
         </div>
-    </header>
-
-    <div class="section section-simple-block-text">
-        <div class="container">
-            <div class="block-wysiwyg">
-
-                <style>
-                    .header-bg {
-                        height: auto;
-                        max-width: 100%;
-                        background-image: url(https://www.pointp.fr/s/imgs/pages/landing-déchèterie/LP_header_bg3.svg);
-                        background-repeat: no-repeat;
-                    }
-
-                    .section-title {
-                        text-transform: uppercase;
-                        text-align: center;
-                        color: white !important;
-                    }
-
-                    section.lpSection {
-                        display: flex;
-                        text-align: left;
-                        flex-wrap: nowrap;
-                        justify-content: flex-end;
-                        align-items: flex-start;
-                        flex-direction: row;
-                    }
-
-                    h1.section-title {
-                        text-wrap: balance;
-                    }
-
-                    .lpTitle__h2span,
-                    .lpTitle__h2span {
-                        width: fit-content;
-                        color: #FFFFFF;
-                        font-family: "Open Sans", sans-serif;
-                        font-weight: 600;
-                    }
-
-                    .lpTitle__h2span__text--black {
-                        color: #000000;
-                        text-transform: uppercase;
-                    }
-
-                    .lpTitle__h2span__text--orange {
-                        color: #E75012;
-                        text-transform: uppercase;
-                    }
-
-                    .block-wysiwyg h2.lpTitle__h2 {
-                        font-family: "Open Sans", sans-serif;
-                        font-weight: 600;
-                        font-size: 22px;
-                        line-height: 30px;
-                        text-transform: uppercase;
-                        margin-bottom: 2rem !important;
-                    }
-
-                    h3.lpTitle__h3 {
-                        text-transform: uppercase;
-                    }
-
-                    .lpText__p {
-                        width: 100%;
-                        text-align: left;
-                    }
-
-                    .font-open-sans .block-wysiwyg h3.lpTitle__h3 {
-                        font-family: "Open Sans", sans-serif;
-                        font-weight: 600;
-                        font-size: 20px;
-                        line-height: 28px;
-                    }
-
-                    p.lpTitle__h3.lpText {
-                        line-height: 2rem;
-                        width: 95%;
-                    }
-
-                    p.lpText__p {
-                        text-wrap: balance;
-                    }
-
-
-
-                    article.lpArticle {
-                        margin-top: 2rem;
-                    }
-
-
-
-
-                    .container.lpTitle__h3 {
-                        line-height: 4rem;
-                        width: 60%;
-                        height: auto;
-                    }
-
-                    .container__center {
-                        margin-top: 2.5rem;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-content: center;
-                    }
-
-                    .container__double {
-                        display: flex;
-                        flex-direction: row-reverse;
-                        margin-bottom: 1rem;
-                        margin-top: 2rem;
-                        padding: 3rem;
-                        column-gap: 4rem;
-                    }
-
-                    p.section.lpText__p {
-                        text-align: center;
-                        margin-top: 2rem;
-                    }
-
-                    section.lpSection__left {
-                        width: 50%;
-                    }
-
-                    p.lpSection__left.lpText__p {
-                        margin-top: 1rem;
-                    }
-
-
-                    .grid-item {
-                        display: flex;
-                        height: auto;
-                        width: 14rem;
-                        background-color: #fff;
-                        border: 1px solid #ddd;
-                        border-radius: 8px;
-                        padding: 20px;
-                        text-align: center;
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-
-                    img.item.img {
-                        width: 6rem;
-                        height: auto;
-                    }
-
-
-                    .grid-item span {
-                        display: block;
-                        margin-top: 10px;
-                        color: #888;
-                    }
-
-                    .block-wysiwyg .lpMain p {
-                        font-family: "Open Sans", sans-serif;
-                        font-size: 16px;
-                        line-height: 43px;
-                    }
-
-                    span.lpTitle__h2--orange {
-                        color: #E84F13;
-                    }
-
-                    p.lpText__p {
-                        padding: 32px;
-                    }
-
-                    .container__centre {
-                        display: flex;
-                        align-content: flex-start;
-                        justify-content: center;
-                    }
-
-                    p.lpText__p.center {
-                        text-align: center;
-                    }
-
-
-                    .container__texte {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        margin: 2rem 3rem;
-
-                    }
-
-
-
-                    .container.lpTitle__img {
-                        display: flex;
-                        align-items: stretch;
-                        justify-content: space-around;
-                    }
-
-
-                    .container__img {
-                        display: flex;
-                        justify-content: center;
-                        margin-bottom: 4rem;
-                    }
-
-
-
-                    img.déchèterie.image {
-                        width: 50%;
-                        height: auto;
-                    }
-
-
-                    .container__cards {
-                        background-color: #ededed;
-                        margin-left: -1rem;
-                    }
-
-
-                    .grid-container2 {
-                        display: flex;
-                        justify-content: space-around;
-                    }
-
-
-                    .grid-container3 {
-                        display: flex;
-                        justify-content: space-evenly;
-                        margin-top: 5rem;
-                        margin-left: 7.5rem;
-                        margin-right: 7.5rem;
-                    }
-
-
-                    .icone__img {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                        width: 100%;
-                        flex-direction: row;
-                        align-content: center;
-                    }
-
-
-
-
-                    p.decheterie__img.title3 {
-                        margin-top: 0.2rem;
-                        width: 47%;
-                        height: auto;
-                    }
-
-                    .section.icone__center {
-                        margin-bottom: 1rem;
-                        margin-top: 1rem;
-                    }
-
-
-
-                    section.lpSection2 {
-                        display: flex;
-                        text-align: left;
-                        flex-wrap: nowrap;
-                        justify-content: flex-end;
-                        align-items: center;
-                        flex-direction: column;
-
-                    }
-
-                    .icone__img2 {
-                        margin-top: 1rem;
-                        text-align: center;
-                        display: -webkit-inline-box;
-
-                    }
-
-
-
-
-                    img.decheterie__img__orange,
-                    img.decheterie__img {
-                        width: 3rem !important;
-                        height: auto;
-                    }
-
-
-                    section.section.section-template-header {
-                        display: none;
-                    }
-
-
-                    p.decheterie__img.title {
-                        width: 70%;
-                        text-wrap: balance;
-                    }
-
-
-                    p.decheterie__img.title2 {
-                        margin-top: 1.2rem;
-                        width: 70%;
-                        height: auto;
-                    }
-
-
-                    p.decheterie__img.title3 {
-                        margin-top: 1.2rem;
-                        width: 47%;
-                        height: auto;
-                    }
-
-
-                    p.decheterie__img.title4 {
-                        margin-top: 0.2rem;
-                        width: 100%;
-                        height: auto;
-                    }
-
-                    p.decheterie_condition {
-                        line-height: 12px !important;
-                        font-size: 8px !important;
-                    }
-
-
-                    .icone__img_double {
-                        display: flex;
-                        align-items: center;
-                    }
-
-
-
-                    .container__video {
-                        display: flex;
-                        margin-bottom: 5rem;
-                        align-items: center;
-                        justify-content: center;
-                        margin-top: 4rem;
-                        text-align: center;
-                        align-content: center;
-                        flex-direction: column;
-                    }
-
-
-                    .icone__img4 {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                        width: 100%;
-                        flex-direction: row;
-                        margin-top: -1rem;
-                    }
-
-
-
-
-                    p.lpSection__center {
-                        font-size: 1.2rem !important;
-                        margin-bottom: 1rem;
-                    }
-
-
-
-
-                    @media (max-width: 1024px) {
-                        .container__double {
-                            flex-direction: column;
-                            align-items: center;
-                        }
-
-                        section.lpSection__left,
-                        section.lpSection__right {
-                            width: 100%;
-                        }
-                    }
-
-                    @media (max-width: 640px) {
-
-
-
-                        .header-bg {
-                            height: auto;
-                            max-width: 100%;
-                            background-image: url(https://www.pointp.fr/s/imgs/pages/landing-déchèterie/LP_header_bg3_mobile.svg);
-                            background-repeat: no-repeat;
-                        }
-
-
-                        video.video_decheterie {
-                            width: 300px;
-                            height: 220px;
-                        }
-
-                        p.decheterie__img.title,
-                        p.decheterie__img.title3,
-                        p.decheterie__img.title2 {
-                            width: 100% !important;
-                            height: auto;
-                        }
-
-                        section.lpSection2 {
-                            display: flex;
-                            align-items: center;
-                            flex-direction: column;
-                        }
-
-
-                        .grid-item {
-                            width: auto;
-                            margin-bottom: 2rem;
-                        }
-
-                        section.lpSection {
-                            display: flex;
-                            flex-direction: column;
-                        }
-
-                        .font-open-sans .section h1.section-title {
-
-                            font-size: 19px;
-
-                        }
-
-
-                        .grid-container2 {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                        }
-
-                        .grid-container3 {
-                            display: inline;
-                        }
-
-
-                        img.item.img {
-                            width: 6rem !important;
-                            height: auto;
-                        }
-
-
-                        .decheterie__img__orange {
-                            width: 2rem !important;
-                            height: auto;
-                        }
-
-
-                        .decheterie__img {
-                            width: 2rem !important;
-                            height: auto;
-                        }
-
-
-
-                        .icone__img {
-                            display: flex;
-                            align-items: center;
-                            text-align: center;
-                            width: 50%;
-                            flex-direction: column;
-                            align-content: center;
-                            justify-content: center;
-                        }
-
-
-                        .icone__img_double {
-                            display: flex;
-                            align-items: center;
-                            flex-direction: column;
-                        }
-
-                        .icone__img3 {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                            width: 100%;
-                            flex-direction: row;
-                            align-content: center;
-                        }
-
-                        .icone__img2 {
-                            margin-top: 1rem;
-                            text-align: center;
-                            align-items: center;
-                            width: 7rem;
-                            display: flex;
-                            flex-direction: column;
-                        }
-
-
-                        .container__double {
-                            flex-direction: column;
-                            align-items: center;
-                            padding: 0;
-                        }
-
-
-
-
-
-
-                    }
-
-                    /***** DEBUT Bloc chiffres *****/
-                    .lpSection--decheterieChiffre {
-                        background-color: #E75012;
-                        border-radius: 5px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        row-gap: 40px;
-                        padding: 20px;
-                    }
-
-                    .block-wysiwyg .lpSection--decheterieChiffre img:not([data-not-responsive="1"]) {
-                        width: 150px !important;
-                        margin: 0 auto;
-                    }
-
-                    .lpSection--decheterieChiffre .desc {
-                        display: flex;
-                        flex-direction: column;
-                        row-gap: 10px;
-                        text-align: center;
-                        text-transform: uppercase;
-                        line-height: 1.375rem;
-                    }
-
-                    .block-wysiwyg .lpMain .lpSection--decheterieChiffre .desc p {
-                        line-height: 2rem !important;
-                    }
-
-                    .lpSection--decheterieChiffre .desc p:first-child {
-                        font-size: 3.125rem;
-                        font-weight: 900;
-                    }
-
-                    .lpSection--decheterieChiffre .desc p:first-child,
-                    .lpSection--decheterieChiffre .desc p:nth-child(2) {
-                        color: #fff;
-                    }
-
-                    .lpSection--decheterieChiffre .desc p:nth-child(3) {
-                        color: black;
-                    }
-
-                    .lpSection--decheterieChiffre .desc p:nth-child(2),
-                    .lpSection--decheterieChiffre .desc p:nth-child(3) {
-                        font-size: 1.625rem;
-                        font-weight: 600;
-                    }
-
-                    @media (min-width: 768px) {
-                        section.lpSection.lpSection--intro {
-                            justify-content: space-around;
-                        }
-
-
-                        .page-template-builder .section-template-builder section.lpSection.lpSection--intro .container.lpTitle__h3, 
-                        .page-template-builder .block-template-builder section.lpSection.lpSection--intro .container.lpTitle__h3 {
-                            width: 450px;
-                        }
-
-                        .section-simple-block-text section.lpSection.lpSection--intro .container.lpTitle__h3 {
-                            margin: 0;
-                        }
-
-                        .lpSection--decheterieChiffre {
-                            width: 430px;
-                        }
-                    }
-
-                    /***** FIN Bloc chiffres *****/
-                </style>
-
-                <div class="lpMain">
-                    <article class="lpArticle">
-                        <section class="lpSection lpSection--intro">
-
-                            <div class="container lpTitle__h3">
-
-                                <h2 class="lpTitle__h2">
-                                    <span class="lpTitle__h2span lpTitle__h2span--black">Le service déchèterie</span>
-                                    <span class="lpTitle__h2span lpTitle__h2span--orange">POINT.P</span>
-
-                                    <!-- rajouter le surlignage noir -->
-                                </h2>
-                                <p class="lpTitle__h3 lpText">POINT.P, au plus près des besoins de ses clients, a
-                                    déployé le plus grand réseau de déchèteries du bâtiment de la distribution de
-                                    matériaux de construction.
-                                </p>
-
-                                <p class="lpTitle__h3 lpText">La loi ne prévoit pas que tous les flux soient repris sans
-                                    frais
-                                    car certaines filières de recyclage ne sont pas encore structurées et les déchets ne
-                                    sont pas revalorisés. Ils partent alors en Déchets Non Dangereux qui sont payants.
-                                </p>
-                            </div>
-
-
-                            <div class="lpSection lpSection--decheterieChiffre">
-                                <img class="lpImage lpSvg" src="/s/imgs/pages/landing-déchèterie/decheterie.svg">
-                                <div class="desc">
-                                    <p>+650</p>
-                                    <p>Agences POINT.P</p>
-                                    <p>Sont désormais équipées<br>d'une déchèterie</p>
-                                </div>
-                            </div>
-
-
-
-
-                        </section>
-                    </article>
-
-
-                    <article class="lpArticle">
-                        <div class="container__double">
-                            <section class="lpSection__left">
-                                <h2 class="lpTitle__h2">
-                                    <span class="lpTitle__h2span lpTitle__h2span--black">Cadre réglementaire :</span>
-                                    <span class="lpTitle__h2span lpTitle__h2span--orange"> la Responsabilité Elargie du
-                                        Producteur</span></h3>
-                                    <p class="lpSection__left lpText__p">
-                                        La Loi n° 2020-105 du 10 février 2020, dite « Loi AGEC » pour Loi
-                                        Anti-Gaspillage et
-                                        Economie Circulaire, lançait la REP PMCB, avec son décret n° 2021-1941 le 31
-                                        décembre 2021. <br>La REP PMCB, c’est la Responsabilité Elargie du Producteur
-                                        pour
-                                        les
-                                        Produits et Matériaux de Construction du Batiment.<br><br>Le principe est simple
-                                        :
-                                        une écocontribution vient intégrer le prix des produits.
-                                        Cette Eco-contribution est collectée par les éco-organismes agréés.
-                                        La mission de ces éco-organismes est d’organiser la reprise sans frais des
-                                        déchets
-                                        du
-                                        bâtiment.<br><br>
-
-                                        A date, 6 types de déchets sont inscrits au décret et font l’objet de cette
-                                        reprise
-                                        sans frais.
-                                        <br><br>Plâtre, gravats inertes, plastiques rigides, métaux ferreux et non
-                                        ferreux,
-                                        bois de
-                                        construction et fenêtre intègres.
-                                    </p>
-                            </section>
-
-                            <section class="lpSection__right">
-
-
-
-
-
-                                <img src="https://www.pointp.fr/s/imgs/pages/landing-déchèterie/image_decheterie.svg"
-                                    alt="Explication déchèterie" class="lpSection__right lpImage">
-                            </section>
-                        </div>
-                    </article>
-
-
-                    <div class="container__video">
-
-                        <p class="lpSection__center"><strong>Découvrez comment déposer vos déchets en agence</strong>
-                        </p>
-
-                        <video class="video_decheterie" width="820" height="480" controls>
-                            <source src="/s/imgs/pages/landing-déchèterie/POINT.P_Decheterie_version_vocale.mp4"
-                                type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video>
-
+    </article>
+
+    <div class="container__video">
+        <p class="lpSection__center"><strong>Découvrez comment déposer vos déchets en agence</strong></p>
+
+        <video class="video_decheterie" width="820" height="480" controls>
+            <source src="/s/imgs/pages/landing-déchèterie/POINT.P_Decheterie_version_vocale.mp4"
+                type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container__cards">
+
+        <article class="lpArticle">
+            <section class="lpSection2">
+                <p class="introTxt lpText__p"><strong>La structure des déchetteries POINT.P est AU MINIMUM la suivante dans toutes les agences équipées.</strong></p>
+                <div class="section icone__center">
+                    <div class="icone__img_double">
+                        <img class="decheterie__img"
+                            src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                        <span>Déchets repris sans frais</span>
                     </div>
-
-
-
-
-
-
-                    <div class="container__cards">
-
-                        <article class="lpArticle">
-                            <section class="lpSection2">
-                                <p class="section lpText__p"><strong>La structure des déchèteries POINT.P est AU MINIMUM
-                                        la
-                                        suivante dans toutes les agences équipées.</strong></p>
-
-
-
-                                <div class="section icone__center">
-
-                                    <div class="icone__img_double">
-
-
-
-                                        <img class="decheterie__img"
-                                            src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-
-
-
-                                        <span>Déchets repris sans frais</span>
-
-
-
-
-                                    </div>
-
-
-                                    <div class="icone__img_double">
-                                        <img class="decheterie__img__orange"
-                                            src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
-
-                                        <span>Déchets payants</span>
-
-                                    </div>
-
-
-                                </div>
-
-
-
-
-                            </section>
-                        </article>
-                        <div class="grid-container2">
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_platre.jpg"
-                                    alt="Plâtre et plâtre complexe">
-                                <div class="icone__img2">
-
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-
-
-
-                                    <p class="decheterie__img title"> Plâtre et plâtre complexe</p><br>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_metaux.jpg"
-                                    alt="Métaux">
-                                <div class="icone__img2">
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title2">Métaux</p><br>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_fenetre.jpg"
-                                    alt="Fenêtre">
-                                <div class="icone__img2">
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title2">Fenêtre</p><br>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_bois_construction.jpg"
-                                    alt="Bois de construction">
-                                <div class="icone__img2">
-
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title">Bois de construction</p><br>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-container3">
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_plastique_rigide.jpg"
-                                    alt="Plastiques rigides">
-                                <div class="icone__img2">
-
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title">Plastiques rigides</p><br>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_inertes.jpg"
-                                    alt="Inertes">
-
-                                <div class="icone__img2">
-
-                                    <p class="decheterie__img title4">Inertes*</p><br>
-
-                                </div>
-                                <p class="decheterie_condition">*Service payant en fonction des régions.<br> Contacter votre agence.
-                                </p>
-
-                            </div>
-
-                            <div class="grid-item">
-
-                                <img class="item img"
-                                    src="/s/imgs/pages/landing-déchèterie/icone_dechets_non_dangereux.svg"
-                                    alt="Déchets non dangereux">
-
-                                <div class="icone__img2">
-                                    <img class="decheterie__img__orange"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
-                                    <p class="decheterie__img title">Déchets non dangereux</p><br>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="container__texte">
-
-
-                            <p><strong>Nous vous invitons à contacter votre agence POINT.P concernant la reprise des
-                                    déchets
-                                    suivants : laine de verre, laine de roche, PSE, cartons et plastiques
-                                    d'emballages.<br>
-                                    En fonction des possibilités, des filières locales de recyclages, des flux
-                                    complémentaires
-                                    peuvent être proposés par certaines agences.</strong></p>
-
-                        </div>
-
-
-                        <div class="grid-container2">
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_laine_de_verre.jpg"
-                                    alt="Laine de verre">
-                                <div class="icone__img">
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title2">Laine de verre</p><br>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_laine_de_roche.jpg">
-
-                                <div class="icone__img" alt="Laine de roche">
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title2">Laine de roche</p><br>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_pse.jpg" alt="PSE">
-                                <div class="icone__img">
-                                    <img class="decheterie__img"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
-                                    <p class="decheterie__img title3">PSE</p><br>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <img class="item img"
-                                    src="/s/imgs/pages/landing-déchèterie/icone_cartons_plastiques.svg"
-                                    alt="Cartons et plastiques d'emballages">
-                                <div class="icone__img4">
-
-                                    <img class="decheterie__img__orange"
-                                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
-
-                                    <p class="decheterie__img title"><br>Cartons et plastiques d'emballages</p><br>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
+                    <div class="icone__img_double">
+                        <img class="decheterie__img"
+                            src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
+                        <span>Déchets payants</span>
                     </div>
+                </div>
+            </section>
+        </article>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_platre.jpg"
+                    alt="Plâtre et plâtre complexe">
+                <div class="icone__img">
+
+                    <img class="decheterie__img" src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item"> Plâtre et plâtre complexe</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>carreaux de plâtre, cloisons alvéolaires, plaques de plâtre y compris avec isolants</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>enduits et mortiers, déchet inerte de tout type comprenant le béton cellulaire, brique plâtrière, sacs et seaux d’enduits et colle à base de plâtre (emballage)</li>
+                        </ul>
+
+                    </aside>
 
                 </div>
-
             </div>
 
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_metaux.jpg"
+                    alt="Métaux">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Métaux</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>ferraille, cuivre, zinc, aluminium</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>composants électriques ou électroniques, radiateur électrique, bouteille de gaz, emballage, bidon, fût vide (DDS)</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_fenetre.jpg"
+                    alt="Fenêtre">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Fenêtre</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>menuiseries avec montants et vitres intactes<br>bois, PVC, aluminium</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>menuiserie contenant de l’amiante, menuiserie bois avec de la peinture au plomb, bris de verre</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_bois_construction.jpg"
+                    alt="Bois de construction">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Bois de construction</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>charpente, coffrage, menuiseries, parquet, panneau</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>meuble et élément d’ameublement, palettes, caisson, tiroir, étagère, table, chaise… Souche, bois de coupe, élagage, déchet vert</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_plastique_rigide.jpg"
+                    alt="Plastiques rigides">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Plastiques rigides</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>profilés, canalisations, cuves, revêtement</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>lames de terrasse (ou autres produits du bâtiment en composite), plancher technique et bardages extérieurs en HPL</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_inertes.jpg"
+                    alt="Inertes">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                    src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Inertes</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>briques, enrobés, tuiles, carrelage, béton, gravats</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>fibrociment amianté, brique plâtrière, terre, mâchefer, emballages, métaux</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img"
+                    src="/s/imgs/pages/landing-déchèterie/icone_dechets_non_dangereux.svg"
+                    alt="Déchets non dangereux">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
+                    <p class="decheterie__item">Déchets non dangereux</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>mélange de déchets non dangereux non valorisables : Laines minérales, membranes d’étanchéité, isolants en polystyrène, moquettes, faux plafonds bois, produit plâtre, plastique, emballages divers…</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>amiante, batterie, bitume, bouteille de gaz, déchet pulvérulent (ciment), pneu</li>
+                        </ul>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <div class="container__texte">
+            <p><strong>Nous vous invitons à contacter votre agence POINT.P concernant la reprise des déchets suivants : laine de verre, laine de roche, PSE, cartons et plastiques d'emballages.<br>En fonction des possibilités, des filières locales de recyclages, des flux complémentaires peuvent être proposés par certaines agences.</strong></p>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_laine_de_verre_laine_de_roche.jpg"
+                    alt="Laine de verre">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">Laine de verre / Laine de roche</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>laine minérale, en rouleau, panneau, avec ou sans pare-vapeur ou soufflée</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>laine minérale collée à une plaque de plâtre</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_pse.jpg" alt="PSE">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie_verte.png">
+                    <p class="decheterie__item">PSE</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>plaques et éléments en polystyrène expansé Moulé (PSE-M), Extrudé (PSE-E)</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>PSE issu de la déconstruction, PSE avec des traces de ciment ou colle, autres matériaux en particulier de plastiques de type PU, XPS, PE…</li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img class="item img" src="/s/imgs/pages/landing-déchèterie/icone_cartons_plastiques.svg" alt="Cartons et plastiques d'emballages">
+                <div class="icone__img">
+                    <img class="decheterie__img"
+                        src="/s/imgs/pages/landing-déchèterie/icone_déchèterie.png">
+                    <p class="decheterie__item">Cartons et plastiques d'emballages</p>
+
+                    <aside class="voirConditions">
+
+                        <span class="lpLink">Voir conditions</span>
+            
+                        <ul class="lpList">
+                            <li class="lpList__item">✅ <span class="highlight_text">Produit repris : </span>cartons d’emballages</li>
+
+                            <li class="lpList__item">❌ <span class="highlight_text">Produit non repris : </span>cartons mouillés</li>
+                        </ul>
+
+                    </aside>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-</body>
+</div>
 
-</html>
+
+<script>
+        /***** Affichage des conditions - START *****/
+        document.addEventListener("DOMContentLoaded", function () {
+        // Sélectionne tous les éléments avec la classe "voirCondition"
+        var promoConditionsElements = document.querySelectorAll('.grid-item .voirConditions .lpLink');
+
+        // Ajoute un écouteur d'événement à chaque élément
+        promoConditionsElements.forEach(function (element) {
+            element.addEventListener("click", function () {
+                // Vérifie si l'élément cliqué a déjà la classe "open"
+                var isOpen = element.classList.contains('open');
+
+                // Retire la classe "open" de tous les éléments
+                promoConditionsElements.forEach(function (el) {
+                    el.classList.remove('open');
+                });
+
+                // Si l'élément cliqué n'avait pas la classe "open", on l'ajoute
+                if (!isOpen) {
+                    element.classList.add('open');
+                }
+            });
+        });
+    });
+    /***** Affichage des conditions - END *****/
+</script>
