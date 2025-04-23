@@ -1,0 +1,537 @@
+<!-- CTA Produits -->
+<section class="lpSection lpSectionCtaProduits">
+    <a class="lpCTA lpCTA--tertiary" href="https://www.pointp.fr/carrelage-interieur">Voir tous les produits</a>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="lpSection lpSection--faq">
+    <h2 class="lpTitle__h2">
+        <span class="lpTitle__h2span lpTitle__h2span--black">
+            Les réponses à toutes
+        </span>
+        <span class="lpTitle__h2span lpTitle__h2span--orange">
+            Vos questions
+        </span>
+    </h2>
+
+    <div class="section-faq__container²">
+        <div class="section-faq__group" id="faqGroup">
+            <!-- Le JS va insérer ici -->
+        </div>
+    </div>
+</section>
+<!-- FAQ END -->
+
+<!-- FAQ -->
+<section class="lpSection lpSection--mentions">
+    <div class="lpSubSection">
+        <p class="lpText">Lorem ipsum dolor sit amet consectetur. Aliquam at scelerisque porttitor augue fringilla accumsan neque. Consequat fames sem dolor diam fusce id quam. Ipsum euismod nulla nibh sapien praesent. Duis ut.</p>
+    </div>
+</section>
+<!-- FAQ END -->
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+// CHECK DEVICE'S WIDTH
+function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+}
+
+const magasins = [
+    {
+        nom: "Showroom POINT.P Revêtements Paris 11",
+        image: "/s/imgs/pages/landing-hub-villes/paris/paris_11.jpg",
+        alt: "Magasin carrelage - Paris 11",
+        adresse: "78 boulevard Richard-Lenoir<br>75011 Paris",
+        mapLink: "https://maps.app.goo.gl/ox1eWauaiAt8844C9",
+        tel: "0155288170",
+        telLink: "tel:+33155288170",
+        ficheLink: "https://www.pointp.fr/infos-showroom/paris-decoceram-5025",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=5025",
+        filtres: ["carrelage-parquet"]
+    },
+    {
+        nom: "Showroom POINT.P Ivry sur Seine",
+        image: "/s/imgs/pages/landing-hub-villes/paris/IVRY_BOYER.jpg",
+        alt: "Magasin carrelage - IVRY_BOYER",
+        adresse: "29 quai Marcel Boyer<br>94200 Ivry sur Seine",
+        mapLink: "https://maps.app.goo.gl/juXBSeys8j3ePEid6",
+        tel: "0176525579",
+        telLink: "tel:+33176525579",
+        ficheLink: "https://www.pointp.fr/infos-showroom/ivry-boyer-point-p-6166",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6166",
+        filtres: ["carrelage-parquet"]
+    },
+    {
+        nom: "Showroom POINT.P Alfortville",
+        image: "/s/imgs/pages/landing-hub-villes/paris/ALFORTVILLE.jpg",
+        alt: "Magasin carrelage - Alfortville",
+        adresse: "19 quai de la Révolution<br>94140 Alfortville",
+        mapLink: "https://maps.app.goo.gl/KFqgwgydAFyfWC7k9",
+        tel: "0174400901",
+        telLink: "tel:+33174400901",
+        ficheLink: "https://www.pointp.fr/infos-showroom/alfortville-point-p-6161",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6161",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Nanterre",
+        image: "/s/imgs/pages/landing-hub-villes/paris/Nanterre.jpg",
+        alt: "Magasin carrelage - Nanterre",
+        adresse: "27 Avenue des Guilleries<br>92000 Nanterre",
+        mapLink: "https://www.google.com/maps/place/27+Avenue+des+Guilleries,+92000+Nanterre",
+        tel: "0141202219",
+        telLink: "tel:+33141202219",
+        ficheLink: "https://www.pointp.fr/infos-showroom/nanterre-point-p-6157",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6157",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Massy",
+        image: "/s/imgs/pages/landing-hub-villes/paris/MASSY_agence.jpg",
+        alt: "Magasin carrelage - Massy",
+        adresse: "6 Route de la Bonde<br>91300 Massy",
+        mapLink: "https://www.google.com/maps/place/6+Route+de+la+Bonde,+91300+Massy",
+        tel: "0160136521",
+        telLink: "tel:+33160136521",
+        ficheLink: "https://www.pointp.fr/infos-showroom/massy-point-p-6170",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6170",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Gournay-sur-Marne",
+        image: "/s/imgs/pages/landing-hub-villes/paris/GOURNAY_SUR_MARNE.jpg",
+        alt: "Magasin carrelage - Gournay-sur-Marne",
+        adresse: "Rue de Paris<br>93460 Gournay-sur-Marne",
+        mapLink: "https://www.google.com/maps/place/Rue+de+Paris,+93460+Gournay-sur-Marne",
+        tel: "0155288178",
+        telLink: "tel:+33155288178",
+        ficheLink: "https://www.pointp.fr/infos-showroom/gournay-sur-marne-point-p-6159",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6159",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Versailles",
+        image: "/s/imgs/pages/landing-hub-villes/paris/agence_pointp.jpg",
+        alt: "Magasin carrelage - Versailles",
+        adresse: "11 Rue de la Porte de Buc<br>78000 Versailles",
+        mapLink: "https://www.google.com/maps/place/11+Rue+de+la+Porte+de+Buc,+78000+Versailles",
+        tel: "0139243401",
+        telLink: "tel:+33139243401",
+        ficheLink: "https://www.pointp.fr/infos-showroom/versailles-point-p-6165",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6165",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Le Port Marly",
+        image: "/s/imgs/pages/landing-hub-villes/paris/agence-port-marly.png",
+        alt: "Magasin carrelage - Le Port Marly",
+        adresse: "21 Bis Avenue Charles de Gaulle<br>78560 Le Port Marly",
+        mapLink: "https://www.google.com/maps/place/21+Bis+Avenue+Charles+de+Gaulle,+78560+Le+Port+Marly",
+        tel: "0139173318",
+        telLink: "tel:+33139173318",
+        ficheLink: "https://www.pointp.fr/infos-showroom/port-marly-point-p-6156",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6156",
+        filtres: ["carrelage-parquet", "amenagement-exterieur"]
+    },
+    {
+        nom: "Showroom POINT.P Pierrelaye",
+        image: "/s/imgs/pages/landing-hub-villes/paris/HERBLAY.jpg",
+        alt: "Magasin carrelage - Pierrelaye",
+        adresse: "256 Boulevard du Havre<br>95480 Pierrelaye",
+        mapLink: "https://www.google.com/maps/place/256+Boulevard+du+Havre,+95480+Pierrelaye",
+        tel: "0134505860",
+        telLink: "tel:+33134505860",
+        ficheLink: "https://www.pointp.fr/infos-showroom/herblay-point-p-6155",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6155",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "menuiserie"]
+    },
+    {
+        nom: "Showroom POINT.P Les Ulis",
+        image: "/s/imgs/pages/landing-hub-villes/paris/LES_ULIS.jpg",
+        alt: "Magasin carrelage - Les Ulis",
+        adresse: "Avenue du Cap Horn<br>91940 Les Ulis",
+        mapLink: "https://www.google.com/maps/place/Avenue+du+Cap+Horn,+91940+Les+Ulis",
+        tel: "0169038596",
+        telLink: "tel:+33169038596",
+        ficheLink: "https://www.pointp.fr/infos-showroom/les-ulis-point-p-6162",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6162",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Saint Thibault des Vignes",
+        image: "/s/imgs/pages/landing-hub-villes/paris/agence_pointp.jpg",
+        alt: "Magasin carrelage - Saint Thibault des Vignes",
+        adresse: "11 Avenue de la Courtillière<br>77400 Saint Thibault des Vignes",
+        mapLink: "https://www.google.com/maps/place/11+Avenue+de+la+Courtillière,+77400+Saint+Thibault+des+Vignes",
+        tel: "0164124549",
+        telLink: "tel:+33164124549",
+        ficheLink: "https://www.pointp.fr/infos-showroom/marne-la-vallee-st-thibault-point-p-6160",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6160",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Claye-Souilly",
+        image: "/s/imgs/pages/landing-hub-villes/paris/CLAYE_SOUILLY.jpg",
+        alt: "Magasin carrelage - Claye-Souilly",
+        adresse: "4 Rue Ernest Sarron<br>77410 Claye-Souilly",
+        mapLink: "https://www.google.com/maps/place/4+Rue+Ernest+Sarron,+77410+Claye-Souilly",
+        tel: "0160276600",
+        telLink: "tel:+33160276600",
+        ficheLink: "https://www.pointp.fr/infos-showroom/claye-souilly-revetement-6167",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6167",
+        filtres: ["carrelage-parquet", "salle-de-bain", "amenagement-exterieur"]
+    },
+    {
+        nom: "Showroom POINT.P Les Clayes-sous-Bois",
+        image: "/s/imgs/pages/landing-hub-villes/paris/CLAYES_SOUS_BOIS.jpg",
+        alt: "Magasin carrelage - Les Clayes-sous-Bois",
+        adresse: "ZA du Chêne Sorcier<br>78340 Les Clayes-sous-Bois",
+        mapLink: "https://www.google.com/maps/place/ZA+du+Chêne+Sorcier,+78340+Les+Clayes-sous-Bois",
+        tel: "0130796015",
+        telLink: "tel:+33130796015",
+        ficheLink: "https://www.pointp.fr/infos-showroom/les-clayes-sous-bois-point-p-6164",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6164",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    },
+    {
+        nom: "Showroom POINT.P Coignières",
+        image: "/s/imgs/pages/landing-hub-villes/paris/coignieres.jpg",
+        alt: "Magasin carrelage - Coignières",
+        adresse: "3 Voie Latérale<br>78310 Coignières",
+        mapLink: "https://www.google.com/maps/place/3+Voie+Latérale,+78310+Coignières",
+        tel: "0130164935",
+        telLink: "tel:+33130164935",
+        ficheLink: "https://www.pointp.fr/infos-showroom/coignieres-revetements-6169",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6169",
+        filtres: ["carrelage-parquet", "amenagement-exterieur", "salle-de-bain"]
+    }
+];
+
+const container = document.getElementById('magasinList');
+
+function formatFiltre(tag) {
+    const labels = {
+        "carrelage-parquet": "Carrelage/Parquet",
+        "salle-de-bain": "Salle de bain",
+        "menuiserie": "Menuiserie",
+        "amenagement-exterieur": "Aménagement extérieur",
+        // "agrandissement": "Agrandissement"
+    };
+    return labels[tag] || tag;
+}
+
+// Création d'un bloc html pour chaque magasin contenu dans la const magasins 
+magasins.forEach(magasin => {
+    const li = document.createElement('li');
+    li.className = `splide__slide ${magasin.filtres.join(' ')}`;
+
+    li.innerHTML = `
+        <div class="ficheMagasin">
+        <img class="imgMagasin" src="${magasin.image}" alt="${magasin.alt}">
+        <h3 class="highlight_text magasinNom">${magasin.nom}</h3>
+        <div class="containerDetails">
+            <a href="${magasin.mapLink}" target="_blank" class="lpLink detailMagasin adresse">${magasin.adresse}</a>
+            <a href="${magasin.telLink}" class="lpLink detailMagasin numeroMobile">${magasin.tel}</a>
+            <p class="lpText detailMagasin numeroDesktop">${magasin.tel}</p>
+            <a href="${magasin.ficheLink}" class="lpLink detailMagasin horaires">Consulter les horaires</a>
+        </div>
+        <div class="containerFiltres">
+            ${magasin.filtres.map(filtre => `<span class="filtre" data-tag="${filtre}">${formatFiltre(filtre)}</span>`).join('')}
+        </div>
+        <a href="${magasin.ficheLinkRdv}" class="lpCTA lpCTA--secondary">Prendre rendez-vous</a>
+        </div>
+    `;
+
+    container.appendChild(li);
+});
+
+
+let carousselMagasins;
+let slidesMagasinActualise;
+let slidesMagasin = document.querySelectorAll('#slider_magasins .splide__slide');
+
+let slidesAvisClientsLength = document.querySelectorAll('#slider_avisClients .splide__slide').length;
+let slidesAvantApresLength = document.querySelectorAll('#slider_inspirationRealisation .splide__slide').length;
+//
+function checkSplide() {
+    if (typeof Splide !== "undefined") {
+        // SLIDER FICHES MAGASINS
+        if ((isMobile() && slidesMagasin.length > 1) || (!isMobile() && slidesMagasin.length > 3)) {
+            carousselMagasins = new Splide("#slider_magasins", {
+                gap: isMobile() ? 24 : 56,
+                perPage: isMobile() ? 1 : 3,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: isMobile() ? true : false,
+                autoWidth: isMobile() ? true : false,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            carousselMagasins.mount();
+            // checkPaginationContainerLength();
+            updateScrollBar();
+            scrollBarReinit();
+        }
+        
+        // SLIDER AVIS CLIENTS
+        if (isMobile() && slidesAvisClientsLength > 1 || (!isMobile() && slidesAvisClientsLength > 4)) {
+            const splideAvis = new Splide("#slider_avisClients", {
+                gap: isMobile() ? 24 : 56,
+                perPage: isMobile() ? 1 : 4,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: isMobile() ? true : false,
+                autoWidth: isMobile() ? true : false,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            splideAvis.mount();
+        }
+
+        // SLIDER AVANT APRES
+        if (isMobile() && slidesAvisClientsLength > 1) {
+            const splideRealisations = new Splide("#slider_inspirationRealisation", {
+                gap: 24,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: true,
+                autoWidth: true,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            splideRealisations.mount();
+        }
+
+        // SLIDER GUIDES ET TENDANCES
+        new Splide("#slider_tendances", {
+            destroy: true,
+            breakpoints: {
+                768: {
+                    destroy: false,
+                    gap: 24,
+                    arrows: true,
+                    perMove  : 1,
+                    drag     : true,
+                    snap     : true,
+                    trimSpace: true,
+                    autoWidth: true,
+                    flickPower: 90,
+                    flickMaxPages: 1,
+                }
+            }
+        }).mount();
+    } else {
+        setTimeout(checkSplide, 500);
+    }
+}
+checkSplide();
+// 
+
+//Sauvegarde des filtres de tag et des fiches magasins
+let filters = document.querySelectorAll('.lpSubSection.filtres .containerFiltres .filtre');
+let txtContainerNombreMagasins = document.getElementsByClassName('nbResultats')[0];
+let mainSlider = document.getElementById('slider_magasins');
+
+// Surveille chaque clic ou tap sur les filtres
+let isHiding = false;
+
+function handleFilterClick(filter) {
+    if (isHiding) return;
+    isHiding = true;
+
+    toggleActiveFilter(filter);
+    mainSlider.classList.add('hiding');
+    
+
+    setTimeout(function() {
+        filterSlider(filter.getAttribute('data-tag'));
+        mainSlider.classList.remove('hiding');
+        isHiding = false;
+        scrollBarReinit();
+    }, 250);
+}
+
+filters.forEach(filter => {
+    ['click', 'touchstart'].forEach(eventType => {
+        filter.addEventListener(eventType, function(event) {
+            if (event.cancelable) {
+                event.preventDefault();
+            }
+            handleFilterClick(filter);
+        });
+    });
+});
+
+//Changement de filtre actif avec changement de class
+function toggleActiveFilter(element) {
+    filters.forEach(filter => {
+        filter.classList.remove('active');
+    });
+    if (!element.classList.contains('active')) {
+        element.classList.add('active');
+    }
+}
+
+//Réinitialisation du slider en fonction du tag choisi
+function filterSlider(tag) {
+    // Destruction du slider en place
+    carousselMagasins.destroy();
+
+    // On désactive les slides en enlevant la class splide__slide
+    slidesMagasin.forEach(slide => {
+        slide.classList.remove('splide__slide');
+        if (slide.classList.contains(tag)) {
+            slide.classList.add('splide__slide');
+        }
+        if (tag == 'tous') {
+            slide.classList.add('splide__slide');
+        }
+    });
+
+    // Actualisation du nombre de magasins affichés
+    let singularOrPlural = '';
+    slidesMagasinActualise = document.querySelectorAll('#slider_magasins .splide__slide').length;
+    if (slidesMagasinActualise > 1 ) {
+        singularOrPlural = 'résultats';
+        mainSlider.classList.remove('noresults');
+        mainSlider.classList.remove('oneresult');
+        carousselMagasins.mount();
+    }
+    if (slidesMagasinActualise == 1 ) {
+        singularOrPlural = 'résultat';
+        mainSlider.classList.remove('noresults');
+        mainSlider.classList.add('oneresult');
+    }
+    if (slidesMagasinActualise < 1 ) {
+        mainSlider.classList.add('noresults');
+        mainSlider.classList.remove('oneresult');
+        singularOrPlural = 'résultat';
+    }
+    txtContainerNombreMagasins.innerText =  `${slidesMagasinActualise} ${singularOrPlural}`;
+    
+    // Réinitialisation du slider
+    // checkPaginationContainerLength();
+    updateScrollBar();
+}
+
+function scrollBarReinit () {
+    let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
+    progressbar.style.width = (100 / document.querySelectorAll('#slider_magasins .splide__slide').length) + "%";
+}
+
+function updateScrollBar() {
+    carousselMagasins.on( 'mounted move', function () {
+        let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
+        let end  = carousselMagasins.Components.Controller.getEnd() + 1;
+        let rate = Math.min( ( carousselMagasins.index + 1 ) / end, 1 );
+        progressbar.style.width = String( 100 * rate ) + '%';
+    });
+}
+
+//Ajout d'une class pour réduire le gap sur la pagination
+// function checkPaginationContainerLength() {
+//     let paginationContainer = document.querySelector('#slider_magasins .splide__pagination');
+//     // Vérification de l'élement HTML existant dans le DOM
+//     if (!paginationContainer) return;
+
+//     if (document.querySelectorAll('#slider_magasins .splide__slide').length > 12 && !paginationContainer.classList.contains('shrinked')) {
+//         paginationContainer.classList.add('shrinked');
+//     }
+//     if (document.querySelectorAll('#slider_magasins .splide__slide').length < 12 && paginationContainer.classList.contains('shrinked')) {
+//         paginationContainer.classList.remove('shrinked');
+//     }
+// }
+
+let banniereContainer = document.querySelector('.sections-container > .tw-w-full.tw-my-4 > .tw-container > .tw-flex > .block-template-builder:nth-child(3)');
+    /***** CHECK IF ELEMENT IS IN VIEWPORT START *****/
+    // Toggle class if targeted element disapear from viewport
+    let observer = new IntersectionObserver(([entry]) => {
+        banniereContainer.classList.toggle('visible', !entry.isIntersecting);
+    }, { threshold: 0.1 });
+
+    observer.observe(mainSlider);
+    /***** CHECK IF ELEMENT IS IN VIEWPORT END *****/
+
+// FAQ
+const faqData = [
+    {
+        question: "Lorem ipsum dolor sit amet consectetur.",
+        answer: "In facilisis odio pellentesque neque sed. Mauris quam pharetra proin neque eros semper egestas orci. Posuere eu pulvinar purus ut ipsum turpis libero. Quis diam quis feugiat leo. Sed nullam aenean etiam proin quam facilisis at aliquam. Aliquam quisque cursus blandit enim."
+    },
+    {
+        question: "Lorem ipsum dolor sit amet consectetur.",
+        answer: "In facilisis odio pellentesque neque sed. Mauris quam pharetra proin neque eros semper egestas orci. Posuere eu pulvinar purus ut ipsum turpis libero. Quis diam quis feugiat leo. Sed nullam aenean etiam proin quam facilisis at aliquam. Aliquam quisque cursus blandit enim."
+    },
+    {
+        question: "Lorem ipsum dolor sit amet consectetur.",
+        answer: "In facilisis odio pellentesque neque sed. Mauris quam pharetra proin neque eros semper egestas orci. Posuere eu pulvinar purus ut ipsum turpis libero. Quis diam quis feugiat leo. Sed nullam aenean etiam proin quam facilisis at aliquam. Aliquam quisque cursus blandit enim."
+    },
+    {
+        question: "Lorem ipsum dolor sit amet consectetur.",
+        answer: "In facilisis odio pellentesque neque sed. Mauris quam pharetra proin neque eros semper egestas orci. Posuere eu pulvinar purus ut ipsum turpis libero. Quis diam quis feugiat leo. Sed nullam aenean etiam proin quam facilisis at aliquam. Aliquam quisque cursus blandit enim."
+    }
+];
+
+// Cible le conteneur
+const faqGroup = document.getElementById('faqGroup');
+
+// Boucle sur les données pour créer chaque élément
+faqData.forEach(item => {
+    const faqItem = document.createElement('div');
+    faqItem.classList.add('faq-item');
+    faqItem.setAttribute('tabindex', '0');
+    faqItem.setAttribute('role', 'button');
+
+    faqItem.innerHTML = `
+        <div class="faq-question">
+            <h3>${item.question}</h3>
+            <img class="triangle" src="https://www.pointp.fr/s/imgs/pages/renovation-energetique/part/pictos/dropdown-arrow-down.svg" alt="Fleche">
+        </div>
+        <div class="faq-answer">
+            <p class="lpText">${item.answer}</p>
+        </div>
+    `;
+
+    // Injecte dans le DOM
+    faqGroup.appendChild(faqItem);
+});
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+    item.addEventListener("click", () => {
+        toggleActiveClass(item);
+    });
+
+    item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleActiveClass(item);
+        }
+    });
+});
+
+function toggleActiveClass(item) {
+    const isActive = item.classList.contains("active");
+    removeActiveClass();
+    if (!isActive) {
+        item.classList.add("active");
+    }
+}
+
+function removeActiveClass() {
+    document.querySelectorAll(".faq-item.active").forEach((activeItem) => {
+        activeItem.classList.remove("active");
+    });
+}
+});
+</script>
+<!-- JS - END -->
