@@ -749,17 +749,17 @@
     }
 
     /* MAIN PAGE TITLE */
-    .section .section-title {
+    /* .section .section-title {
         background-color: unset;
         padding-bottom: 0;
         position: relative;
         text-align: left;
         padding-left: 60px;
-    }
-    .section .section-title span {
+    } */
+    .section .text-title span {
         position: relative;
     }
-    .section .section-title span::before {
+    .section .text-title span::before {
         content: '';
         background:url('/s/imgs/pages/00-commun/pictos/picto-bonjour.svg');
         background-size: cover;
@@ -1882,7 +1882,6 @@
                 }
                 // SLIDER ETAPES DESKTOP
                 if (!isMobile() && document.querySelectorAll('#slider_etapes .splide__slide').length > 4) {
-                    console.log('oui');
                     const splide = new Splide("#slider_etapes", {
                         gap: 24,
                         arrows: true,
