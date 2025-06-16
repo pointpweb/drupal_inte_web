@@ -276,7 +276,6 @@ function checkSplide() {
             carousselMagasins.mount();
             // checkPaginationContainerLength();
             updateScrollBar();
-            scrollBarReinit();
         }
         
         // SLIDER AVIS CLIENTS
@@ -357,7 +356,7 @@ function handleFilterClick(filter) {
         filterSlider(filter.getAttribute('data-tag'));
         mainSlider.classList.remove('hiding');
         isHiding = false;
-        scrollBarReinit();
+        updateScrollBar();
     }, 250);
 }
 
@@ -424,19 +423,24 @@ function filterSlider(tag) {
     updateScrollBar();
 }
 
-function scrollBarReinit () {
-    let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
-    progressbar.style.width = (100 / document.querySelectorAll('#slider_magasins .splide__slide').length) + "%";
-}
+    function updateScrollBar() {
+        // Fonction interne de mise à jour
+        function setProgressBar() {
+            let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
+            if (!progressbar) return;
 
-function updateScrollBar() {
-    carousselMagasins.on( 'mounted move', function () {
-        let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
-        let end  = carousselMagasins.Components.Controller.getEnd() + 1;
-        let rate = Math.min( ( carousselMagasins.index + 1 ) / end, 1 );
-        progressbar.style.width = String( 100 * rate ) + '%';
-    });
-}
+            let end = carousselMagasins.Components.Controller.getEnd() + 1;
+            let rate = Math.min((carousselMagasins.index + 1) / end, 1);
+
+            progressbar.style.width = (100 * rate) + '%';
+        }
+
+        // Exécute une première fois lors de l'initialisation
+        setProgressBar();
+
+        // Ajoute du listener
+        carousselMagasins.on('mounted move', setProgressBar);
+    }
 
 //Ajout d'une class pour réduire le gap sur la pagination
 // function checkPaginationContainerLength() {

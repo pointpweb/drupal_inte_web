@@ -527,7 +527,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 carousselMagasins.mount();
                 // checkPaginationContainerLength();
                 updateScrollBar();
-                scrollBarReinit();
             }
             
             // SLIDER AVIS CLIENTS
@@ -608,7 +607,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             filterSlider(filter.getAttribute('data-tag'));
             mainSlider.classList.remove('hiding');
             isHiding = false;
-            scrollBarReinit();
+            updateScrollBar();
         }, 250);
     }
     
@@ -675,18 +674,23 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         updateScrollBar();
     }
     
-    function scrollBarReinit () {
-        let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
-        progressbar.style.width = (100 / document.querySelectorAll('#slider_magasins .splide__slide').length) + "%";
-    }
-    
     function updateScrollBar() {
-        carousselMagasins.on( 'mounted move', function () {
+        // Fonction interne de mise à jour
+        function setProgressBar() {
             let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
-            let end  = carousselMagasins.Components.Controller.getEnd() + 1;
-            let rate = Math.min( ( carousselMagasins.index + 1 ) / end, 1 );
-            progressbar.style.width = String( 100 * rate ) + '%';
-        });
+            if (!progressbar) return;
+
+            let end = carousselMagasins.Components.Controller.getEnd() + 1;
+            let rate = Math.min((carousselMagasins.index + 1) / end, 1);
+
+            progressbar.style.width = (100 * rate) + '%';
+        }
+
+        // Exécute une première fois lors de l'initialisation
+        setProgressBar();
+
+        // Ajoute du listener
+        carousselMagasins.on('mounted move', setProgressBar);
     }
     
     //Ajout d'une class pour réduire le gap sur la pagination
