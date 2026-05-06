@@ -1,0 +1,367 @@
+<style>
+    .builder-body .sections-container .tw-w-full.tw-my-4 {
+        margin-top: 0;
+    }
+    .page-template-builder {
+        padding-top: 0;
+    }
+
+    .builder-header {
+        display: none;
+    }
+    /* HIDE FIRST HTML BLOCK TO AVOID USELESS GAP */
+    .tw-w-full.tw-my-4 .tw-container.tw-px-6 .block-template-builder.width-100:first-child {
+        display: none;
+    }
+    .block-free-html .tone .meterial .material__content h4,
+    .block-template-builder .block-wysiwyg h4,
+    .block-free-html .tone .meterial .material__content p,
+    .block-free-html .section-title__subtitle .subtitle,
+    .block-free-html .testimonial .testimonial__content,
+    .block-template-builder .block-wysiwyg p {
+        color: #333333;
+    }
+    .detailPicture {
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .block-free-html .intro-style__img .img .img__first {
+        margin-bottom: 0;
+    }
+    .other .right, .other .left {
+        max-width: unset;
+        padding: 0;
+    }
+    .tone__img .img .img__multi > div {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 768px) {
+        .sections-container .tw-px-6 {
+            padding: 20px 20px 0 20px;
+        }
+        .dialog-off-canvas-main-canvas .page-template-builder .block-template-builder .container {
+            padding: 0;
+        }
+        .dialog-off-canvas-main-canvas .page-template-builder .block-template-builder {
+            padding: 0;
+        }
+        .block-content .testimonial {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .block-free-html .showroom {
+            margin: unset;
+            margin-bottom: 130px;
+        }
+        .block-free-html .showroom__left .showroom-popup {
+            padding: 20px;
+        }
+        .other .other__wrapper .left, .other .other__wrapper .center, .other .other__wrapper .right {
+            display: block;
+            max-width: 100%;
+        }
+        .other__title .right, .other__title .left {
+            max-width: 100%;
+        }
+        .block-free-html .bloc-push {
+            flex-direction: column;
+        }
+        .bloc-push .right, .bloc-push .left {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<!---------- CSS Bloc rdv sh START ---------->
+<style>
+
+    /***** GLOBAL START *****/
+    .element--mobile {
+        display: block;
+    }
+
+    .element--desktop {
+        display: none;
+    }
+
+    .blocRdvSh {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 10px 10px 10px;
+        overflow: hidden;
+    }
+
+    img:not([width]).rdvShImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .rdvShContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        text-align: center;
+    }
+
+    .rdvShTitle__h2 {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .rdvShText {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: .875rem;
+    }
+
+    .rdvShCta {
+        width: 100%;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 1rem;
+        border-radius: 50px;
+        padding: 4px 32px;
+    }
+
+    @media (min-width: 768px) {
+        .element--mobile {
+            display: none;
+        }
+
+        .element--desktop {
+            display: block;
+        }
+
+        .blocRdvSh {
+            flex-direction: row;
+        }
+
+        .rdvShTitle__h2 {
+            font-size: 1.625rem;
+        }
+
+        .rdvShDesc {
+            display: flex;
+            align-items: center;
+        }
+
+        .rdvShText {
+            font-size: 1rem;
+        }
+
+        img:not([width]).rdvShImg--iconClick {
+            max-width: 60px;
+        }
+
+        .rdvShCta {
+            font-size: 1.125rem;
+            transition: all .3s ease-out;
+        }
+    }
+    /***** GLOBAL END *****/
+
+    /***** Bloc 1 START *****/
+    .blocRdvSh.blocRdvSh--1 {
+        background-color: #333333;
+    }
+
+    .blocRdvSh--1 .rdvShContent {
+        color: #ffffff;
+        padding: 16px 32px;
+    }
+
+    .blocRdvSh--1 .rdvShCta {
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #ffffff;
+        width: fit-content;
+    }
+
+    @media (min-width: 768px) {
+
+        img:not([width]).rdvShImg--visual {
+            max-width: 330px;
+        }
+
+        .blocRdvSh--1 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+    }
+    /***** Bloc 1 END *****/
+
+    /***** Bloc 2 START *****/
+    .blocRdvSh.blocRdvSh--2 {
+        background-color: #333333;
+        padding: 16px;
+    }
+
+    .blocRdvSh--2 .rdvShContent {
+        color: #FFFFFF;
+        padding: 16px 0;
+    }
+
+    .blocRdvSh--2 .rdvShReassurance {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blocRdvSh--2 .reassuranceItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4px;
+        width: calc(100% / 3);
+    }
+
+    .blocRdvSh--2 img:not([width]).rdvShImg--reassurance {
+        max-width: 48px;
+    }
+
+    .blocRdvSh--2 .itemText {
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: .875rem;
+    }
+
+    .blocRdvSh--2 .rdvShCta {
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        width: fit-content;
+    }
+
+    @media (min-width: 768px) {
+
+        .blocRdvSh--2 .rdvShContent {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .blocRdvSh--2 img:not([width]).rdvShImg--visual {
+            max-width: 420px;
+        }
+
+        .blocRdvSh--2 .rdvShReassurance {
+            justify-content: center;
+            column-gap: 32px;
+            margin: 16px;
+        }
+
+        .blocRdvSh--2 .itemText {
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        .blocRdvSh--2 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+    }
+    /***** Bloc 2 END *****/
+
+    /***** Bloc 3 START *****/
+
+    /* Reset START */
+    #bloc_sommaire p.rdvShText,
+    #bloc_sommaire p.rdvShCtaText {
+        margin: 0;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+    /* Reset END */
+
+    .blocRdvSh.blocRdvSh--3 {
+        background-color: #333333;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        border-radius: 0;
+        padding: 16px 32px;
+    }
+
+    .blocRdvSh--3 .rdvShContent {
+        color: #FFFFFF; 
+    }
+
+    #bloc_sommaire .blocRdvSh.blocRdvSh--3 .rdvShText {
+        font-size: 1rem;
+    }
+
+    .blocRdvSh--3 .rdvShCta {
+        display: flex;
+        column-gap: 4px;
+        color: #333333;
+        background-color: #FFFFFF;
+        border: 1px solid #ffffff;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding: 8px 16px;
+    }
+
+    #bloc_sommaire .blocRdvSh--3 .rdvShCtaText {
+        font-size: 1.375rem;
+    }
+
+    .blocRdvSh--3 .rdvShImg--calendar {
+        width: 48px;
+        height: 48px;
+    }
+
+    @media (min-width: 768px) {
+
+        .blocRdvSh.blocRdvSh--3 {
+            position: unset;
+            padding: 16px;
+            border-radius: 0 10px 10px 10px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        #bloc_sommaire .blocRdvSh--3 .rdvShText {
+            font-size: .875rem;
+        }
+
+        .blocRdvSh--3 .rdvShCta:hover {
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+
+        .blocRdvSh--3 .rdvShImg--calendar {
+            width: 24px;
+            height: 24px;
+        }
+
+        .blocRdvSh--3 .rdvShCta:hover .rdvShSvg--calendar path {
+            fill: #FFFFFF;
+        }
+
+        #bloc_sommaire .blocRdvSh--3 .rdvShCtaText {
+            font-size: .875rem;
+        }
+    }
+    /***** Bloc 3 END *****/
+
+        .section-template-builder.width-75 .blocRdvSh {
+            margin-top: 30px;
+            margin-bottom: 60px;
+       }
+       .section-template-builder.width-100 .blocRdvSh {
+           margin-top: 20px;
+           margin-bottom: 40px;
+       }
+
+</style>
+<!---------- CSS Bloc rdv sh END ---------->
