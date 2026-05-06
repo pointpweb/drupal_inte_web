@@ -320,15 +320,15 @@
         background-color: #D4450C;
         color: #FFFFFF;
     }
-  
+
     @media (min-width: 768px) {
         .lpCTA--primary:hover,
         .block-wysiwyg a.lpCTA--primary:hover,
         .block-wysiwyg a.lpCTA--primary:not(.is-disabled):hover,
         .c-wysiwyg a.lpCTA--primary:hover,
         .c-wysiwyg a.lpCTA--primary:not(.is-disabled):hover {
-            background-color: #EF855A;
-            color: #000000;
+            background-color: #B83F0E;
+            color: #FFFFFF;
         }
     }
     
@@ -356,7 +356,6 @@
     .c-wysiwyg a.lpCTA--tertiary {
         background-color: #FFFFFF;
         color: #000000;
-        border: 1px solid #000000;
     }
   
     @media (min-width: 768px) {
@@ -365,8 +364,8 @@
         .block-wysiwyg a.lpCTA--tertiary:not(.is-disabled):hover,
         .c-wysiwyg a.lpCTA--tertiary:hover,
         .c-wysiwyg a.lpCTA--tertiary:not(.is-disabled):hover {
-            background-color: #000000;
-            color: #FFFFFF;
+            background-color: #F2F4F7;
+            color: #000000;
         }
     }
   
@@ -382,7 +381,7 @@
     @media (min-width: 768px) {
         .lpCTA--quaternary:hover,
         .block-wysiwyg a.lpCTA--quaternary:hover,
-        .block-wysiwyg a.lpCTA--quaternary:not(.is-disabled):hover
+        .block-wysiwyg a.lpCTA--quaternary:not(.is-disabled):hover,
         .c-wysiwyg a.lpCTA--quaternary:hover,
         .c-wysiwyg a.lpCTA--quaternary:not(.is-disabled):hover {
             background-color: #000000;
@@ -420,21 +419,6 @@
         background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
     }
   
-    @media (min-width: 768px) {
-        .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
-        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
-            background-image: url("/s/imgs/pages/landing-global/icon_mail_black.svg");
-        }
-    }
-  
-    @media (min-width: 768px) {
-        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
-        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
-            background-image: url("/s/imgs/pages/landing-global/icon_mail_white.svg");
-        }
-    }
-    /* Icon mail - END */
-  
     /* Icon new tab - START */
     .lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before,
     .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary).icon--newTab::before {
@@ -450,13 +434,6 @@
         .lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before,
         .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newTab:hover::before {
             background-image: url("/s/imgs/pages/landing-global/icon_new_tab_black.svg");
-        }
-    }
-  
-    @media (min-width: 768px) {
-        .lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before,
-        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newTab:hover::before {
-            background-image: url("/s/imgs/pages/landing-global/icon_new_tab_white.svg");
         }
     }
     /* Icon new tab - END */
@@ -506,8 +483,7 @@
   
     @media (min-width: 768px) {
         .lpCTA--secondary.lpCTA--icon.icon--calendrier:hover::before,
-        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--calendrier:hover::before,
-        .lpCTA--primary.lpCTA--icon.icon--calendrier:hover::before{
+        .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--calendrier:hover::before {
             background-image: url("/s/imgs/pages/00-commun/pictos/picto-calendrier-black.svg");
         }
     }
@@ -544,8 +520,6 @@
     }
   
     @media (min-width: 768px) {
-        .lpCTA--tertiary.lpCTA--icon.icon--newtab:hover::before,
-        .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newtab:hover::before,
         .lpCTA--icon.lpCTA--quaternary.icon--newtab:hover::before,
         .c-wysiwyg a.lpCTA--icon.lpCTA--quaternary.icon--newtab:hover::before  {
             background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-white.svg");
@@ -558,9 +532,7 @@
     .c-wysiwyg a.lpCTA--icon:not(.lpCTA--tertiary, .lpCTA--quaternary).icon--newtab-white::before {
         background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-white.svg");
     }
-  
-    .lpCTA--icon.lpCTA--tertiary.icon--newtab-white::before,
-    .c-wysiwyg a.lpCTA--icon.lpCTA--tertiary.icon--newtab-white::before, 
+
     .lpCTA--icon.lpCTA--quaternary.icon--newtab-white::before,
     .c-wysiwyg a.lpCTA--icon.lpCTA--quaternary.icon--newtab-white::before {
         background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-white.svg");
@@ -568,7 +540,6 @@
   
     @media (min-width: 768px) {
         .lpCTA--secondary.lpCTA--icon.icon--newtab-white:hover::before,
-        .lpCTA--primary.lpCTA--icon.icon--newtab-white:hover::before,
         .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--newtab-white:hover::before {
             background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-black.svg");
         }
@@ -577,7 +548,7 @@
     @media (min-width: 768px) {
         .lpCTA--tertiary.lpCTA--icon.icon--newtab-white:hover::before,
         .c-wysiwyg a.lpCTA--tertiary.lpCTA--icon.icon--newtab-white:hover::before,
-        .lpCTA--icon.lpCTA--quaternary.icon--newtab-whitehover::before,
+        .lpCTA--icon.lpCTA--quaternary.icon--newtab-whitehover:hover::before,
         .c-wysiwyg a.lpCTA--icon.lpCTA--quaternary.icon--newtab-white:hover::before  {
             background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-black.svg");
         }
@@ -599,7 +570,6 @@
     }
   
     @media (min-width: 768px) {
-        .lpCTA--primary.lpCTA--icon.icon--showroom:hover::before,
         .c-wysiwyg a.lpCTA--secondary.lpCTA--icon.icon--showroom:hover::before {
             background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-showroom-noir.svg");
         }
@@ -759,6 +729,945 @@
   </style>
   <!-- GLOBAL STYLES - END -->
 
+    <!-- THIS PAGE STYLES - START -->
+    <style>
+        .sections-container .tw-gap-10 {
+            gap: 0;
+        }
+        .lpLink {
+            text-underline-offset: 3px;
+        }
+        a:not(.lpCTA):hover {
+            text-decoration: unset;
+        }
+        .lpMain {
+            padding: 0;
+            row-gap: 0;
+        }
+        .highlight_text {
+            font-weight: 700;
+        }
+        .lpSection {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding: 48px 20px;
+        }
+        @media (min-width: 768px) {
+            .lpSection {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 40px;
+            }
+        }
+        .lpSection--thematiques .lpSubSection {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        @media (min-width: 768px) {
+            .lpSubSection.lpSubSection--wMargin {
+                margin-top: 40px;
+            }
+        }
+        .block-wysiwyg ul li:before {
+            content: none;
+        }
+        /* SECTION INTRO */
+        h1.section-title {
+            display: none;
+        }
+        .lpSection.lpSection--title {
+            gap: 0;
+            text-align: center;
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/showroom-lp-rdv.jpg");
+            background-repeat: no-repeat;
+            min-height: 208px;
+            justify-content: center;
+            background-size: cover;
+            padding: 2rem 20px;
+            background-position: 50% 45%;
+        }
+        .lpSection.lpSection--title > .containerTitle {
+            background-color: #ffffffe6;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        }
+        @media (min-width: 768px) {
+            .lpSection.lpSection--title > .containerTitle {
+                row-gap: 16px;
+                padding: 24px;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            .lpSection.lpSection--title > .containerTitle > .lpText {
+                max-width: 650px;
+            }
+        }
+        .lpSection.lpSection--title .section-title {
+            background-color: unset;
+            padding: unset;
+            margin-bottom: 6px;
+        }
+        .lpSection.lpSection--title .text-title {
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-style: normal;
+            display: block;
+        }
+        .lpSection.lpSection--title .text-title .highlight_title {
+            color: #D4450C;
+        }
+        .lpSection.lpSection--title > .containerTitle > a {
+            margin: 0 auto;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .lpSection.lpSection--title > .containerTitle > a {
+                max-width: 370px;
+            }
+        }
+        .reassuranceIntro {
+            background-color: #333333;
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .reassuranceIntro .lpText {
+            color: #FFFFFF;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 600;
+            border-right: solid 1px #FFFFFF;
+            padding: 8px;
+        }
+        @media (min-width: 768px) {
+            .reassuranceIntro .lpText {
+                width: 26%;
+                gap: 24px;
+            }
+        }
+        .reassuranceIntro .lpText:last-child {
+            border-right: unset;
+        }
+        .reassuranceIntro .lpText::before {
+            content: '';
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/picto_reassurance.svg");
+            height: 20px;
+            width: 20px;
+            display: block;
+        }
+        
+        /* SECTION THEMATIQUES */
+        #slider_thematiques {
+            margin-bottom: 0;
+            opacity: 1;
+            transition: opacity .25s linear;
+        }
+        #slider_thematiques .splide__pagination {
+            bottom: -34.5px;
+        }
+        #slider_thematiques .splide__list {
+            overflow: visible;
+        }
+        #slider_thematiques .slider_thematiques_progress {
+            opacity: 1;
+            transition: opacity .2s linear;
+        }
+        #slider_thematiques .splide__slide {
+            border-radius: 0 10px 10px 10px;
+        }
+        #slider_thematiques .splide__slide {
+            width: calc(55% - 27px);
+            margin-right: 16px;
+            max-width: 200px;
+        }
+        @media (min-width: 768px) {
+            #slider_thematiques .splide__slide {
+                width: calc(25% - 24px);
+                max-width: 320px;
+            }
+        }
+        #slider_thematiques .splide__slide .imgThematique {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 0 10px 10px 10px;
+            cursor: pointer;
+        }
+        #slider_thematiques .splide__slide .thematiqueNom {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            background: #FFFFFF;
+            padding: 0 6px;
+            line-height: 1.5;
+        }
+        #thematiquesListDesc {
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #thematiquesListDesc .fichethematiquedesc {
+            position: relative;
+            border-radius: 5px;
+            width: calc(100% - 60px);
+            background-color: #fdfdfc;
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            padding: 24px;
+            display: none;
+        }
+        #thematiquesListDesc .fichethematiquedesc__txt {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        #thematiquesListDesc .fichethematiquedesc__container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        #thematiquesListDesc .fichethematiquedesc .lpCTA {
+            width: 100%;
+        }
+        #thematiquesListDesc.is-visible,
+        #thematiquesListDesc .fichethematiquedesc.is-visible {
+            display: flex;
+        }
+        #thematiquesListDesc .fichethematiquedesc .lpTitle__h4 {
+            text-align: center;
+        }
+        #thematiquesListDesc .fichethematiquedesc .lpText {
+            text-align: center;
+        }
+        #thematiquesListDesc .fichethematiquedesc .close {
+            cursor: pointer;
+            display: block;
+            background-image: url('/s/imgs/pages/00-commun/pictos/picto-croix.svg');
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+        #thematiquesListDesc .fichethematiquedesc__imgBlock {
+            display: flex;
+            justify-content: center;
+            column-gap: 16px;
+        }
+        @media (min-width: 768px) {
+            #thematiquesListDesc .fichethematiquedesc__container {
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+            }
+            #thematiquesListDesc .fichethematiquedesc__imgBlock {
+                width: 42.68%;
+            }
+            #thematiquesListDesc .fichethematiquedesc .lpCTA {
+                max-width: 309px;
+                margin: 0 auto;
+            }
+            #thematiquesListDesc .fichethematiquedesc__txt {
+                width: 53.41%;
+                gap: 2rem;
+            }
+            #thematiquesListDesc .fichethematiquedesc .lpText {
+                text-align: left;
+            }
+            #thematiquesListDesc .fichethematiquedesc {
+                width: 900px;
+                padding: 40px;
+            }
+            #thematiquesListDesc .fichethematiquedesc .close {
+                width: 24px;
+                height: 24px;
+                top: 16px;
+                right: 16px;
+            }
+        }
+        /* SCROLLBAR SLIDER THEMATIQUES */
+        #slider_thematiques {
+            margin-bottom: 32px;
+        }
+        #slider_thematiques .slider_thematiques_progress {
+            background: #D9D9D9;
+            border-radius: 10px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 24px;
+            display: none;
+        }
+        #slider_thematiques .slider_thematiques_progress_bar {
+            background: #D4450C;
+            height: 4px;
+            transition: width 400ms ease;
+            border-radius: 10px;
+            width: 0;
+        }
+        #slider_thematiques:not(.is-active) li.splide__slide {
+            width: 100%;
+        }
+        /* SECTION PRENDRE RDV */
+        .lpSection--priseRdv {
+            background: #F6F6F6;
+            padding-bottom: 48px;
+        }
+        .lpSection--priseRdv--container {
+            background: #F6F6F6;
+            display: flex;
+            flex-direction: column;
+        }
+        .lpSection--priseRdv--container > .lpTitle__h2 {
+            margin-bottom: 2rem;
+        }
+        .lpSubSection.subSectionRdvShowroom, 
+        .lpSubSection.subSectionRdvVisio {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+        } 
+        .lpSection--priseRdv .lpSubSection > .ctaTunnelRdv {
+            min-width: stretch;
+        }
+        @media (min-width: 768px) {
+            .lpSection--priseRdv {
+                padding-bottom: 0;
+            }
+            .lpSection--priseRdv--container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .CTA__container {
+                width: 100%;
+            }
+
+            .lpSection--priseRdv .ctaTunnelRdv {
+                min-width: fit-content;
+                margin: 0 auto; 
+            }
+        }
+        #slider_methode_prise_rdv .splide__slide,
+        #slider_methode_prise_rdvdesktop .splide__slide {
+            width: 50%;
+        }
+        #slider_methode_prise_rdvdesktop {
+            display: none !important;
+        }
+        #slider_methode_prise_rdv .rdvShowRoom, #slider_methode_prise_rdv .rdvVisio,
+        #slider_methode_prise_rdvdesktop .rdvShowRoom, #slider_methode_prise_rdvdesktop .rdvVisio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+            cursor: pointer;
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        @media (min-width: 768px) {
+            #slider_methode_prise_rdv .rdvShowRoom, #slider_methode_prise_rdv .rdvVisio,
+            #slider_methode_prise_rdvdesktop .rdvShowRoom, #slider_methode_prise_rdvdesktop .rdvVisio {
+                flex-direction: row;
+                padding: 24px;
+            }
+        }
+        #slider_methode_prise_rdv .rdvShowRoom .slideText, #slider_methode_prise_rdv .rdvVisio .slideText, 
+        #slider_methode_prise_rdvdesktop .rdvShowRoom .slideText, #slider_methode_prise_rdvdesktop .rdvVisio .slideText {
+            font-size: 18px;
+        }
+        #slider_methode_prise_rdv .rdvShowRoom::before, #slider_methode_prise_rdv .rdvVisio::before,
+        #slider_methode_prise_rdvdesktop .rdvShowRoom::before, #slider_methode_prise_rdvdesktop .rdvVisio::before {
+            content: '';
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-showroom-noir.svg");
+            height: 28px;
+            width: 32px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #slider_methode_prise_rdv .rdvVisio::before, 
+        #slider_methode_prise_rdvdesktop .rdvVisio::before {
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-video-noir.svg");
+            width: 28px;
+            background-position: 50% 50%;
+        }
+        .lpSection--priseRdv .splide__list {
+            overflow: visible;
+        }
+        /* ACTIVE SLIDE */
+        #slider_methode_prise_rdv .splide__slide.active,
+        #slider_methode_prise_rdvdesktop .splide__slide.active {
+            /* border-bottom: solid 3px #D4450C; */
+            background: #FFFFFF;
+        }
+        #slider_methode_prise_rdv .splide__slide.active .slideText,
+        #slider_methode_prise_rdvdesktop .splide__slide.active .slideText {
+            color: #D4450C;
+            font-weight: 700;
+        }
+        #slider_methode_prise_rdv .splide__slide:not(.active) .slideText,
+        #slider_methode_prise_rdvdesktop .splide__slide:not(.active) .slideText {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            color: #000000;
+        }
+        #slider_methode_prise_rdv .rdvShowRoom.active::before,
+        #slider_methode_prise_rdvdesktop .rdvShowRoom.active::before {
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-showroom-orange.svg");
+        }
+        #slider_methode_prise_rdv .rdvVisio.active::before,
+        #slider_methode_prise_rdvdesktop .rdvVisio.active::before {
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-video-orange.svg");
+        }
+        .lpSection--priseRdv .lpSubSection {
+            opacity: 1;
+            transition: opacity .2s ease-out;
+            gap: 2rem;
+            padding: 2rem 8px 4rem 8px;
+            border-radius: 4px;
+        }
+        .lpSection--priseRdv .lpSubSection:not(.active) {
+            opacity: 0;
+        }
+        .lpSection--priseRdv .lpSubSection.active {
+            opacity: 1;
+            background: #FFFFFF;
+        }
+        .lpSection--priseRdv .lpSubSection.hidden {
+            display: none;
+        }
+        .imgContainer {
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            #slider_methode_prise_rdv {
+                display: none !important;
+            }
+            #slider_methode_prise_rdvdesktop {
+                display: block !important;
+            }
+            #slider_methode_prise_rdvdesktop .splide__list {
+                display: flex;
+                justify-content: center;
+                height: 56px;
+                width: 100%;
+                column-gap: 80px;
+            }
+            #slider_methode_prise_rdvdesktop .splide__slide {
+                width: fit-content;
+            }
+            .lpSection--priseRdv .lpSubSection {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 24px;
+            }
+            .lpSection--priseRdv .imgContainer {
+                height: fit-content;
+                width: 60%;
+            }
+            .lpSection--priseRdv .etapesRdv {
+                margin-bottom: 40px;
+            }
+            .lpSection--priseRdv .triangle {
+                display: none;
+            }
+
+            .lpSection--priseRdv {
+                padding-bottom: 40px !important;
+            }
+
+            .lpSubSection.subSectionRdvShowroom .lpText, .lpSubSection.subSectionRdvVisio .lpText {
+                width: 100%;
+            }
+        }
+        /* .imgContainer a {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2rem);
+            white-space: nowrap;
+            column-gap: 0;
+            border-color: #D4450C;
+            border-width: 3px;
+            gap: 1rem;
+            padding: 1rem 24px;
+            height: 45px;
+        }
+        .imgContainer a::before {
+            width: 20px;
+            height: 16px;
+        } */
+        .faq-answer {
+            gap: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        .faq-answer .answer_detail {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .faq-answer .answer_detail::before {
+            content: '';
+            min-width: 30px;
+            height: 30px;
+            display: block;
+            background-repeat: no-repeat;
+        }
+        .answer_glass::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_glass.svg');
+        }
+        .answer_styles::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_styles.svg');
+        }
+        .answer_idea::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_idea.svg');
+        }
+        .answer_thumbs::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_thumbs.svg');
+        }
+        .answer_files::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_files.svg');
+        }
+        .answer_chat::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_chat.svg');
+        }
+        .answer_clock::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_clock.svg');
+        }
+        .answer_dashboard::before {
+            background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_dashboard.svg');
+        }
+        .slider_etapes {
+            margin-top: 1rem;
+        }
+        .slider_etapes .splide__slide {
+            background-color: #F9F9F9;
+            padding: 1rem;
+            border-radius: 0 10px 10px 10px;
+            width: 79%;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        .slider_etapes .splide__slide .lpText {
+            font-size: 1rem;
+        }
+        .slider_etapes .splide__slide .etape {
+            font-family: 'Inter', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: #D4450C;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #D4450C;
+        }
+        .section-faq__group {
+            border-radius: 0px 10px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .section-faq__group .faq-item {
+            background-color: #FFFFFF;
+            border-radius: 0px 10px 10px 10px;
+            cursor: pointer;
+        }
+        .section-faq__group .faq-item .faq-question {
+            padding: 1rem;
+            font-weight: 700;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            border-bottom: solid 1px #F6F6F6;
+            align-items: center;
+        }
+        .section-faq__group .faq-item .faq-question .triangle {
+            height: 1rem !important;
+            width: 1rem !important;
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+        }
+        .section-faq__group .faq-item.active .faq-question .triangle {
+            transform: rotate(180deg);
+        }
+        .section-faq__group .faq-item .faq-answer {
+            font-weight: 400;
+            padding: 0 1rem;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        .section-faq__group .faq-item.active .faq-answer {
+            padding: 1rem;
+            opacity: 1;
+            max-height: 1000px;
+            visibility: visible;
+        }
+        .faq-item .faq-answer .highlight_text {
+            font-weight: 500;
+        }
+        .faq-item .faq-answer a.highlight_text {
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            .lpSection--priseRdv .section-faq__group .faq-item {
+                cursor: default;
+            }
+            .lpSection--priseRdv .section-faq__group .faq-item .faq-question {
+                padding: 16px;
+            }
+            .lpSection--priseRdv .section-faq__group .faq-item .faq-answer {
+                max-height: unset;
+                visibility: visible;
+                opacity: 1;
+                padding: 16px;
+            }
+            .lpSection--priseRdv .section-faq__container {
+                width: 36%;
+            }
+        }
+        #slider_videosClients {
+            margin-bottom: 3rem;
+        }
+        #slider_videosClients .splide__slide {
+            width: 79%;
+            background-color: #F6F6F6;
+            border-radius: 0px 10px 10px 10px;
+        }
+        @media (min-width: 768px) {
+            #slider_videosClients .splide__list {
+                display: flex;
+                justify-content: flex-start;
+                column-gap: 40px;
+            }
+            #slider_videosClients .splide__slide {
+                width: calc(25% - 40px);
+            }
+        }
+        #slider_videosClients .splide__slide .highlight_text {
+            padding: 1rem;
+        }
+        #slider_videosClients .splide__slide .legendAvis {
+            padding: 0 1rem 1rem 1rem;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 10px 0 0;
+        }
+        /* SLIDER AVIS CLIENTS */
+        #slider_avisClients {
+            margin-bottom: 3rem;
+        }
+        #slider_avisClients .splide__slide {
+            background-color: #F6F6F6;
+            padding: 1rem;
+            border-radius: 0 10px 10px 10px;
+            width: 79%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        } 
+        .contentLegend {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }   
+        #slider_avisClients .splide__slide .lpText {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        } 
+        #slider_avisClients .splide__slide .lpText .lpLink {
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        #slider_avisClients .splide__slide .lpText .lpLink::before {
+            background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-black.svg");
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #slider_avisClients .splide__slide::before {
+            content: '';
+            background-image: url("/s/imgs/pages/landing-rdv-showroom/etoiles_avis_client.png");
+            width: 53px;
+            height: 25px;
+            margin: 0 auto;
+        }
+        #slider_avisClients .splide__slide .legendAvis {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-direction: row;
+        }
+        #slider_avisClients .splide__slide .legendAvis::before {
+            /* font-style: italic; */
+            background-image: url("/s/imgs/pages/00-commun/pictos/picto-user.svg");
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #slider_avisClients .splide__slide .legendLieuDate {
+            font-style: italic;
+            text-align: right;
+            font-size: .875rem;
+        }
+        /* SECTION PROJET */
+        .lpSection--projet {
+            background-color: #F6F6F6;
+            padding-bottom: 5rem;
+        }
+        #slider_projet .splide__slide {
+            position: relative;
+            width: 55%;
+            border-radius: 10px;
+        }
+        #slider_projet .splide__slide img {
+            object-fit: cover;
+            border-radius: 10px;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            #slider_projet .splide__list {
+                display: flex;
+                justify-content: space-between;
+                column-gap: 40px;
+            }
+            #slider_projet .splide__slide {
+                width: calc(25% - 40px);
+            }
+        }
+        #slider_projet .splide__slide h3 {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+        }
+        #slider_projet .splide__slide h3 p {
+            background-color: rgba(255, 255, 255);
+            font-weight: 700;
+            width: fit-content;
+            padding: 2px .5rem 0 .5rem;
+            color: #333333;
+        }
+        #slider_projet .splide__slide h3 span {
+            display: block;
+            width: fit-content;
+            color: #D4450C;
+            background-color: rgba(255, 255, 255);
+            padding: 5px .5rem 5px .5rem;
+        }
+        /* SECTION FAQ */
+        #faq .faq-item {
+            background-color: #F6F6F6;
+        }
+        /* BANNIERE PROMO STICKY */
+        #banniereFlottante {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            bottom: 0;
+            left: 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            z-index: 5;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        #banniereFlottante > a {
+            column-gap: 8px;
+        }
+        #banniereFlottante {
+            gap: 16px;
+        }
+        #banniereFlottante .lpText {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.1rem;
+            color: #FFFFFF;
+        }
+        #banniereFlottante .lpText span {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        #banniereFlottante {
+            position: sticky;
+            bottom: 0;
+            z-index: 5;
+            transition: opacity .2s linear;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #banniereFlottante.visible {
+            opacity: 1;
+            pointer-events: initial;
+        }
+        /* GLOBAL SLIDER STYLES */
+        .splide > .splide__pagination {
+            position: absolute;
+            bottom: -37.5px;
+            gap: 8px;
+        }
+        .lpSubSection .splide:not(.is-overflow) .splide__pagination {
+            display: flex;
+        }
+        .splide > .splide__pagination li::before {
+            content: none;
+        }
+        .splide > .splide__pagination .splide__pagination__page {
+            opacity: 1;
+            border: solid 1px black;
+            background-color: #FFFFFF;
+            height: 10px;
+            width: 10px;
+            margin: 0;
+        }
+        .splide > .splide__pagination .splide__pagination__page.is-active {
+            background-color: #000000;
+        }
+        .splide > .splide__arrows--ltr {
+            position: absolute;
+            width: 100%;
+            bottom: -60px;
+            top: unset;
+            display: flex;
+        }
+        .splide > .splide__arrows .splide__arrow svg {
+            height: 1em;
+            width: 1em;
+            opacity: .7;
+        }
+        .splide__arrow--prev {
+            left: 0;
+        }
+        .splide__arrow--next {
+            right: 0;
+        }
+        .splide__pagination__page.is-active {
+            transform: unset;
+        }
+        .splide > .splide__arrows .splide__arrow.splide__arrow--prev,
+        .splide > .splide__arrows .splide__arrow.splide__arrow--next {
+            width: 25px;
+            border-radius: 50%;
+            height: 25px;
+            background: #D9D9D9;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .splide > .splide__arrows .splide__arrow--prev:not(.disabled),
+        .splide > .splide__arrows .splide__arrow--next:not(.disabled) {
+            opacity: 1;
+        }
+        .splide > .splide__arrows.splide__arrows--ltr .splide__arrow:disabled {
+            opacity: .3;
+        }
+        @media (min-width: 768px) {
+            .linebreak {
+                display: none;
+            }
+            #slider_thematiques .splide__arrows {
+                display: flex;
+            }
+            #banniereFlottante {
+                gap: 56px;
+            }
+            #banniereFlottante .lpText {
+                font-size: 14px;
+                line-height: 25px;
+            }
+            #banniereFlottante .lpText span {
+                font-size: 18px;
+            }
+        }
+        /* FOCUS VISIBLE — clavier uniquement, invisible au clic */
+        #slider_thematiques .splide__slide:focus-visible {
+            outline: 3px solid #D4450C;
+            outline-offset: 2px;
+        }
+    
+        #thematiquesListDesc .fichethematiquedesc .close:focus-visible {
+            outline: 3px solid #D4450C;
+            outline-offset: 4px;
+        }
+    
+        #slider_methode_prise_rdv .splide__slide:focus-visible,
+        #slider_methode_prise_rdvdesktop .splide__slide:focus-visible {
+            outline: 3px solid #D4450C;
+            outline-offset: 2px;
+        }
+    
+        .faq-item:focus-visible {
+            outline: 3px solid #D4450C;
+            outline-offset: 2px;
+        }
+      </style>
+      <!-- THIS PAGE STYLES - END -->
+
 
   
   <!-- HTML START -->
@@ -854,14 +1763,10 @@
             <div class="lpSubSection subSectionRdvShowroom active" role="tabpanel" aria-label="Rendez-vous en showroom">
                 <p class="lpText">Les showrooms POINT.P vous aident à trouver l'inspiration et à vous projeter chez vous.<br>Aménagement extérieur, salle de bain, salon ou cuisine venez découvrir toute notre gamme de produits afin de vous projeter dans votre projet.</p>
 
-                <a target="_blank" class="ctaTunnelRdv icon--showroom lpCTA lpCTA--primary lpCTA--icon" href="https://rdv.pointp.fr/">Prendre rendez-vous en showroom</a>
-  
-                <div class="imgContainer">
-                    <a href="https://rdv.pointp.fr/" target="_blank">
-                        <img class="imgMethodeRdv" src="/s/imgs/pages/landing-rdv-showroom/methode_rdv_showroom.jpg" alt="Conseiller POINT.P en rendez-vous showroom">
-                    </a>
+                <div class="CTA__container">
+                    <a target="_blank" class="ctaTunnelRdv icon--showroom lpCTA lpCTA--primary lpCTA--icon" href="https://rdv.pointp.fr/">Prendre rendez-vous en showroom</a>
                 </div>
-  
+
                 <div class="section-faq__container">
                     <div class="section-faq__group">
                         <div class="faq-item" tabindex="0" role="button" aria-expanded="false">
@@ -890,6 +1795,12 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="imgContainer">
+                    <a href="https://rdv.pointp.fr/" target="_blank">
+                        <img class="imgMethodeRdv" src="/s/imgs/pages/landing-rdv-showroom/methode_rdv_showroom.jpg" alt="Conseiller POINT.P en rendez-vous showroom">
+                    </a>
+                </div>
   
                 <div class="etapesRdv">
                     <h3 class="lpTitle__h3">Comment prendre rendez-vous en showroom ?</h3>
@@ -900,7 +1811,6 @@
                                     <a target="_blank" href="https://rdv.pointp.fr/">
                                         <span class="etape">1</span>
                                         <p class="lpText">Aller sur <u>rdv.pointp.fr</u>, choisir le motif de votre projet et le créneau horaire souhaité.</p>
-                                        </a>
                                     </a>
                                 </article>
                                 <article class="splide__slide">
@@ -937,11 +1847,9 @@
             <!-- RDV EN VISIO START -->
             <div class="lpSubSection subSectionRdvVisio hidden" role="tabpanel" aria-label="Rendez-vous en visio">
                 <p class="lpText">Les rendez-vous en visio POINT.P vous accompagnent à distance pour trouver l'inspiration et concrétiser votre projet.<br>Aménagement extérieur, salle de bain, salon ou cuisine : découvrez toute notre gamme de produits et bénéficiez des conseils personnalisés de nos experts.</p>
-                <a target="_blank" class="ctaTunnelRdv icon--visio lpCTA lpCTA--primary lpCTA--icon" href="https://rdv.pointp.fr/">Prendre rendez-vous en visio</a>
-                <div class="imgContainer">
-                    <a href="https://rdv.pointp.fr/" target="_blank">
-                        <img class="imgMethodeRdv" src="/s/imgs/pages/landing-rdv-showroom/methode_rdv_visio.jpg" alt="Rendez-vous visio">
-                    </a>
+
+                <div class="CTA__container">
+                    <a target="_blank" class="ctaTunnelRdv icon--visio lpCTA lpCTA--primary lpCTA--icon" href="https://rdv.pointp.fr/">Prendre rendez-vous en visio</a>
                 </div>
   
                 <div class="section-faq__container">
@@ -970,6 +1878,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="imgContainer">
+                    <a href="https://rdv.pointp.fr/" target="_blank">
+                        <img class="imgMethodeRdv" src="/s/imgs/pages/landing-rdv-showroom/methode_rdv_visio.jpg" alt="Rendez-vous visio">
+                    </a>
                 </div>
   
                 <div class="etapesRdv">
@@ -1144,6 +2058,7 @@
             alt: "Showroom revêtements de sol et de mur POINT.P",
             desctitle: 'Revêtements de sol et de mur',
             secondaryimage: '/s/imgs/pages/landing-rdv-showroom/popin_carrelage.jpg',
+            secondaryimage_desktop: '/s/imgs/pages/landing-rdv-showroom/popin_carrelage_desktop.png',
             altsecondaryimage: 'Exemple de carrelage intérieur POINT.P',
             description: 'POINT.P vous propose une gamme de plus de 6000 références de carrelage intérieur sol et mur pour toutes les pièces de votre maison. Nous vous proposons également une gamme très étoffée de revêtements, à tous les prix. Du parquet bois massif aux lames de PVC, en passant par le sol stratifié, les produits pour votre sol intérieur sont là.',
         },
@@ -1153,6 +2068,7 @@
             alt: "Showroom salle de bain et sanitaires POINT.P",
             desctitle: 'Salle de bain et sanitaires',
             secondaryimage: '/s/imgs/pages/landing-rdv-showroom/popin_sdb.jpg',
+            secondaryimage_desktop: '/s/imgs/pages/landing-rdv-showroom/popin_sdb_desktop.png',
             altsecondaryimage: "Exemple d'aménagement salle de bain POINT.P",
             description: 'Pièce utilisée au quotidien, la salle de bain doit être un espace de bien-être, suffisamment personnalisé pour répondre aux envies de design et aux besoins de confort de chacun. Pour réussir ce compromis, l\'offre salle de bain POINT.P regroupe tous les composants de votre future pièce d\'eau. Mobilier, robinetterie, vasque, douche, WC...Explorez notre gamme complète !',
         },
@@ -1162,6 +2078,7 @@
             alt: "Showroom menuiseries POINT.P",
             desctitle: 'Menuiseries',
             secondaryimage: '/s/imgs/pages/landing-rdv-showroom/popin_menuiseries.jpg',
+            secondaryimage_desktop: '/s/imgs/pages/landing-rdv-showroom/popin_menuiseries_desktop.png',
             altsecondaryimage: 'Exemple de menuiseries POINT.P',
             description: 'Les menuiseries concernent tous les éléments en bois, PVC ou aluminium qui composent l\'architecture de votre maison, tels que les fenêtres, portes, escaliers ou encore les volets. Une bonne menuiserie est essentielle pour assurer l\'isolation thermique et phonique de votre logement, tout en apportant une touche esthétique. Lors de votre rendez-vous POINT.P, nos experts vous conseilleront sur le choix des matériaux et des styles adaptés à vos besoins.',
         },
@@ -1171,15 +2088,17 @@
             alt: "Showroom aménagement extérieur POINT.P",
             desctitle: 'Aménagement extérieur',
             secondaryimage: '/s/imgs/pages/landing-rdv-showroom/popin_amex.jpg',
+            secondaryimage_desktop: '/s/imgs/pages/landing-rdv-showroom/popin_amex_desktop.png',
             altsecondaryimage: "Exemple d'aménagement extérieur POINT.P",
             description: "L'aménagement extérieur d'une terrasse ou d'un jardin permet de créer une véritable extension de la maison. Dans l'univers « Terrasses et extérieurs », POINT.P propose une offre de revêtements de sol et de produits destinés à l'aménagement extérieur. Dalles ou lames de terrasse, portail, bordure, éclairage, fontaines… Tout est pensé pour vous aider à aménager votre jardin selon vos goûts et votre bien-être.",
         },
         {
-            image: "/s/imgs/pages/landing-rdv-showroom/conseils_agrandissement.jpg",
+            image: "/s/imgs/pages/landing-rdv-showroom/popin_agrandissement_desktop.png",
             nom: "Agrandissement",
             alt: "Showroom agrandissement POINT.P",
             desctitle: 'Agrandissement',
             secondaryimage: '/s/imgs/pages/landing-rdv-showroom/popin_agrandissement.jpg',
+            secondaryimage_desktop: '/s/imgs/pages/landing-rdv-showroom/popin_agrandissement_desktop.png',
             altsecondaryimage: "Exemple de projet d'agrandissement POINT.P",
             description: 'Que vous souhaitiez créer une pièce supplémentaire, aménager un espace plus spacieux ou agrandir votre maison, POINT.P vous accompagne à chaque étape. Découvrez notre sélection de matériaux adaptés : isolation performante, revêtements de façade, systèmes de cloisonnement, portes et fenêtres. Profitez des conseils experts POINT.P pour une extension harmonieuse, confortable et énergétique.',
         },
@@ -1210,7 +2129,12 @@
             <button class="close" aria-label="Fermer la fiche ${thematique.desctitle}"></button>
             <div class="fichethematiquedesc__container">
                 <div class="fichethematiquedesc__imgBlock">
-                    <img src="${thematique.secondaryimage}" alt="${thematique.altsecondaryimage}" class="fichethematiquedesc__img">
+                    <picture>
+                        <!-- Image pour desktop -->
+                        <source srcset="${thematique.secondaryimage_desktop}" media="(min-width: 768px)"/>
+
+                        <img src="${thematique.secondaryimage}" alt="${thematique.altsecondaryimage}" class="fichethematiquedesc__img">
+                    </picture>
                 </div>
                 <div class="fichethematiquedesc__txt">
                     <p class="lpText">
@@ -1617,926 +2541,3 @@
   });
   </script>
   <!-- JS END -->
-
-
-  
-  <!-- THIS PAGE STYLES - START -->
-  <style>
-    .sections-container .tw-gap-10 {
-        gap: 0;
-    }
-    .lpLink {
-        text-underline-offset: 3px;
-    }
-    a:not(.lpCTA):hover {
-        text-decoration: unset;
-    }
-    .lpMain {
-        padding: 0;
-        row-gap: 0;
-    }
-    .highlight_text {
-        font-weight: 700;
-    }
-    .lpSection {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        padding: 48px 20px;
-    }
-    @media (min-width: 768px) {
-        .lpSection {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            padding: 40px 40px;
-        }
-    }
-    .lpSection--thematiques .lpSubSection {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-    }
-    @media (min-width: 768px) {
-        .lpSubSection.lpSubSection--wMargin {
-            margin-top: 40px;
-        }
-    }
-    .block-wysiwyg ul li:before {
-        content: none;
-    }
-    /* SECTION INTRO */
-    h1.section-title {
-        display: none;
-    }
-    .lpSection.lpSection--title {
-        gap: 0;
-        text-align: center;
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/showroom-lp-rdv.jpg");
-        background-repeat: no-repeat;
-        min-height: 208px;
-        justify-content: center;
-        background-size: cover;
-        padding: 2rem 20px;
-        background-position: 50% 45%;
-    }
-    .lpSection.lpSection--title > .containerTitle {
-        background-color: #ffffffe6;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 8px;
-    }
-    @media (min-width: 768px) {
-        .lpSection.lpSection--title > .containerTitle {
-            row-gap: 16px;
-            padding: 24px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .lpSection.lpSection--title > .containerTitle > .lpText {
-            max-width: 650px;
-        }
-    }
-    .lpSection.lpSection--title .section-title {
-        background-color: unset;
-        padding: unset;
-        margin-bottom: 6px;
-    }
-    .lpSection.lpSection--title .text-title {
-        text-align: center;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-style: normal;
-        display: block;
-    }
-    .lpSection.lpSection--title .text-title .highlight_title {
-        color: #D4450C;
-    }
-    .lpSection.lpSection--title > .containerTitle > a {
-        margin: 0 auto;
-        width: 100%;
-    }
-    @media (min-width: 768px) {
-        .lpSection.lpSection--title > .containerTitle > a {
-            max-width: 370px;
-        }
-    }
-    .reassuranceIntro {
-        background-color: #333333;
-        padding: 8px 0;
-        display: flex;
-        justify-content: center;
-    }
-    .reassuranceIntro .lpText {
-        color: #FFFFFF;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
-        font-weight: 600;
-        border-right: solid 1px #FFFFFF;
-        padding: 8px;
-    }
-    @media (min-width: 768px) {
-        .reassuranceIntro .lpText {
-            width: 26%;
-            gap: 24px;
-        }
-    }
-    .reassuranceIntro .lpText:last-child {
-        border-right: unset;
-    }
-    .reassuranceIntro .lpText::before {
-        content: '';
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/picto_reassurance.svg");
-        height: 20px;
-        width: 20px;
-        display: block;
-    }
-    
-    /* SECTION THEMATIQUES */
-    #slider_thematiques {
-        margin-bottom: 0;
-        opacity: 1;
-        transition: opacity .25s linear;
-    }
-    #slider_thematiques .splide__pagination {
-        bottom: -34.5px;
-    }
-    #slider_thematiques .splide__list {
-        overflow: visible;
-    }
-    #slider_thematiques .slider_thematiques_progress {
-        opacity: 1;
-        transition: opacity .2s linear;
-    }
-    #slider_thematiques .splide__slide {
-        border-radius: 0 10px 10px 10px;
-    }
-    #slider_thematiques .splide__slide {
-        width: calc(55% - 27px);
-        margin-right: 16px;
-        max-width: 200px;
-    }
-    @media (min-width: 768px) {
-        #slider_thematiques .splide__slide {
-            width: calc(25% - 24px);
-            max-width: 320px;
-        }
-    }
-    #slider_thematiques .splide__slide .imgThematique {
-        width: 100%;
-        max-width: 320px;
-        border-radius: 0 10px 10px 10px;
-        cursor: pointer;
-    }
-    #slider_thematiques .splide__slide .thematiqueNom {
-        position: absolute;
-        bottom: 24px;
-        left: 24px;
-        font-size: 14px;
-        font-weight: 600;
-        background: #FFFFFF;
-        padding: 0 6px;
-        line-height: 1.5;
-    }
-    #thematiquesListDesc {
-        background: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
-    #thematiquesListDesc .fichethematiquedesc {
-        position: relative;
-        border-radius: 5px;
-        width: calc(100% - 60px);
-        background-color: #fdfdfc;
-        display: flex;
-        flex-direction: column;
-        row-gap: 24px;
-        padding: 24px;
-        display: none;
-    }
-    #thematiquesListDesc .fichethematiquedesc__txt {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-    #thematiquesListDesc .fichethematiquedesc__container {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-    #thematiquesListDesc .fichethematiquedesc .lpCTA {
-        width: 100%;
-    }
-    #thematiquesListDesc.is-visible,
-    #thematiquesListDesc .fichethematiquedesc.is-visible {
-        display: flex;
-    }
-    #thematiquesListDesc .fichethematiquedesc .lpTitle__h4 {
-        text-align: center;
-    }
-    #thematiquesListDesc .fichethematiquedesc .lpText {
-        text-align: center;
-    }
-    #thematiquesListDesc .fichethematiquedesc .close {
-        cursor: pointer;
-        display: block;
-        background-image: url('/s/imgs/pages/00-commun/pictos/picto-croix.svg');
-        width: 16px;
-        height: 16px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-    }
-    #thematiquesListDesc .fichethematiquedesc__imgBlock {
-        display: flex;
-        justify-content: center;
-        column-gap: 16px;
-    }
-    @media (min-width: 768px) {
-        #thematiquesListDesc .fichethematiquedesc__container {
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-        }
-        #thematiquesListDesc .fichethematiquedesc__imgBlock {
-            width: 42.68%;
-        }
-        #thematiquesListDesc .fichethematiquedesc .lpCTA {
-            max-width: 309px;
-            margin: 0 auto;
-        }
-        #thematiquesListDesc .fichethematiquedesc__txt {
-            width: 53.41%;
-            gap: 2rem;
-        }
-        #thematiquesListDesc .fichethematiquedesc .lpText {
-            text-align: left;
-        }
-        #thematiquesListDesc .fichethematiquedesc {
-            width: 900px;
-            padding: 40px;
-        }
-        #thematiquesListDesc .fichethematiquedesc .close {
-            width: 24px;
-            height: 24px;
-            top: 16px;
-            right: 16px;
-        }
-    }
-    /* SCROLLBAR SLIDER THEMATIQUES */
-    #slider_thematiques {
-        margin-bottom: 32px;
-    }
-    #slider_thematiques .slider_thematiques_progress {
-        background: #D9D9D9;
-        border-radius: 10px;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 24px;
-        display: none;
-    }
-    #slider_thematiques .slider_thematiques_progress_bar {
-        background: #D4450C;
-        height: 4px;
-        transition: width 400ms ease;
-        border-radius: 10px;
-        width: 0;
-    }
-    #slider_thematiques:not(.is-active) li.splide__slide {
-        width: 100%;
-    }
-    /* SECTION PRENDRE RDV */
-    .lpSection--priseRdv {
-        background: #F6F6F6;
-        padding-bottom: 48px;
-    }
-    .lpSection--priseRdv--container {
-        background: #F6F6F6;
-        display: flex;
-        flex-direction: column;
-    }
-    .lpSection--priseRdv--container > .lpTitle__h2 {
-        margin-bottom: 2rem;
-    }
-    .lpSubSection.subSectionRdvShowroom, 
-    .lpSubSection.subSectionRdvVisio {
-        display: flex;
-        flex-direction: column;
-        row-gap: 32px;
-    } 
-    .lpSection--priseRdv .lpSubSection > .ctaTunnelRdv {
-        min-width: stretch;
-    }
-    @media (min-width: 768px) {
-        .lpSection--priseRdv {
-            padding-bottom: 0;
-        }
-        .lpSection--priseRdv--container {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            padding: 40px 40px;
-        }
-    }
-    #slider_methode_prise_rdv,
-    #slider_methode_prise_rdvdesktop {
-        /* border-bottom: solid 1px #666666; */
-    }
-    #slider_methode_prise_rdv .splide__slide,
-    #slider_methode_prise_rdvdesktop .splide__slide {
-        width: 50%;
-    }
-    #slider_methode_prise_rdvdesktop {
-        display: none !important;
-    }
-    @media (min-width: 768px) {
-        #slider_methode_prise_rdv {
-            display: none !important;
-        }
-        #slider_methode_prise_rdvdesktop {
-            display: block !important;
-        }
-        #slider_methode_prise_rdvdesktop {
-            border-image-slice: 1;
-            border-bottom: 1px solid;
-            border-image-source: linear-gradient(90deg, #FFFFFF 0%, #666666 20%, #666666 80%, #FFFFFF 100%);
-        }
-        #slider_methode_prise_rdvdesktop .splide__list {
-            display: flex;
-            justify-content: center;
-            height: 56px;
-            width: 100%;
-            column-gap: 80px;
-        }
-        #slider_methode_prise_rdvdesktop .splide__slide {
-            width: fit-content;
-        }
-        .lpSection--priseRdv .lpSubSection {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .lpSection--priseRdv .imgContainer {
-            order: 1;
-            height: fit-content;
-            width: 60%;
-        }
-        .lpSection--priseRdv .etapesRdv {
-            order: 2;
-            margin-bottom: 40px;
-        }
-        .lpSection--priseRdv .triangle {
-            display: none;
-        }
-    }
-    #slider_methode_prise_rdv .rdvShowRoom, #slider_methode_prise_rdv .rdvVisio,
-    #slider_methode_prise_rdvdesktop .rdvShowRoom, #slider_methode_prise_rdvdesktop .rdvVisio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
-        cursor: pointer;
-        text-align: center;
-        padding: 1rem .5rem .5rem .5rem;
-    }
-    #slider_methode_prise_rdv .rdvShowRoom .slideText, #slider_methode_prise_rdv .rdvVisio .slideText, 
-    #slider_methode_prise_rdvdesktop .rdvShowRoom .slideText, #slider_methode_prise_rdvdesktop .rdvVisio .slideText {
-        font-size: 18px;
-    }
-    #slider_methode_prise_rdv .rdvShowRoom::before, #slider_methode_prise_rdv .rdvVisio::before,
-    #slider_methode_prise_rdvdesktop .rdvShowRoom::before, #slider_methode_prise_rdvdesktop .rdvVisio::before {
-        content: '';
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-showroom-noir.svg");
-        height: 28px;
-        width: 32px;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    #slider_methode_prise_rdv .rdvVisio::before, 
-    #slider_methode_prise_rdvdesktop .rdvVisio::before {
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-video-noir.svg");
-        width: 28px;
-        background-position: 50% 50%;
-    }
-    .lpSection--priseRdv .splide__list {
-        overflow: visible;
-    }
-    /* ACTIVE SLIDE */
-    #slider_methode_prise_rdv .splide__slide.active,
-    #slider_methode_prise_rdvdesktop .splide__slide.active {
-        /* border-bottom: solid 3px #D4450C; */
-        background: #FFFFFF;
-    }
-    #slider_methode_prise_rdv .splide__slide.active .slideText,
-    #slider_methode_prise_rdvdesktop .splide__slide.active .slideText {
-        color: #D4450C;
-        font-weight: 700;
-    }
-    #slider_methode_prise_rdv .splide__slide:not(.active) .slideText,
-    #slider_methode_prise_rdvdesktop .splide__slide:not(.active) .slideText {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        color: #000000;
-    }
-    #slider_methode_prise_rdv .rdvShowRoom.active::before,
-    #slider_methode_prise_rdvdesktop .rdvShowRoom.active::before {
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-showroom-orange.svg");
-    }
-    #slider_methode_prise_rdv .rdvVisio.active::before,
-    #slider_methode_prise_rdvdesktop .rdvVisio.active::before {
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/picto-video-orange.svg");
-    }
-    .lpSection--priseRdv .lpSubSection {
-        opacity: 1;
-        transition: opacity .2s ease-out;
-        gap: 2rem;
-        padding: 2rem 8px 4rem 8px;
-    }
-    .lpSection--priseRdv .lpSubSection:not(.active) {
-        opacity: 0;
-    }
-    .lpSection--priseRdv .lpSubSection.active {
-        opacity: 1;
-        background: #FFFFFF;
-    }
-    .lpSection--priseRdv .lpSubSection.hidden {
-        display: none;
-    }
-    .imgContainer {
-        position: relative;
-    }
-    /* .imgContainer a {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 2rem);
-        white-space: nowrap;
-        column-gap: 0;
-        border-color: #D4450C;
-        border-width: 3px;
-        gap: 1rem;
-        padding: 1rem 24px;
-        height: 45px;
-    }
-    .imgContainer a::before {
-        width: 20px;
-        height: 16px;
-    } */
-    .faq-answer {
-        gap: 24px;
-        display: flex;
-        flex-direction: column;
-    }
-    .faq-answer .answer_detail {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-    }
-    .faq-answer .answer_detail::before {
-        content: '';
-        min-width: 30px;
-        height: 30px;
-        display: block;
-        background-repeat: no-repeat;
-    }
-    .answer_glass::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_glass.svg');
-    }
-    .answer_styles::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_styles.svg');
-    }
-    .answer_idea::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_idea.svg');
-    }
-    .answer_thumbs::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_thumbs.svg');
-    }
-    .answer_files::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_files.svg');
-    }
-    .answer_chat::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_chat.svg');
-    }
-    .answer_clock::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_clock.svg');
-    }
-    .answer_dashboard::before {
-        background-image: url('/s/imgs/pages/landing-rdv-showroom/picto_dashboard.svg');
-    }
-    .slider_etapes {
-        margin-top: 1rem;
-    }
-    .slider_etapes .splide__slide {
-        background-color: #F9F9F9;
-        padding: 1rem;
-        border-radius: 0 10px 10px 10px;
-        width: 79%;
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-    }
-    .slider_etapes .splide__slide .lpText {
-        font-size: 1rem;
-    }
-    .slider_etapes .splide__slide .etape {
-        font-family: 'Inter', sans-serif;
-        font-size: 60px;
-        font-weight: 700;
-        color: #D4450C;
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #D4450C;
-    }
-    .section-faq__group {
-        border-radius: 0px 10px 10px 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .section-faq__group .faq-item {
-        background-color: #FFFFFF;
-        border-radius: 0px 10px 10px 10px;
-        cursor: pointer;
-    }
-    .section-faq__group .faq-item .faq-question {
-        padding: 1rem;
-        font-weight: 700;
-        display: flex;
-        gap: 1rem;
-        justify-content: space-between;
-        border-bottom: solid 1px #F6F6F6;
-        align-items: center;
-    }
-    .section-faq__group .faq-item .faq-question .triangle {
-        height: 1rem !important;
-        width: 1rem !important;
-        transform: rotate(0deg);
-        transition: transform 0.5s ease;
-    }
-    .section-faq__group .faq-item.active .faq-question .triangle {
-        transform: rotate(180deg);
-    }
-    .section-faq__group .faq-item .faq-answer {
-        font-weight: 400;
-        padding: 0 1rem;
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.5s ease;
-    }
-    .section-faq__group .faq-item.active .faq-answer {
-        padding: 1rem;
-        opacity: 1;
-        max-height: 1000px;
-        visibility: visible;
-    }
-    .faq-item .faq-answer .highlight_text {
-        font-weight: 500;
-    }
-    .faq-item .faq-answer a.highlight_text {
-        text-decoration: underline;
-    }
-    @media (min-width: 768px) {
-        .lpSection--priseRdv .section-faq__group .faq-item {
-            cursor: default;
-        }
-        .lpSection--priseRdv .section-faq__group .faq-item .faq-question {
-            padding: 24px;
-        }
-        .lpSection--priseRdv .section-faq__group .faq-item .faq-answer {
-            max-height: unset;
-            visibility: visible;
-            opacity: 1;
-            padding: 24px;
-        }
-        .lpSection--priseRdv .section-faq__container {
-            width: 36%;
-        }
-    }
-    #slider_videosClients {
-        margin-bottom: 3rem;
-    }
-    #slider_videosClients .splide__slide {
-        width: 79%;
-        background-color: #F6F6F6;
-        border-radius: 0px 10px 10px 10px;
-    }
-    @media (min-width: 768px) {
-        #slider_videosClients .splide__list {
-            display: flex;
-            justify-content: flex-start;
-            column-gap: 40px;
-        }
-        #slider_videosClients .splide__slide {
-            width: calc(25% - 40px);
-        }
-    }
-    #slider_videosClients .splide__slide .highlight_text {
-        padding: 1rem;
-    }
-    #slider_videosClients .splide__slide .legendAvis {
-        padding: 0 1rem 1rem 1rem;
-    }
-    .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-    }
-    .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0px 10px 0 0;
-    }
-    /* SLIDER AVIS CLIENTS */
-    #slider_avisClients {
-        margin-bottom: 3rem;
-    }
-    #slider_avisClients .splide__slide {
-        background-color: #F6F6F6;
-        padding: 1rem;
-        border-radius: 0 10px 10px 10px;
-        width: 79%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    } 
-    .contentLegend {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }   
-    #slider_avisClients .splide__slide .lpText {
-        display: flex;
-        flex-direction: column;
-    } 
-    #slider_avisClients .splide__slide .lpText .lpLink {
-        font-weight: 400;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 8px;
-    }
-    #slider_avisClients .splide__slide .lpText .lpLink::before {
-        background-image: url("/s/imgs/pages/00-commun/pictos/picto-newtab-black.svg");
-        content: '';
-        display: block;
-        width: 15px;
-        height: 15px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #slider_avisClients .splide__slide::before {
-        content: '';
-        background-image: url("/s/imgs/pages/landing-rdv-showroom/etoiles_avis_client.png");
-        width: 53px;
-        height: 25px;
-        margin: 0 auto;
-    }
-    #slider_avisClients .splide__slide .legendAvis {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-direction: row;
-    }
-    #slider_avisClients .splide__slide .legendAvis::before {
-        /* font-style: italic; */
-        background-image: url("/s/imgs/pages/00-commun/pictos/picto-user.svg");
-        content: '';
-        display: block;
-        width: 15px;
-        height: 15px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #slider_avisClients .splide__slide .legendLieuDate {
-        font-style: italic;
-        text-align: right;
-    }
-    /* SECTION PROJET */
-    .lpSection--projet {
-        background-color: #F6F6F6;
-        padding-bottom: 5rem;
-    }
-    #slider_projet .splide__slide {
-        position: relative;
-        width: 55%;
-        border-radius: 10px;
-    }
-    #slider_projet .splide__slide img {
-        object-fit: cover;
-        border-radius: 10px;
-        width: 100%;
-    }
-    @media (min-width: 768px) {
-        #slider_projet .splide__list {
-            display: flex;
-            justify-content: space-between;
-            column-gap: 40px;
-        }
-        #slider_projet .splide__slide {
-            width: calc(25% - 40px);
-        }
-    }
-    #slider_projet .splide__slide h3 {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-weight: 700;
-        display: flex;
-        flex-direction: column;
-    }
-    #slider_projet .splide__slide h3 p {
-        background-color: rgba(255, 255, 255);
-        font-weight: 700;
-        width: fit-content;
-        padding: 2px .5rem 0 .5rem;
-        color: #333333;
-    }
-    #slider_projet .splide__slide h3 span {
-        display: block;
-        width: fit-content;
-        color: #D4450C;
-        background-color: rgba(255, 255, 255);
-        padding: 5px .5rem 5px .5rem;
-    }
-    /* SECTION FAQ */
-    #faq .faq-item {
-        background-color: #F6F6F6;
-    }
-    /* BANNIERE PROMO STICKY */
-    #banniereFlottante {
-        position: absolute;
-        width: 100%;
-        height: 80px;
-        bottom: 0;
-        left: 0;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        z-index: 5;
-        display: flex;
-        background-color: rgba(0, 0, 0, 0.9);
-    }
-    #banniereFlottante > a {
-        column-gap: 8px;
-    }
-    #banniereFlottante {
-        gap: 16px;
-    }
-    #banniereFlottante .lpText {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 1.1rem;
-        color: #FFFFFF;
-    }
-    #banniereFlottante .lpText span {
-        font-weight: 700;
-        font-size: 16px;
-    }
-    #banniereFlottante {
-        position: sticky;
-        bottom: 0;
-        z-index: 5;
-        transition: opacity .2s linear;
-        opacity: 0;
-        pointer-events: none;
-    }
-    #banniereFlottante.visible {
-        opacity: 1;
-        pointer-events: initial;
-    }
-    /* GLOBAL SLIDER STYLES */
-    .splide > .splide__pagination {
-        position: absolute;
-        bottom: -37.5px;
-        gap: 8px;
-    }
-    .lpSubSection .splide:not(.is-overflow) .splide__pagination {
-        display: flex;
-    }
-    .splide > .splide__pagination li::before {
-        content: none;
-    }
-    .splide > .splide__pagination .splide__pagination__page {
-        opacity: 1;
-        border: solid 1px black;
-        background-color: #FFFFFF;
-        height: 10px;
-        width: 10px;
-        margin: 0;
-    }
-    .splide > .splide__pagination .splide__pagination__page.is-active {
-        background-color: #000000;
-    }
-    .splide > .splide__arrows--ltr {
-        position: absolute;
-        width: 100%;
-        bottom: -60px;
-        top: unset;
-        display: flex;
-    }
-    .splide > .splide__arrows .splide__arrow svg {
-        height: 1em;
-        width: 1em;
-        opacity: .7;
-    }
-    .splide__arrow--prev {
-        left: 0;
-    }
-    .splide__arrow--next {
-        right: 0;
-    }
-    .splide__pagination__page.is-active {
-        transform: unset;
-    }
-    .splide > .splide__arrows .splide__arrow.splide__arrow--prev,
-    .splide > .splide__arrows .splide__arrow.splide__arrow--next {
-        width: 25px;
-        border-radius: 50%;
-        height: 25px;
-        background: #D9D9D9;
-        transition: opacity 0.2s ease-in-out;
-    }
-    .splide > .splide__arrows .splide__arrow--prev:not(.disabled),
-    .splide > .splide__arrows .splide__arrow--next:not(.disabled) {
-        opacity: 1;
-    }
-    .splide > .splide__arrows.splide__arrows--ltr .splide__arrow:disabled {
-        opacity: .3;
-    }
-    @media (min-width: 768px) {
-        .linebreak {
-            display: none;
-        }
-        #slider_thematiques .splide__arrows {
-            display: flex;
-        }
-        #banniereFlottante {
-            gap: 56px;
-        }
-        #banniereFlottante .lpText {
-            font-size: 14px;
-            line-height: 25px;
-        }
-        #banniereFlottante .lpText span {
-            font-size: 18px;
-        }
-    }
-    /* FOCUS VISIBLE — clavier uniquement, invisible au clic */
-    #slider_thematiques .splide__slide:focus-visible {
-        outline: 3px solid #D4450C;
-        outline-offset: 2px;
-    }
-
-    #thematiquesListDesc .fichethematiquedesc .close:focus-visible {
-        outline: 3px solid #D4450C;
-        outline-offset: 4px;
-    }
-
-    #slider_methode_prise_rdv .splide__slide:focus-visible,
-    #slider_methode_prise_rdvdesktop .splide__slide:focus-visible {
-        outline: 3px solid #D4450C;
-        outline-offset: 2px;
-    }
-
-    .faq-item:focus-visible {
-        outline: 3px solid #D4450C;
-        outline-offset: 2px;
-    }
-  </style>
-  <!-- THIS PAGE STYLES - END -->
