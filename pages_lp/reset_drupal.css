@@ -89,7 +89,7 @@
 }
 
 .lpTitle__h2span--orange {
-    background-color: #E75012;
+    background-color: #D4450C;
 }
 
 /*** <h3></h3> ***/
@@ -148,7 +148,7 @@
 
 a.lpLink {
     width: fit-content;
-    color: #E75012;
+    color: #D4450C;
     font-family: "Open Sans", sans-serif;
     text-decoration: underline;
     transition: all .3s ease-out;

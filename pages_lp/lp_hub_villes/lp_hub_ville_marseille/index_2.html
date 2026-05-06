@@ -1,0 +1,441 @@
+<!-- CTA Produits -->
+<section class="lpSection lpSectionCtaProduits">
+    <a class="lpCTA lpCTA--tertiary" href="https://www.pointp.fr/carrelage-interieur">Voir tous les produits</a>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="lpSection lpSection--faq">
+    <h2 class="lpTitle__h2">
+        <span class="lpTitle__h2span lpTitle__h2span--black">
+            Les réponses à toutes
+        </span>
+        <span class="lpTitle__h2span lpTitle__h2span--orange">
+            Vos questions
+        </span>
+    </h2>
+
+    <div class="section-faq__container">
+        <div class="section-faq__group" id="faqGroup">
+            <!-- Le JS va insérer ici -->
+        </div>
+    </div>
+</section>
+<!-- FAQ END -->
+
+<!-- ADDITIONAL TXT START -->
+<section class="lpSection lpSection--mentions">
+    <div class="lpSubSection">
+        <h2 class="lpTitle__h2">Ce que nos clients apprécient dans nos showrooms à Marseille</h2>
+        <p class="lpText">Marseille Prado ou La Valentine, Gignac ou encore Salon-de-Provence… Quel que soit le showroom, tout est pensé pour vous offrir une expérience à la fois inspirante et rassurante.</p>
+        <p class="lpText">Dès l’entrée, l’accueil chaleureux met à l’aise, et chaque visiteur est accompagné par un conseiller disponible, à l’écoute et attentif à son projet.</p>
+        <p class="lpText">Les espaces d’exposition, <strong>clairs et bien agencés</strong>, permettent de se projeter facilement. Vous y découvrirez un large choix de carrelages, de salles de bains, de parquets ou de <a class="lpLink" href="https://www.pointp.fr/c/terrasses-bois/x3snv3_dig_2003047">lames de terrasses</a>, <strong>mis en scène dans des ambiances variées</strong>. Que vous soyez en pleine rénovation ou simplement en quête d’idées, ces univers vous aident à affiner vos goûts et à structurer votre réflexion. </p>
+        <p class="lpText">Dans nos showrooms, <strong>vous pouvez prendre votre temps</strong>, circuler librement, poser vos questions, comparer, et repartir avec des conseils clairs. Nos clients soulignent souvent la qualité de l’accompagnement, la compétence et l’engagement de nos équipes, ainsi que leur capacité à transformer une simple idée en projet concret.</p>
+        <p class="lpText">Ici, <strong>pas de discours standard</strong> : les échanges sont personnalisés et orientés vers la faisabilité de vos futurs travaux. Que vous veniez sans idée précise ou avec un plan bien avancé, nos équipes prennent le temps d’écouter, de conseiller, et de vous aider à transformer vos envies en un projet réalisable, à votre image.</p>
+    </div>
+
+    <div class="lpSubSection">
+        <h2 class="lpTitle__h2">Quel carrelage choisir à Marseille selon votre espace ?</h2>
+        <h3 class="lpTitle__h3">Le grès cérame dans toutes ses formes : uni, zellige, terrazzo, effet parquet</h3>
+        <p class="lpText">Chaque pièce a ses contraintes, et votre choix de carrelage doit s’y adapter. Pour les sols intérieurs, le grès cérame est un incontournable : résistant, facile d’entretien et adapté à tous les styles, <strong>il est un caméléon incroyable</strong>, capable de prendre l'effet ou la teinte que vous souhaitez. Pour les murs, la faïence reste la meilleure option, notamment dans la salle de bain.</p>
+        <h3 class="lpTitle__h3">Le choix à l'extérieur, pour la terrasse et la piscine</h3>
+        <p class="lpText">Impossible de passer sur l'aménagement de votre extérieur dans une région aussi ensoleillée ! Règle de base pour vos futurs carrelages : privilégiez des <a class="lpLink" href="https://www.pointp.fr/c/carrelage-technique/x3snv3_dig_2026913">carreaux antidérapants</a> et résistants au gel, notamment pour les terrasses, balcons ou abords de piscine. Si votre projet concerne une pièce humide, vous pourrez vous appuyer sur les recommandations de nos conseillers pour garantir un produit technique parfaitement adapté.</p>
+    </div>
+</section>
+<!-- ADDITIONAL TXT END -->
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+// CHECK DEVICE'S WIDTH
+function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+}
+
+const magasins = [
+    {
+        nom: "Showroom POINT.P Marseille Prado",
+        image: "/s/imgs/pages/landing-hub-villes/marseille/showroom_marseille_prado.jpg",
+        alt: "Magasin carrelage - Marseille Prado",
+        adresse: "326 avenue du Prado<br>13008 Marseille 08",
+        mapLink: "https://maps.app.goo.gl/FSBbzj4Adq9HBsXu9",
+        tel: "0491163000",
+        telLink: "tel:+33491163000",
+        ficheLink: "https://www.pointp.fr/infos-showroom/marseille-prado-point-p-1429",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=1429",
+        filtres: ["carrelage-parquet", "menuiserie", "amenagement-exterieur", "promoteur-constructeur", "agrandissement"]
+    },
+    {
+        nom: "Showroom POINT.P Marseille La Valentine",
+        image: "/s/imgs/pages/landing-hub-villes/marseille/showroom_marseille_valentine.jpg",
+        alt: "Magasin carrelage - Marseille La Valentine",
+        adresse: "Montée de la Valentine, quartier Saint-Menet<br>13011 La Valentine",
+        mapLink: "https://maps.app.goo.gl/uVxayTA6LSnWbTkx9",
+        tel: "0491430289",
+        telLink: "tel:+33491430289",
+        ficheLink: "https://www.pointp.fr/infos-showroom/la-valentine-point-p-6126",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6126",
+        filtres: ["carrelage-parquet", "mobilier-sanitaire-sdb", "amenagement-exterieur", "agrandissement", "menuiserie"]
+    },
+    {
+        nom: "Showroom POINT.P Gignac",
+        image: "/s/imgs/pages/landing-hub-villes/marseille/showroom_marseille_gignac.jpg",
+        alt: "Magasin carrelage - Gignac",
+        adresse: "1390, avenue Lino Ventura, quartier Bricard<br>13180 Gignac La Nerthee",
+        mapLink: "https://maps.app.goo.gl/tFYkV6KXMTt4sLNt9",
+        tel: "0442884807",
+        telLink: "tel:+33442884807",
+        ficheLink: "https://www.pointp.fr/infos-showroom/gignac-point-p-6125",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6125",
+        filtres: ["carrelage-parquet", "mobilier-sanitaire-sdb", "amenagement-exterieur", "agrandissement", "menuiserie", "promoteur-constructeur"]
+    },
+    {
+        nom: "Showroom POINT.P Aix en Provence - Le Tholonet",
+        image: "/s/imgs/pages/landing-hub-villes/marseille/showroom_marseille_le_tholonet.jpg",
+        alt: "Magasin carrelage - Aix en Provence - Le Tholonet",
+        adresse: "1160 avenue Paul Julien<br>13100 Le Tholonet",
+        mapLink: "https://maps.app.goo.gl/BDjUTk9nA6FHvyfM8",
+        tel: "0442667840",
+        telLink: "tel:+33442667840",
+        ficheLink: "https://www.pointp.fr/infos-showroom/aix-le-tholonet-point-p-6121",
+        ficheLinkRdv: "https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous?magasin=6121",
+        filtres: ["carrelage-parquet", "mobilier-sanitaire-sdb", "agrandissement", "amenagement-exterieur", "menuiserie"]
+    }
+];
+
+const container = document.getElementById('magasinList');
+
+function formatFiltre(tag) {
+    const labels = {
+        "carrelage-parquet": "Carrelage/Parquet",
+        // "salle-de-bain": "Salle de bain",
+        "menuiserie": "Menuiserie",
+        "amenagement-exterieur": "Aménagement extérieur",
+        "mobilier-sanitaire-sdb": "Mobilier/Sanitaires de salle de bain",
+        "agrandissement": "Agrandissement",
+        "promoteur-constructeur" : "Promoteur/Constructeur",
+    };
+    return labels[tag] || tag;
+}
+
+// Création d'un bloc html pour chaque magasin contenu dans la const magasins 
+magasins.forEach(magasin => {
+    const li = document.createElement('li');
+    li.className = `splide__slide ${magasin.filtres.join(' ')}`;
+
+    li.innerHTML = `
+        <div class="ficheMagasin">
+        <img class="imgMagasin" src="${magasin.image}" alt="${magasin.alt}">
+        <h3 class="highlight_text magasinNom">${magasin.nom}</h3>
+        <div class="containerDetails">
+            <a href="${magasin.mapLink}" target="_blank" class="lpLink detailMagasin adresse">${magasin.adresse}</a>
+            <a href="${magasin.telLink}" class="lpLink detailMagasin numeroMobile">${magasin.tel}</a>
+            <p class="lpText detailMagasin numeroDesktop">${magasin.tel}</p>
+            <a href="${magasin.ficheLink}" class="lpLink detailMagasin horaires">Consulter les horaires</a>
+        </div>
+        <div class="containerFiltres">
+            ${magasin.filtres.map(filtre => `<span class="filtre" data-tag="${filtre}">${formatFiltre(filtre)}</span>`).join('')}
+        </div>
+        <a href="${magasin.ficheLinkRdv}" class="lpCTA lpCTA--secondary">Prendre rendez-vous</a>
+        </div>
+    `;
+
+    container.appendChild(li);
+});
+
+
+let carousselMagasins;
+let slidesMagasinActualise;
+let slidesMagasin = document.querySelectorAll('#slider_magasins .splide__slide');
+
+let slidesAvisClientsLength = document.querySelectorAll('#slider_avisClients .splide__slide').length;
+let slidesAvantApresLength = document.querySelectorAll('#slider_inspirationRealisation .splide__slide').length;
+//
+function checkSplide() {
+    if (typeof Splide !== "undefined") {
+        // SLIDER FICHES MAGASINS
+        if ((isMobile() && slidesMagasin.length > 1) || (!isMobile() && slidesMagasin.length > 3)) {
+            carousselMagasins = new Splide("#slider_magasins", {
+                gap: isMobile() ? 24 : 56,
+                perPage: isMobile() ? 1 : 3,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: isMobile() ? true : false,
+                autoWidth: isMobile() ? true : false,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            carousselMagasins.mount();
+            // checkPaginationContainerLength();
+            // updateScrollBar();
+        }
+        
+        // SLIDER AVIS CLIENTS
+        if (isMobile() && slidesAvisClientsLength > 1 || (!isMobile() && slidesAvisClientsLength > 4)) {
+            const splideAvis = new Splide("#slider_avisClients", {
+                gap: isMobile() ? 24 : 56,
+                perPage: isMobile() ? 1 : 4,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: isMobile() ? true : false,
+                autoWidth: isMobile() ? true : false,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            splideAvis.mount();
+        }
+
+        // SLIDER AVANT APRES
+        if (isMobile() && slidesAvantApresLength > 1) {
+            const splideRealisations = new Splide("#slider_inspirationRealisation", {
+                gap: 24,
+                arrows: true,
+                perMove  : 1,
+                drag     : true,
+                snap     : true,
+                trimSpace: true,
+                autoWidth: true,
+                flickPower: 130,
+                flickMaxPages: 1,
+            });
+            splideRealisations.mount();
+        }
+
+        // SLIDER GUIDES ET TENDANCES
+        new Splide("#slider_tendances", {
+            destroy: true,
+            breakpoints: {
+                768: {
+                    destroy: false,
+                    gap: 24,
+                    arrows: true,
+                    perMove  : 1,
+                    drag     : true,
+                    snap     : true,
+                    trimSpace: true,
+                    autoWidth: true,
+                    flickPower: 90,
+                    flickMaxPages: 1,
+                }
+            }
+        }).mount();
+    } else {
+        setTimeout(checkSplide, 500);
+    }
+}
+checkSplide();
+// 
+
+//Sauvegarde des filtres de tag et des fiches magasins
+let filters = document.querySelectorAll('.lpSubSection.filtres .containerFiltres .filtre');
+let txtContainerNombreMagasins = document.getElementsByClassName('nbResultats')[0];
+let mainSlider = document.getElementById('slider_magasins');
+
+// Surveille chaque clic ou tap sur les filtres
+let isHiding = false;
+
+function handleFilterClick(filter) {
+    if (isHiding) return;
+    isHiding = true;
+
+    toggleActiveFilter(filter);
+    mainSlider.classList.add('hiding');
+    
+
+    setTimeout(function() {
+        filterSlider(filter.getAttribute('data-tag'));
+        mainSlider.classList.remove('hiding');
+        isHiding = false;
+        // updateScrollBar();
+    }, 250);
+}
+
+filters.forEach(filter => {
+    ['click', 'touchstart'].forEach(eventType => {
+        filter.addEventListener(eventType, function(event) {
+            if (event.cancelable) {
+                event.preventDefault();
+            }
+            handleFilterClick(filter);
+        });
+    });
+});
+
+//Changement de filtre actif avec changement de class
+function toggleActiveFilter(element) {
+    filters.forEach(filter => {
+        filter.classList.remove('active');
+    });
+    if (!element.classList.contains('active')) {
+        element.classList.add('active');
+    }
+}
+
+//Réinitialisation du slider en fonction du tag choisi
+function filterSlider(tag) {
+    // Destruction du slider en place
+    // carousselMagasins.destroy();
+
+    // On désactive les slides en enlevant la class splide__slide
+    slidesMagasin.forEach(slide => {
+        slide.classList.remove('splide__slide');
+        if (slide.classList.contains(tag)) {
+            slide.classList.add('splide__slide');
+        }
+        if (tag == 'tous') {
+            slide.classList.add('splide__slide');
+        }
+    });
+
+    // Actualisation du nombre de magasins affichés
+    let singularOrPlural = '';
+    slidesMagasinActualise = document.querySelectorAll('#slider_magasins .splide__slide').length;
+    if (slidesMagasinActualise > 1 ) {
+        singularOrPlural = 'résultats';
+        mainSlider.classList.remove('noresults');
+        mainSlider.classList.remove('oneresult');
+        // carousselMagasins.mount();
+    }
+    if (slidesMagasinActualise == 1 ) {
+        singularOrPlural = 'résultat';
+        mainSlider.classList.remove('noresults');
+        mainSlider.classList.add('oneresult');
+    }
+    if (slidesMagasinActualise < 1 ) {
+        mainSlider.classList.add('noresults');
+        mainSlider.classList.remove('oneresult');
+        singularOrPlural = 'résultat';
+    }
+    txtContainerNombreMagasins.innerText =  `${slidesMagasinActualise} ${singularOrPlural}`;
+    
+    // Réinitialisation du slider
+    // checkPaginationContainerLength();
+    // updateScrollBar();
+}
+
+// function updateScrollBar() {
+//         // Fonction interne de mise à jour
+//         function setProgressBar() {
+//             let progressbar = carousselMagasins.root.querySelector('.slider_magasins_progress_bar');
+//             if (!progressbar) return;
+
+//             let end = carousselMagasins.Components.Controller.getEnd() + 1;
+//             let rate = Math.min((carousselMagasins.index + 1) / end, 1);
+
+//             progressbar.style.width = (100 * rate) + '%';
+//         }
+
+//         // Exécute une première fois lors de l'initialisation
+//         setProgressBar();
+
+//         // Ajoute du listener
+//         carousselMagasins.on('mounted move', setProgressBar);
+//     }
+
+//Ajout d'une class pour réduire le gap sur la pagination
+// function checkPaginationContainerLength() {
+//     let paginationContainer = document.querySelector('#slider_magasins .splide__pagination');
+//     // Vérification de l'élement HTML existant dans le DOM
+//     if (!paginationContainer) return;
+
+//     if (document.querySelectorAll('#slider_magasins .splide__slide').length > 12 && !paginationContainer.classList.contains('shrinked')) {
+//         paginationContainer.classList.add('shrinked');
+//     }
+//     if (document.querySelectorAll('#slider_magasins .splide__slide').length < 12 && paginationContainer.classList.contains('shrinked')) {
+//         paginationContainer.classList.remove('shrinked');
+//     }
+// }
+
+let banniereContainer = document.querySelector('.sections-container > .tw-w-full.tw-my-4 > .tw-container > .tw-flex > .block-template-builder:nth-child(3)');
+    /***** CHECK IF ELEMENT IS IN VIEWPORT START *****/
+    // Toggle class if targeted element disapear from viewport
+    let observer = new IntersectionObserver(([entry]) => {
+        banniereContainer.classList.toggle('visible', !entry.isIntersecting);
+    }, { threshold: 0.1 });
+
+    observer.observe(mainSlider);
+    /***** CHECK IF ELEMENT IS IN VIEWPORT END *****/
+
+// FAQ
+const faqData = [
+    {
+        question: "Comment prendre rendez-vous avec un conseiller en showroom à Marseille ?",
+        answer: "Vous avez un projet d’aménagement en tête ? En quelques clics, organisez <strong>un rendez-vous personnalisé avec un conseiller POINT.P</strong> directement en ligne. Il vous suffit de préciser la nature de votre projet (rénovation de salle de bain, pose de carrelage extérieur, choix d’un parquet…) et de choisir le showroom marseillais qui vous convient, ainsi que le créneau horaire qui vous arrange. Prenez rendez-vous ici : <a href='https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous' class='lpLink'>https://www.pointp.fr/nos-showrooms/prendre-rendrez-vous</a>"
+    },
+    {
+        question: "Combien de temps dure un rendez-vous avec un conseiller expert carrelage ?",
+        answer: "Préparez-vous à un vrai moment d’échange ! Un rendez-vous avec un conseiller spécialiste du carrelage peut durer <strong>entre une heure et deux heures</strong>. Tout dépend de l’ampleur de votre projet : nombre de pièces à rénover, besoin d’accompagnement technique ou décoratif, envies d’aménagement extérieur… Notre priorité est de vous faire gagner du temps en vous aidant à faire les bons choix."
+    },
+    {
+        question: "Que dois-je préparer pour mon rendez-vous dans un showroom marseillais ?",
+        answer: "Lors de la prise de rendez-vous en ligne, vous pouvez déjà partager quelques infos clés et documents en version digitalisée : type de pièce à aménager, ambiance souhaitée, état d’avancement des travaux… Rien d’obligatoire, cela permettra simplement à votre conseiller <strong>de vous recevoir dans les meilleures conditions</strong>. Le jour de votre visite, pensez à amener ce qui peut l’aider à mieux comprendre votre intérieur : quelques photos, un plan coté, les coordonnées de votre artisan si vous en avez un."
+    },
+    {
+        question: "Quels carrelages sont disponibles dans les showrooms POINT.P à Marseille et alentours ?",
+        answer: "Dans les showrooms POINT.P de Marseille et ses alentours, le carrelage se décline à l’infini : imitation bois, effet béton, formats XXL, mosaïques décoratives… et toujours les plus grandes marques du secteur, comme Marazzi, Refin ou encore Rondine.<br><br>Vous cherchez autre chose qu’un simple carrelage mural ? <a class='lpLink' href='https://www.pointp.fr/c/parquet-contrecolle/x3snv3_dig_2026886'>Parquets contrecollés</a>, <a class='lpLink' href='https://www.pointp.fr/sol-stratifie'>sols stratifiés</a>, <a class='lpLink' href='https://www.pointp.fr/vinyles-pvc-lino'>sols PVC</a>, sols souples, lambris déco, parements de façade... tout est réuni pour réinventer vos espaces, du salon jusqu’à la terrasse."
+    },
+    {
+        question: "Peut-on faire une simulation ou un devis personnalisé en showroom ?",
+        answer: "Absolument ! À l’issue de votre rendez-vous, vous repartez avec une sélection de produits adaptés à vos besoins, une estimation budgétaire claire, et parfois même une planche d’inspiration.<br><br>Et pour vous projeter dans votre futur intérieur ? Nos conseillers peuvent vous accompagner au travers de planches d’inspiration et sur l’outil de simulation <a class='lpLink' href='https://www.pointp.fr/decouvrez-magic-view'>Magic View</a>. En chargeant une photo de votre pièce, <strong>vous visualisez immédiatement les rendus</strong> des carrelages ou parquets repérés. L’idéal pour valider vos choix avec confiance."
+    }
+];
+
+// Cible le conteneur
+const faqGroup = document.getElementById('faqGroup');
+
+// Boucle sur les données pour créer chaque élément
+faqData.forEach(item => {
+    const faqItem = document.createElement('div');
+    faqItem.classList.add('faq-item');
+    faqItem.setAttribute('tabindex', '0');
+    faqItem.setAttribute('role', 'button');
+
+    faqItem.innerHTML = `
+        <div class="faq-question">
+            <h3>${item.question}</h3>
+            <img class="triangle" src="/s/imgs/pages/00-commun/pictos/caret-down.png" alt="Fleche">
+        </div>
+        <div class="faq-answer"">
+            <p class="lpText">${item.answer}</p>
+        </div>
+    `;
+
+    // Injecte dans le DOM
+    faqGroup.appendChild(faqItem);
+});
+
+document.querySelectorAll(".faq-question").forEach((item) => {
+    item.addEventListener("click", () => {
+        const parent = item.closest('.faq-item');
+        toggleActiveClass(parent);
+    });
+
+    item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleActiveClass(item);
+        }
+    });
+});
+
+function toggleActiveClass(item) {
+    const isActive = item.classList.contains("active");
+    removeActiveClass();
+    if (!isActive) {
+        item.classList.add("active");
+    }
+}
+
+function removeActiveClass() {
+    document.querySelectorAll(".faq-item.active").forEach((activeItem) => {
+        activeItem.classList.remove("active");
+    });
+}
+});
+</script>
+<!-- JS - END -->
